@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ISL Avatar — 3D Sign Language Renderer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#1a1208;--surface:#221a0e;--border:#3a2e1a;
+  --gold:#c8902a;--light:#f5e6c8;--muted:#8a7a5a;
+  --green:#4a9a6a;--red:#c04040;
+  --skin:#c68642;--skin-dark:#a0622a;--skin-light:#e8a870;
+}
+body{background:var(--bg);color:var(--light);font-family:'DM Sans',sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+
+/* Header */
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;border-bottom:1px solid var(--border);
+  background:var(--surface);flex-shrink:0;
+}
+.logo{font-family:'DM Mono',monospace;font-size:12px;color:var(--gold);letter-spacing:2px;}
+.status{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* Main layout */
+.main{display:flex;flex:1;overflow:hidden;}
+
+/* Canvas area */
+.canvas-wrap{flex:1;position:relative;}
+#three-canvas{display:block;width:100%;height:100%;}
+
+/* Side panel */
+.side{
+  width:300px;flex-shrink:0;
+  background:var(--surface);border-left:1px solid var(--border);
+  display:flex;flex-direction:column;overflow:hidden;
+}
+
+/* Upload */
+.upload{
+  padding:16px;border-bottom:1px solid var(--border);
+  text-align:center;cursor:pointer;transition:background .2s;
+}
+.upload:hover{background:#2a2010;}
+.upload input{display:none;}
+.upload-label{font-size:13px;color:var(--muted);}
+.upload-label span{color:var(--gold);}
+.upload-hint{font-family:'DM Mono',monospace;font-size:10px;color:#4a3a1a;margin-top:4px;}
+
+/* Current sign display */
+.sign-display{
+  padding:20px 16px;border-bottom:1px solid var(--border);
+  text-align:center;
+}
+.sign-word{
+  font-size:42px;font-weight:500;color:var(--gold);
+  letter-spacing:3px;min-height:52px;
+  transition:all .3s;font-family:'DM Sans',sans-serif;
+}
+.sign-english{font-size:12px;color:var(--muted);margin-top:6px;font-style:italic;}
+.sign-details{
+  display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap;
+}
+.detail-chip{
+  font-family:'DM Mono',monospace;font-size:10px;
+  padding:3px 10px;border-radius:12px;
+  background:#2a2010;border:1px solid var(--border);color:var(--muted);
+}
+.detail-chip span{color:var(--light);}
+
+/* Controls */
+.controls{padding:12px 16px;border-bottom:1px solid var(--border);}
+.prog-row{display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:6px;}
+.prog-bg{height:3px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:12px;}
+.prog-bar{height:100%;background:var(--gold);width:0%;transition:width .1s;}
+.btn-row{display:flex;gap:8px;margin-bottom:10px;}
+button{
+  font-family:'DM Mono',monospace;font-size:11px;font-weight:500;
+  padding:7px 16px;border-radius:6px;border:1px solid var(--border);
+  cursor:pointer;transition:all .15s;letter-spacing:.5px;
+  background:transparent;color:var(--muted);
+}
+button:disabled{opacity:.3;cursor:default;}
+#btn-play{background:var(--gold);color:#1a1208;border-color:var(--gold);}
+#btn-play:hover:not(:disabled){box-shadow:0 0 12px rgba(200,144,42,.4);}
+.spd-row{display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);}
+.spd-row input{accent-color:var(--gold);flex:1;}
+.spd-val{color:var(--gold);min-width:24px;}
+
+/* Segment list */
+.seg-head{padding:8px 16px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:1.5px;color:var(--muted);border-bottom:1px solid var(--border);text-transform:uppercase;}
+.seg-list{flex:1;overflow-y:auto;}
+.seg-list::-webkit-scrollbar{width:3px;}
+.seg-list::-webkit-scrollbar-thumb{background:var(--border);}
+.seg-item{
+  padding:8px 16px;border-bottom:1px solid #2a2010;
+  cursor:pointer;transition:background .1s;
+  display:grid;grid-template-columns:40px 1fr;gap:8px;
+}
+.seg-item:hover{background:#2a2010;}
+.seg-item.active{background:#2a1e08;border-left:2px solid var(--gold);}
+.seg-t{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);padding-top:2px;}
+.seg-en{font-size:11px;color:#8a7a5a;margin-bottom:2px;}
+.seg-gl{font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.5px;}
+
+/* Overlay info */
+.overlay{position:absolute;bottom:16px;left:16px;font-family:'DM Mono',monospace;font-size:10px;color:rgba(200,144,42,.5);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ISL · 3D AVATAR RENDERER</div>
+  <div class="status"><div class="dot"></div>THREE.JS · WEBGL</div>
+</header>
+
+<div class="main">
+  <div class="canvas-wrap">
+    <canvas id="three-canvas"></canvas>
+    <div class="overlay" id="overlay">Load gloss_output.json to begin</div>
+  </div>
+
+  <div class="side">
+    <div class="upload" onclick="document.getElementById('fi').click()">
+      <input type="file" id="fi" accept=".json" onchange="loadFile(event)"/>
+      <div class="upload-label">Click to load <span>gloss_output.json</span></div>
+      <div class="upload-hint">nlp / gloss_output.json</div>
+    </div>
+
+    <div class="sign-display">
+      <div class="sign-word" id="sw">—</div>
+      <div class="sign-english" id="se">Press Play to start</div>
+      <div class="sign-details" id="sd"></div>
+    </div>
+
+    <div class="controls">
+      <div class="prog-row"><span id="tc">0.0s</span><span id="tt">0.0s</span></div>
+      <div class="prog-bg"><div class="prog-bar" id="pb"></div></div>
+      <div class="btn-row">
+        <button id="btn-play" onclick="play()">▶ PLAY</button>
+        <button id="btn-pause" onclick="pause()" disabled>⏸</button>
+        <button id="btn-reset" onclick="reset()">↺</button>
+      </div>
+      <div class="spd-row">
+        SPD <input type="range" min="0.25" max="2" step="0.25" value="1" oninput="setSpd(this.value)"/>
+        <span class="spd-val" id="sl">1×</span>
+      </div>
+    </div>
+
+    <div class="seg-head">Segments</div>
+    <div class="seg-list" id="slist"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ═══════════════════════════════════════════════════════════════
+// THREE.JS SCENE SETUP
+// ═══════════════════════════════════════════════════════════════
+
+const canvas = document.getElementById('three-canvas');
+const wrap   = canvas.parentElement;
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type    = THREE.PCFSoftShadowMap;
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.outputEncoding    = THREE.sRGBEncoding;
+
+const scene  = new THREE.Scene();
+scene.background = new THREE.Color(0x1a1208);
+scene.fog        = new THREE.Fog(0x1a1208, 8, 20);
+
+const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+camera.position.set(0, 1.2, 3.8);
+camera.lookAt(0, 0.8, 0);
+
+// Resize handler
+function resize(){
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+resize();
+window.addEventListener('resize', resize);
+
+// ── Lighting ──────────────────────────────────────────────────
+const ambient = new THREE.AmbientLight(0xfff5e0, 0.6);
+scene.add(ambient);
+
+const keyLight = new THREE.DirectionalLight(0xfff0d0, 1.2);
+keyLight.position.set(2, 4, 3);
+keyLight.castShadow = true;
+keyLight.shadow.mapSize.set(1024,1024);
+scene.add(keyLight);
+
+const fillLight = new THREE.DirectionalLight(0xd0e8ff, 0.4);
+fillLight.position.set(-3, 2, 1);
+scene.add(fillLight);
+
+const rimLight = new THREE.DirectionalLight(0xffe0a0, 0.3);
+rimLight.position.set(0, 3, -4);
+scene.add(rimLight);
+
+// ── Materials ─────────────────────────────────────────────────
+const skinMat = new THREE.MeshStandardMaterial({
+  color: 0xc68642, roughness: 0.7, metalness: 0.0,
+});
+const skinDarkMat = new THREE.MeshStandardMaterial({
+  color: 0xa05a2c, roughness: 0.8, metalness: 0.0,
+});
+const clothMat = new THREE.MeshStandardMaterial({
+  color: 0x2a3a5a, roughness: 0.9, metalness: 0.0,
+});
+const hairMat = new THREE.MeshStandardMaterial({
+  color: 0x1a0e06, roughness: 0.9, metalness: 0.0,
+});
+const eyeMat = new THREE.MeshStandardMaterial({
+  color: 0x1a0a00, roughness: 0.3, metalness: 0.1,
+});
+const whiteMat = new THREE.MeshStandardMaterial({
+  color: 0xf0e8e0, roughness: 0.8,
+});
+const nailMat = new THREE.MeshStandardMaterial({
+  color: 0xd4956a, roughness: 0.4, metalness: 0.1,
+});
+
+// ── Helper: create rounded box ─────────────────────────────────
+function box(w,h,d,mat){
+  const g = new THREE.CylinderGeometry ? new THREE.BoxGeometry(w,h,d,2,2,2) : new THREE.BoxGeometry(w,h,d);
+  return new THREE.Mesh(g, mat);
+}
+function sphere(r,mat,ws=16,hs=12){
+  return new THREE.Mesh(new THREE.SphereGeometry(r,ws,hs), mat);
+}
+function cyl(rt,rb,h,mat,seg=8){
+  return new THREE.Mesh(new THREE.CylinderGeometry(rt,rb,h,seg), mat);
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BUILD AVATAR
+// ═══════════════════════════════════════════════════════════════
+
+const avatar = new THREE.Group();
+scene.add(avatar);
+
+// ── Torso ─────────────────────────────────────────────────────
+const torso = new THREE.Group();
+avatar.add(torso);
+
+const torsoMesh = cyl(0.22,0.26,0.7,clothMat,12);
+torsoMesh.position.y = 0.35;
+torso.add(torsoMesh);
+
+// Shirt collar
+const collar = cyl(0.14,0.16,0.12,clothMat,12);
+collar.position.y = 0.74;
+torso.add(collar);
+
+// Shoulders
+[-1,1].forEach(side=>{
+  const sh = cyl(0.09,0.11,0.18,clothMat,8);
+  sh.rotation.z = side * Math.PI/2;
+  sh.position.set(side*0.32, 0.68, 0);
+  torso.add(sh);
+});
+
+// ── Head ──────────────────────────────────────────────────────
+const head = new THREE.Group();
+head.position.y = 1.02;
+avatar.add(head);
+
+// Head shape
+const headMesh = new THREE.Mesh(
+  new THREE.SphereGeometry(0.22, 20, 16),
+  skinMat
+);
+headMesh.scale.set(1, 1.15, 0.95);
+head.add(headMesh);
+
+// Hair
+const hairTop = new THREE.Mesh(
+  new THREE.SphereGeometry(0.225, 20, 12, 0, Math.PI*2, 0, Math.PI*0.55),
+  hairMat
+);
+hairTop.position.y = 0.04;
+head.add(hairTop);
+
+// Hair sides
+[-1,1].forEach(s=>{
+  const hs = new THREE.Mesh(new THREE.SphereGeometry(0.15,10,8), hairMat);
+  hs.scale.set(0.5,0.9,0.6);
+  hs.position.set(s*0.19, -0.02, -0.02);
+  head.add(hs);
+});
+
+// Eyes
+[-1,1].forEach(side=>{
+  const eyeWhite = sphere(0.045, whiteMat);
+  eyeWhite.position.set(side*0.085, 0.04, 0.19);
+  head.add(eyeWhite);
+  const iris = sphere(0.028, eyeMat);
+  iris.position.set(side*0.085, 0.04, 0.225);
+  head.add(iris);
+  // Eyebrow
+  const brow = box(0.07,0.012,0.01,hairMat);
+  brow.position.set(side*0.085, 0.095, 0.2);
+  brow.rotation.z = side * -0.15;
+  head.add(brow);
+});
+
+// Nose
+const nose = new THREE.Mesh(new THREE.SphereGeometry(0.03,8,6), skinMat);
+nose.scale.set(0.8,0.7,1.2);
+nose.position.set(0, -0.02, 0.215);
+head.add(nose);
+
+// Mouth
+const mouth = box(0.07,0.015,0.01,skinDarkMat);
+mouth.position.set(0,-0.07,0.215);
+head.add(mouth);
+
+// Ears
+[-1,1].forEach(side=>{
+  const ear = new THREE.Mesh(new THREE.SphereGeometry(0.04,8,6), skinMat);
+  ear.scale.set(0.5,0.9,0.6);
+  ear.position.set(side*0.225, 0, 0);
+  head.add(ear);
+});
+
+// Neck
+const neck = cyl(0.08,0.09,0.16,skinMat,10);
+neck.position.y = 0.82;
+avatar.add(neck);
+
+// ── Arms ──────────────────────────────────────────────────────
+// We'll build full arm rigs with bones for animation
+
+function buildArm(side){
+  const arm = new THREE.Group();
+  const sign = side === 'R' ? 1 : -1;
+
+  // Upper arm
+  const upperArm = new THREE.Group();
+  upperArm.position.set(sign*0.32, 0.68, 0);
+  arm.add(upperArm);
+
+  const uArmMesh = cyl(0.075,0.065,0.32,clothMat,8);
+  uArmMesh.position.y = -0.16;
+  upperArm.add(uArmMesh);
+
+  // Forearm
+  const foreArm = new THREE.Group();
+  foreArm.position.y = -0.32;
+  upperArm.add(foreArm);
+
+  const fArmMesh = cyl(0.06,0.05,0.30,skinMat,8);
+  fArmMesh.position.y = -0.15;
+  foreArm.add(fArmMesh);
+
+  // Wrist/hand base
+  const hand = new THREE.Group();
+  hand.position.y = -0.30;
+  foreArm.add(hand);
+
+  // Palm
+  const palm = box(0.1,0.11,0.04,skinMat);
+  palm.position.y = -0.055;
+  hand.add(palm);
+
+  // Thumb
+  const thumb = buildFinger(0.022,0.018,0.055,0.048);
+  thumb.position.set(sign*0.055,-0.02,0);
+  thumb.rotation.z = sign * 1.1;
+  thumb.rotation.x = -0.3;
+  hand.add(thumb);
+
+  // 4 Fingers
+  const fpos = [-0.035,-0.012,0.012,0.035];
+  const flen = [0.085,0.095,0.090,0.075];
+  const fingers = fpos.map((x,i)=>{
+    const f = buildFinger(0.018,0.015,flen[i],flen[i]*0.85);
+    f.position.set(x,-0.11,0);
+    hand.add(f);
+    return f;
+  });
+
+  return { group:arm, upperArm, foreArm, hand, thumb, fingers };
+}
+
+function buildFinger(r1,r2,seg1Len,seg2Len){
+  const finger = new THREE.Group();
+
+  // Proximal phalanx
+  const p1 = new THREE.Group();
+  const p1mesh = cyl(r1,r2,seg1Len,6);
+  p1mesh.material = skinMat;
+  p1mesh.position.y = -seg1Len/2;
+  p1.add(p1mesh);
+  // Knuckle
+  const k1 = sphere(r1*1.05, skinDarkMat, 6, 4);
+  p1.add(k1);
+  finger.add(p1);
+
+  // Middle phalanx
+  const p2 = new THREE.Group();
+  p2.position.y = -seg1Len;
+  const p2mesh = cyl(r2,r2*0.9,seg2Len*0.55,6);
+  p2mesh.material = skinMat;
+  p2mesh.position.y = -seg2Len*0.275;
+  p2.add(p2mesh);
+  const k2 = sphere(r2*1.0, skinDarkMat, 6, 4);
+  p2.add(k2);
+  p1.add(p2);
+
+  // Distal phalanx
+  const p3 = new THREE.Group();
+  p3.position.y = -seg2Len*0.55;
+  const p3mesh = cyl(r2*0.9,r2*0.7,seg2Len*0.45,6);
+  p3mesh.material = skinMat;
+  p3mesh.position.y = -seg2Len*0.225;
+  p3.add(p3mesh);
+  // Fingertip
+  const tip = sphere(r2*0.75, skinMat, 6, 4);
+  tip.position.y = -seg2Len*0.45;
+  p3.add(tip);
+  p2.add(p3);
+
+  finger._p1 = p1;
+  finger._p2 = p2;
+  finger._p3 = p3;
+
+  return finger;
+}
+
+const rightArm = buildArm('R');
+const leftArm  = buildArm('L');
+avatar.add(rightArm.group);
+avatar.add(leftArm.group);
+
+// Position arms
+rightArm.group.position.set(0,0,0);
+leftArm.group.position.set(0,0,0);
+
+// Default arm pose — slightly bent at sides
+function setRestPose(){
+  // Right
+  rightArm.upperArm.rotation.z = -0.3;
+  rightArm.upperArm.rotation.x = 0.1;
+  rightArm.foreArm.rotation.x  = 0.4;
+  rightArm.hand.rotation.x     = 0.1;
+  // Left
+  leftArm.upperArm.rotation.z =  0.3;
+  leftArm.upperArm.rotation.x =  0.1;
+  leftArm.foreArm.rotation.x  =  0.4;
+  leftArm.hand.rotation.x     =  0.1;
+  // Rest finger pose
+  setFingers(rightArm, [0.15,0.15,0.15,0.15,0.15]);
+  setFingers(leftArm,  [0.15,0.15,0.15,0.15,0.15]);
+}
+
+// ── Ground plane ───────────────────────────────────────────────
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(10,10),
+  new THREE.MeshStandardMaterial({color:0x120e06, roughness:1})
+);
+ground.rotation.x = -Math.PI/2;
+ground.position.y = -0.5;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// Subtle background gradient plane
+const bgPlane = new THREE.Mesh(
+  new THREE.PlaneGeometry(8,6),
+  new THREE.MeshBasicMaterial({color:0x221608})
+);
+bgPlane.position.z = -3;
+scene.add(bgPlane);
+
+avatar.position.y = -0.1;
+setRestPose();
+
+// ═══════════════════════════════════════════════════════════════
+// HAND SHAPE SYSTEM
+// ═══════════════════════════════════════════════════════════════
+
+// setFingers: exts = [thumb, i, m, r, p] each 0=closed 1=extended
+function setFingers(armRig, exts){
+  const maxCurl = 1.4; // radians
+  // Thumb
+  armRig.thumb._p1.rotation.x = (1-exts[0]) * 0.8;
+  armRig.thumb._p2.rotation.x = (1-exts[0]) * 0.6;
+
+  armRig.fingers.forEach((f,i)=>{
+    const curl = (1-exts[i+1]) * maxCurl;
+    f._p1.rotation.x = curl * 0.4;
+    f._p2.rotation.x = curl * 0.4;
+    f._p3.rotation.x = curl * 0.2;
+  });
+}
+
+// Arm poses for different sign locations
+function setArmPose(armRig, pose, side){
+  const s = side === 'R' ? 1 : -1;
+  switch(pose){
+    case 'neutral':
+      armRig.upperArm.rotation.z = s * -0.3;
+      armRig.upperArm.rotation.x = 0.1;
+      armRig.foreArm.rotation.x  = 0.4;
+      armRig.hand.rotation.x     = 0.1;
+      break;
+    case 'chest':
+      armRig.upperArm.rotation.z = s * -0.15;
+      armRig.upperArm.rotation.x = 0.4;
+      armRig.foreArm.rotation.x  = 1.1;
+      armRig.hand.rotation.x     = -0.2;
+      break;
+    case 'forehead':
+      armRig.upperArm.rotation.z = s * -0.2;
+      armRig.upperArm.rotation.x = 0.8;
+      armRig.foreArm.rotation.x  = 1.4;
+      armRig.hand.rotation.x     = -0.3;
+      break;
+    case 'chin':
+      armRig.upperArm.rotation.z = s * -0.2;
+      armRig.upperArm.rotation.x = 0.6;
+      armRig.foreArm.rotation.x  = 1.2;
+      armRig.hand.rotation.x     = -0.1;
+      break;
+    case 'raised':
+      armRig.upperArm.rotation.z = s * -0.1;
+      armRig.upperArm.rotation.x = 1.0;
+      armRig.foreArm.rotation.x  = 0.9;
+      armRig.hand.rotation.x     = 0.0;
+      break;
+    case 'forward':
+      armRig.upperArm.rotation.z = s * -0.25;
+      armRig.upperArm.rotation.x = 0.3;
+      armRig.foreArm.rotation.x  = 0.7;
+      armRig.hand.rotation.x     = 0.0;
+      break;
+  }
+}
+
+// Sign definitions: [R_fingers, R_pose, L_fingers, L_pose, headTilt]
+// fingers: [thumb,index,middle,ring,pinky] 0=closed 1=extended
+const SIGNS = {
+  // Greetings
+  HELLO:     [[.9,1,1,1,1],'forehead', [.3,.1,.1,.1,.1],'neutral',  0],
+  GOODBYE:   [[.9,1,1,1,1],'raised',   [.3,.1,.1,.1,.1],'neutral',  0],
+  THANK:     [[.9,1,1,1,1],'chin',     [.3,.1,.1,.1,.1],'neutral',  0.1],
+
+  // Pronouns
+  I:         [[.3,1,.1,.1,.1],'chest', [.3,.1,.1,.1,.1],'neutral',  0],
+  YOU:       [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', 0],
+  WE:        [[.3,1,.1,.1,.1],'chest', [.3,.1,.1,.1,.1],'neutral',  0],
+  HE:        [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', 0.1],
+  SHE:       [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', 0.1],
+  THEY:      [[.3,1,.1,.1,.1],'raised', [.3,.1,.1,.1,.1],'neutral', 0],
+  MY:        [[.9,1,1,1,1],'chest',    [.3,.1,.1,.1,.1],'neutral',  0],
+  YOUR:      [[.9,1,1,1,1],'forward',  [.3,.1,.1,.1,.1],'neutral',  0],
+
+  // Verbs
+  KNOW:      [[.9,1,1,1,1],'forehead', [.3,.1,.1,.1,.1],'neutral',  0],
+  THINK:     [[.3,1,.1,.1,.1],'forehead',[.3,.1,.1,.1,.1],'neutral',0.1],
+  UNDERSTAND:[[.3,1,.1,.1,.1],'forehead',[.3,.1,.1,.1,.1],'neutral',0],
+  LEARN:     [[.9,.5,.5,.5,.5],'forehead',[.3,.1,.1,.1,.1],'neutral',0],
+  TEACH:     [[.9,.5,.5,.5,.5],'forehead',[.9,.5,.5,.5,.5],'forehead',0],
+  EXPLAIN:   [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',   0],
+  GO:        [[.3,1,.1,.1,.1],'forward', [.3,.1,.1,.1,.1],'neutral', 0],
+  COME:      [[.3,1,.1,.1,.1],'chest',   [.3,.1,.1,.1,.1],'neutral', 0],
+  SHOW:      [[.3,1,.1,.1,.1],'forward', [.9,1,1,1,1],'forward',   0],
+  WORK:      [[.4,.1,.1,.1,.1],'neutral', [.4,.1,.1,.1,.1],'neutral',0],
+  HELP:      [[.9,1,1,1,1],'neutral',   [.4,.1,.1,.1,.1],'neutral', 0.1],
+  WANT:      [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',0],
+  NEED:      [[.3,.3,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', -0.1],
+  STOP:      [[.9,1,1,1,1],'neutral',   [.9,1,1,1,1],'neutral',    0],
+  START:     [[.3,1,.1,.1,.1],'neutral', [.9,1,1,1,1],'neutral',   0],
+  HAVE:      [[.9,.6,.6,.6,.6],'chest',  [.3,.1,.1,.1,.1],'neutral', 0],
+
+  // Questions
+  WHAT:      [[.9,1,1,1,1],'forward',  [.9,1,1,1,1],'forward',    -0.1],
+  WHERE:     [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', -0.1],
+  WHO:       [[.9,1,.1,.1,.1],'chin',   [.3,.1,.1,.1,.1],'neutral', -0.1],
+  HOW:       [[.9,.6,.6,.6,.6],'forward',[.9,.6,.6,.6,.6],'forward',-0.1],
+  WHEN:      [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', -0.1],
+  WHY:       [[.9,.1,.5,.1,.1],'forehead',[.3,.1,.1,.1,.1],'neutral',-0.15],
+
+  // Modifiers
+  NOT:       [[.9,.1,.1,.1,.1],'chin',  [.3,.1,.1,.1,.1],'neutral', -0.2],
+  GOOD:      [[.9,1,1,1,1],'chin',     [.3,.1,.1,.1,.1],'neutral',  0.15],
+  BAD:       [[.9,1,1,1,1],'chin',     [.3,.1,.1,.1,.1],'neutral', -0.15],
+  NEW:       [[.9,1,1,1,1],'forward',  [.3,.1,.1,.1,.1],'neutral',  0.1],
+
+  // Default / fingerspell
+  DEFAULT:   [[.9,1,1,1,1],'forward',  [.3,.1,.1,.1,.1],'neutral',  0],
+};
+
+// ── Smooth animation system ────────────────────────────────────
+let currentPose = null;
+let targetPose  = null;
+let poseT       = 1; // 0→1 blend
+const BLEND_SPD = 4; // blend speed
+
+function setPoseTarget(signName){
+  currentPose = targetPose || SIGNS.DEFAULT;
+  targetPose  = SIGNS[signName] || SIGNS.DEFAULT;
+  poseT       = 0;
+}
+
+function lerp(a,b,t){ return a + (b-a)*t; }
+function lerpArr(a,b,t){ return a.map((v,i)=>lerp(v,b[i],t)); }
+
+function applyPoseBlend(t){
+  if(!targetPose) return;
+  const cur = currentPose || targetPose;
+  const [rF,rP,lF,lP,ht] = targetPose;
+  const [crF,crP,clF,clP,cht] = cur;
+
+  setFingers(rightArm, lerpArr(crF, rF, t));
+  setFingers(leftArm,  lerpArr(clF, lF, t));
+
+  // Blend arm pose (simplified — just interpolate rotation values)
+  setArmPose(rightArm, rP, 'R');
+  setArmPose(leftArm,  lP, 'L');
+
+  // Head tilt
+  head.rotation.x = lerp(cht||0, ht||0, t);
+}
+
+// ── Idle animation ────────────────────────────────────────────
+let idleT = 0;
+function applyIdle(dt){
+  idleT += dt;
+  // Subtle breathing
+  avatar.position.y = -0.1 + Math.sin(idleT*0.8)*0.004;
+  // Slight head bob
+  if(!isPlaying){
+    head.rotation.y = Math.sin(idleT*0.3)*0.05;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PLAYBACK STATE
+// ═══════════════════════════════════════════════════════════════
+let segs=[],signs=[],total=0,elapsed=0,cidx=-1,lseg=-1;
+let isPlaying=false,lts=null,raf=null,spd=1;
+
+function loadFile(e){
+  const f=e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onload=ev=>{try{initData(JSON.parse(ev.target.result));}catch{alert('Load nlp/gloss_output.json');}};
+  r.readAsText(f);
+}
+
+function initData(data){
+  segs=data;signs=[];let t=0;
+  segs.forEach(s=>{
+    const toks=(s.gloss||'').split(' ').filter(Boolean);
+    const ps=toks.length>0?Math.max((s.end-s.start)/toks.length,0.6):0.8;
+    toks.forEach(tok=>{signs.push({sid:s.id,tok,en:s.clean,gl:s.gloss,ts:t,te:t+ps});t+=ps;});
+  });
+  total=t;elapsed=0;cidx=-1;lseg=-1;isPlaying=false;
+  renderList();
+  document.getElementById('tt').textContent=total.toFixed(1)+'s';
+  document.getElementById('overlay').textContent=`${segs.length} segments · ${signs.length} signs · ${total.toFixed(0)}s`;
+  document.getElementById('btn-play').disabled=false;
+  // Set default sign display
+  setPoseTarget('DEFAULT');poseT=1;
+}
+
+function renderList(){
+  document.getElementById('slist').innerHTML=segs.map(s=>`
+    <div class="seg-item" id="si-${s.id}" onclick="jumpTo(${s.id})">
+      <div class="seg-t">${s.start.toFixed(1)}s</div>
+      <div><div class="seg-en">${s.clean||'—'}</div><div class="seg-gl">${s.gloss||'—'}</div></div>
+    </div>`).join('');
+}
+
+function updateSign(idx){
+  if(idx===cidx)return;cidx=idx;
+  if(idx<0||idx>=signs.length){
+    document.getElementById('sw').textContent='—';
+    document.getElementById('se').textContent='—';
+    document.getElementById('sd').innerHTML='';
+    return;
+  }
+  const sg=signs[idx];
+  document.getElementById('sw').textContent=sg.tok;
+  document.getElementById('se').textContent=`"${sg.en}"`;
+
+  const pose=SIGNS[sg.tok]||SIGNS.DEFAULT;
+  document.getElementById('sd').innerHTML=`
+    <div class="detail-chip">loc <span>${getLocName(sg.tok)}</span></div>
+    <div class="detail-chip">seg <span>${sg.sid}</span></div>`;
+
+  // Highlight segment
+  document.querySelectorAll('.seg-item').forEach(e=>e.classList.remove('active'));
+  const sel=document.getElementById('si-'+sg.sid);
+  if(sel){sel.classList.add('active');sel.scrollIntoView({behavior:'smooth',block:'nearest'});}
+
+  // Animate avatar
+  setPoseTarget(sg.tok);
+}
+
+function getLocName(tok){
+  const p=SIGNS[tok];if(!p)return'neutral';
+  return p[1];
+}
+
+// ── Render loop ────────────────────────────────────────────────
+let lastTime=0;
+function animate(ts){
+  requestAnimationFrame(animate);
+  const dt=Math.min((ts-lastTime)/1000,0.05);
+  lastTime=ts;
+
+  // Blend pose
+  if(poseT<1){
+    poseT=Math.min(poseT+dt*BLEND_SPD,1);
+    applyPoseBlend(poseT);
+  }
+
+  applyIdle(dt);
+
+  // Playback
+  if(isPlaying){
+    elapsed=Math.min(elapsed+dt*spd,total);
+    const idx=signs.findIndex(s=>elapsed>=s.ts&&elapsed<s.te);
+    if(idx!==cidx) updateSign(idx);
+    const pct=total>0?(elapsed/total)*100:0;
+    document.getElementById('pb').style.width=pct+'%';
+    document.getElementById('tc').textContent=elapsed.toFixed(1)+'s';
+    if(elapsed>=total){
+      isPlaying=false;
+      document.getElementById('sw').textContent='✓';
+      document.getElementById('btn-play').disabled=false;
+      document.getElementById('btn-pause').disabled=true;
+      setPoseTarget('DEFAULT');
+    }
+  }
+
+  renderer.render(scene, camera);
+}
+animate(0);
+
+// ── Controls ───────────────────────────────────────────────────
+function play(){
+  if(!signs.length)return;
+  if(elapsed>=total){elapsed=0;cidx=-1;lseg=-1;}
+  isPlaying=true;lts=null;
+  document.getElementById('btn-play').disabled=true;
+  document.getElementById('btn-pause').disabled=false;
+}
+function pause(){
+  isPlaying=false;
+  document.getElementById('btn-play').disabled=false;
+  document.getElementById('btn-pause').disabled=true;
+}
+function reset(){
+  pause();elapsed=0;cidx=-1;lseg=-1;
+  document.getElementById('pb').style.width='0%';
+  document.getElementById('tc').textContent='0.0s';
+  document.getElementById('sw').textContent='—';
+  document.getElementById('se').textContent='Press Play to start';
+  setPoseTarget('DEFAULT');
+  document.getElementById('btn-play').disabled=!signs.length;
+}
+function setSpd(v){spd=parseFloat(v);document.getElementById('sl').textContent=v+'×';}
+function jumpTo(sid){
+  const s=signs.find(x=>x.sid===sid);if(!s)return;
+  elapsed=s.ts;cidx=-1;
+  if(!isPlaying)updateSign(signs.indexOf(s));
+}
+</script>
+</body>
+</html>
