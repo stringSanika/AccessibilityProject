@@ -1,6 +1,6 @@
 # Accessibility-Project — Real-Time Lecture to ISL Translator
 
-> Converts live lecture audio into **Indian Sign Language (ISL)** using a modular pipeline of speech recognition, linguistic transformation, and avatar-based sign rendering — making academic lectures accessible to Deaf and hard-of-hearing students.
+> Converts live lecture audio into **Indian Sign Language (ISL)** using a modular pipeline of speech recognition, linguistic transformation, and avatar-based sign rendering,  making academic lectures accessible to Deaf and hard-of-hearing students.
 
 ---
 
@@ -37,17 +37,17 @@ Lecture Video (MP4)
   (3D browser avatar / Blender)
 ```
 
-Each stage communicates only through JSON — **loosely coupled**, so any component can be upgraded independently.
+Each stage communicates only through JSON -- **loosely coupled**, so any component can be upgraded independently.
 
 ---
 
 ## Features
 
-- **Real-time capable** — 3–5 second latency window per segment
-- **ISL grammar rules** — OSV reordering, auxiliary verb dropping, negation and WH-word placement
-- **Motion library** — 50+ ISL signs mapped to hand shape descriptors
-- **3D browser avatar** — Three.js avatar with finger bone animation, no installation needed
-- **Modular architecture** — swap ASR, NLP, or avatar layer independently
+- **Real-time capable** : 3-5 second latency window per segment
+- **ISL grammar rules** : OSV reordering, auxiliary verb dropping, negation and WH-word placement
+- **Motion library** : 50+ ISL signs mapped to hand shape descriptors
+- **3D browser avatar** : Three.js avatar with finger bone animation, no installation needed
+- **Modular architecture** : swap ASR, NLP, or avatar layer independently
 
 ---
 
@@ -56,7 +56,7 @@ Each stage communicates only through JSON — **loosely coupled**, so any compon
 ```
 Accessibility-Project/
 ├── asr/
-│   ├── asr_isl.py              # Whisper ASR — audio → segments.json
+│   ├── asr_isl.py              # Whisper ASR -- audio → segments.json
 │   ├── audio.wav               # Extracted lecture audio
 │   └── lecture.mp4             # Source lecture video
 │
@@ -117,12 +117,12 @@ python motion_mapper.py
 
 ## How It Works
 
-### 1. ASR — `asr/asr_isl.py`
+### 1. ASR -- `asr/asr_isl.py`
 Uses **OpenAI Whisper** (base model) to transcribe lecture audio into timestamped segments. Audio is resampled to 16kHz mono using librosa before inference. Filler words (uh, um, like) are stripped and output is saved as structured JSON.
 
 **Evaluation metric:** Word Error Rate (WER)
 
-### 2. Gloss Conversion — `nlp/gloss_converter.py`
+### 2. Gloss Conversion -- `nlp/gloss_converter.py`
 Converts cleaned English text to ISL gloss notation using rule-based linguistic transformation:
 
 | Rule | Example |
@@ -135,7 +135,7 @@ Converts cleaned English text to ISL gloss notation using rule-based linguistic 
 
 **Evaluation metric:** BLEU score against human-annotated ISL gloss
 
-### 3. Motion Mapping — `motion/motion_mapper.py`
+### 3. Motion Mapping -- `motion/motion_mapper.py`
 Maps each gloss token to a structured motion descriptor:
 
 ```json
@@ -154,10 +154,10 @@ Library covers 50+ common ISL signs. Unknown tokens fall back to fingerspelling.
 ### 4. Avatar Rendering
 Two rendering modes:
 
-**Browser (Three.js)** — `avatar/avatar_3d.html`
+**Browser (Three.js)** -- `avatar/avatar_3d.html`
 Full upper body 3D avatar with articulated finger bones. Runs in any browser, no installation needed. Load `gloss_output.json` to drive the animation.
 
-**Blender** — `avatar/avatar_integration.py`
+**Blender** -- `avatar/avatar_integration.py`
 Drives a Mixamo-rigged armature using the Blender Python API. Run from Blender's Scripting workspace with a rigged `.blend` file loaded.
 
 ---
@@ -166,7 +166,7 @@ Drives a Mixamo-rigged armature using the Blender Python API. Run from Blender's
 
 | Limitation | Planned Fix |
 |------------|-------------|
-| Rule-based gloss conversion | Replace with Seq2Seq transformer trained on English–ISL corpus |
+| Rule-based gloss conversion | Replace with Seq2Seq transformer trained on English-ISL corpus |
 | Whisper struggles with Indian accents | Fine-tune on Indian English academic speech / integrate Bhashini ASR |
 | ~50 signs in motion library | Expand with pose estimation from ISL video corpus |
 | No non-manual marker animation | Add facial expression blend shapes to avatar |
