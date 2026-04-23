@@ -4,13 +4,6 @@
 
 ---
 
-## Demo
-
-![Pipeline Demo](assets/demo.gif)
-*← Record a GIF of demo_viewer.html and place it here*
-
----
-
 ## Pipeline Overview
 
 ```
