@@ -2,15 +2,15 @@
 [   4.72s –   12.80s]  be taking this semester. my name is mossam, i am a professor at iit delhi. i finished my phd
 [  12.80s –   18.80s]  in 2007 from university of washington seattle where i worked in the field of ai. i was there for
 [  18.80s –   24.08s]  the fact as a faculty member for six years until 2013 and i moved back to iit delhi at the time
-[  24.96s –   30.96s]  in 2013 and from since then i have been in delhi teaching students at iit delhi
-[  30.96s –   36.88s]  and i have been taking this ai course, i have taught it several times and after taking
-[  36.88s –   45.68s]  it five, six times i felt the course content had come to a certain roundedness and finesse that
+[  24.96s –   31.20s]  in 2013 and from since then i have been in delhi teaching students at iit delhi
+[  31.20s –   36.88s]  and i have been taking this ai course, i have taught it several times and after taking
+[  36.88s –   45.68s]  it five six times i felt the course content had come to a certain roundedness and finesse that
 [  45.68s –   51.12s]  we could do an nptel course for it. i am really excited that we have recorded some fantastic lectures
 [  51.92s –   59.68s]  as part of the nptel program. this is a 12 week course. it is primarily going to be for the
 [  59.68s –   64.72s]  undergraduate students. it is an introductory course. as you may imagine that ai as a field has
 [  64.72s –   71.04s]  become extremely popular, extremely well known. these days a lot of newspapers are writing about ai
-[  71.04s –   78.88s]  the our prime minister modi has also done, has a policy for ai now, nithya yoga has brought out
-[  78.88s –   84.64s]  an ai document. everywhere in the world people are talking about ai and it is sort of the amount
+[  71.04s –   78.88s]  the our prime minister modi has also done has a policy for ai now, nithya yoga has brought out
+[  78.88s –   84.64s]  an ai document everywhere in the world people are talking about ai and it is sort of the amount
 [  84.64s –   90.72s]  of interest that the field is getting is phenomenal. i hope that many of you are interested in
 [  90.72s –   96.08s]  learning about the subject. now, of course, the subject is huge. ai itself is more the philosophy
 [  96.08s –  101.60s]  and less a particular material course materials. when we take the course we have to make some
@@ -21,31 +21,31 @@
 [ 125.52s –  131.36s]  would be able to understand the various facets of intelligence and computational intelligence
 [ 131.44s –  137.44s]  and how we model it how we model intelligence computationally. and then from there on you would be
 [ 137.44s –  144.40s]  able to go into advanced study from the basics that we have covered in this course. we will cover
-[ 145.76s –  150.80s]  the philosophy of ai. what does it mean for the machine to be intelligent? what are the various
-[ 150.80s –  156.00s]  ways in which machine can be considered intelligent? what are the various tasks that demonstrate
-[ 156.32s –  161.84s]  the demonstrate machine intelligence and then we will talk about the traditional ai as well as
-[ 161.84s –  167.44s]  the modern ai. in the traditional ai you may or may or may not be aware that ai already
-[ 167.44s –  176.56s]  has almost 60 plus years of history. with such a long history we cannot obviously cover everything
-[ 176.56s –  181.44s]  and not everything is relevant today, but we will give you a feel, a flavor for the lot of topics
-[ 181.52s –  185.92s]  we will talk about the traditional ai, the search or the interview, the knowledge representation
-[ 185.92s –  190.64s]  or the interview, but then we will talk more about the modern ai also which is more machine learning
-[ 190.64s –  195.44s]  or the interview. and again this would not be a machine learning course. we will not cover
-[ 195.44s –  200.00s]  the lot of topics that will be covered in a typical machine learning course, but we will introduce
-[ 200.00s –  204.32s]  the concepts and we will talk about reinforcement learning which is one part of machine learning
-[ 204.32s –  210.80s]  which often machine learning courses do not cover. we will take that particular topic and we will
-[ 210.80s –  219.12s]  study deeply inside the ai course. even within modern there are now two branches. the typical
-[ 219.12s –  225.52s]  modern ai was very probabilistic statistical whereas, the very modern the developments that
-[ 225.52s –  230.40s]  when that have been happening in the last 2 or 3 years have been of 5 years that have been
-[ 230.40s –  236.24s]  using neural models. we will cover both the probabilistic ai, the statistical ai as well as
-[ 236.24s –  242.88s]  we will cover the more neural the deep learning ai. we will obviously keep them at a very basic
-[ 242.88s –  250.08s]  level, but you would get the concepts that you can study it further in subsequent courses
-[ 250.08s –  254.88s]  we will follow one book the book is called artificial intelligence and modern approach by stuart
-[ 254.88s –  261.84s]  russell and peter novich. stuart russell is a well known professor in berkeley and peter novich
-[ 261.84s –  267.76s]  is a very well known researcher in google and they have both written this book which is almost
-[ 267.76s –  272.88s]  a bible of ai and we will not be able to cover the full bible because it has many many
-[ 272.88s –  276.40s]  chapters. we will cover about 50 percent of the book in this particular course
-[ 277.84s –  283.92s]  yeah. i think you would enjoy the course. we will not only talk about the computational
-[ 283.92s –  289.68s]  techniques, but we will also take detours here and they are talking about stories about how ai
-[ 289.68s –  297.84s]  evolved what can we as humans learn from ai, how can ai model primate behavior, monkey's behavior
-[ 297.84s –  301.92s]  and on forth. we will take several interesting detours and make the course fun and
-[ 301.92s –  315.28s]  interesting and engaging. i hope you take it. i hope you enjoyed. thank you very much
+[ 145.76s –  150.80s]  the philosophy of ai what does it mean for the machine to be intelligent, what are the various
+[ 150.80s –  156.32s]  ways in which machine can be considered intelligent, what are the various tasks that demonstrate
+[ 157.04s –  162.96s]  machine intelligence and then we will talk about the traditional ai as well as the modern ai
+[ 162.96s –  168.64s]  in the traditional ai you may or may or may not be aware that ai already has almost
+[ 170.24s –  176.56s]  60 plus years of history with such a long history we cannot obviously cover everything
+[ 176.56s –  181.44s]  and not everything is relevant today but we will give you a feel, a flavor for the lot of topic
+[ 181.44s –  185.20s]  we will talk about the traditional ai, the search or the interview, the knowledge
+[ 185.20s –  189.84s]  representation of the interview. but then we will talk more about the modern ai also which is
+[ 189.84s –  194.64s]  more machine learning oriented view. and again this would not be a machine learning course
+[ 194.64s –  199.04s]  we will not cover a lot of topics that will be covered in a typical machine learning course
+[ 199.04s –  203.44s]  but we will introduce the concepts and we will talk about reinforcement learning which is one
+[ 203.44s –  208.32s]  part of machine learning which often machine learning courses do not cover. we will take that
+[ 208.56s –  216.32s]  particular topic and we will study deeply inside the ai course. even within modern there are
+[ 216.32s –  222.56s]  now two branches. the typical modern ai was very probabilistic statistical whereas
+[ 222.56s –  228.16s]  the very modern the developments that have been happening in the last 2 or 3 years
+[ 228.16s –  234.16s]  have been of 5 years that have been using neural models. we will cover both the probabilistic ai
+[ 234.40s –  239.84s]  the statistically ai as well as we will cover the more neural the deep learning ai. we will
+[ 239.84s –  246.16s]  obviously keep them at a very basic level, but you would get the concepts that you can
+[ 247.68s –  252.72s]  study it further in subsequent courses. we will follow one book. the book is called artificial
+[ 252.72s –  257.84s]  intelligence modern approach by stuart russell and peter novich. stuart russell is a well-known
+[ 257.84s –  264.72s]  professor in berkeley and peter novich is a very well-known researcher in google and they have
+[ 264.72s –  271.12s]  both written this book which is almost a bible of ai and we will not be able to cover the
+[ 271.12s –  275.68s]  full bible because it has many many chapters. we will cover about 50 percent of the book in this
+[ 275.68s –  283.44s]  particular course. i think you would enjoy the course. we will not only talk about the
+[ 283.44s –  288.72s]  computational techniques, but we will also take detours here and there talking about stories
+[ 288.72s –  296.72s]  about how ai evolved. what can we as humans learn from ai? how can ai model primate behavior
+[ 296.72s –  301.28s]  monkeys behavior and on forth? we will take several interesting detours and make the
+[ 301.28s –  306.40s]  course fun and interesting and engaging. i hope you take it. i hope you enjoyed. thank you very much

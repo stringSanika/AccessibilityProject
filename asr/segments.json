@@ -34,14 +34,14 @@
   {
     "id": 4,
     "start": 24.96,
-    "end": 30.96,
+    "end": 31.2,
     "raw": "in 2013 and from since then I have been in Delhi teaching students at IIT Delhi.",
     "clean": "in 2013 and from since then i have been in delhi teaching students at iit delhi",
     "word_count": 16
   },
   {
     "id": 5,
-    "start": 30.96,
+    "start": 31.2,
     "end": 36.88,
     "raw": "And I have been taking this AI course, I have taught it several times and after you know taking",
     "clean": "and i have been taking this ai course, i have taught it several times and after taking",
@@ -51,8 +51,8 @@
     "id": 6,
     "start": 36.88,
     "end": 45.68,
-    "raw": "it five, six times I felt like the course content had come to a certain roundedness and finesse that",
-    "clean": "it five, six times i felt the course content had come to a certain roundedness and finesse that",
+    "raw": "it five six times I felt like the course content had come to a certain roundedness and finesse that",
+    "clean": "it five six times i felt the course content had come to a certain roundedness and finesse that",
     "word_count": 18
   },
   {
@@ -91,16 +91,16 @@
     "id": 11,
     "start": 71.04,
     "end": 78.88,
-    "raw": "the our Prime Minister Modi has also done, has a policy for AI now, Nithya Yoga has brought out",
-    "clean": "the our prime minister modi has also done, has a policy for ai now, nithya yoga has brought out",
+    "raw": "the our Prime Minister Modi has also done has a policy for AI now, Nithya Yoga has brought out",
+    "clean": "the our prime minister modi has also done has a policy for ai now, nithya yoga has brought out",
     "word_count": 19
   },
   {
     "id": 12,
     "start": 78.88,
     "end": 84.64,
-    "raw": "an AI document. Everywhere in the world people are talking about AI and it is sort of the amount",
-    "clean": "an ai document. everywhere in the world people are talking about ai and it is sort of the amount",
+    "raw": "an AI document everywhere in the world people are talking about AI and it is sort of the amount",
+    "clean": "an ai document everywhere in the world people are talking about ai and it is sort of the amount",
     "word_count": 19
   },
   {
@@ -147,7 +147,7 @@
     "id": 18,
     "start": 113.12,
     "end": 120.32,
-    "raw": "means is that we will cover a lot of topics. We will cover them at a certain level of depth,",
+    "raw": "means is that we will cover a lot of topics. We will cover them at a certain level of depth",
     "clean": "means is that we will cover a lot of topics. we will cover them at a certain level of depth",
     "word_count": 20
   },
@@ -187,224 +187,224 @@
     "id": 23,
     "start": 145.76,
     "end": 150.8,
-    "raw": "the philosophy of AI. What does it mean for the machine to be intelligent? What are the various",
-    "clean": "the philosophy of ai. what does it mean for the machine to be intelligent? what are the various",
+    "raw": "the philosophy of AI what does it mean for the machine to be intelligent, what are the various",
+    "clean": "the philosophy of ai what does it mean for the machine to be intelligent, what are the various",
     "word_count": 18
   },
   {
     "id": 24,
     "start": 150.8,
-    "end": 156.0,
-    "raw": "ways in which machine can be considered intelligent? What are the various tasks that demonstrate?",
-    "clean": "ways in which machine can be considered intelligent? what are the various tasks that demonstrate",
+    "end": 156.32,
+    "raw": "ways in which machine can be considered intelligent, what are the various tasks that demonstrate",
+    "clean": "ways in which machine can be considered intelligent, what are the various tasks that demonstrate",
     "word_count": 15
   },
   {
     "id": 25,
-    "start": 156.32,
-    "end": 161.84,
-    "raw": "The demonstrate machine intelligence and then we will talk about the traditional AI as well as",
-    "clean": "the demonstrate machine intelligence and then we will talk about the traditional ai as well as",
-    "word_count": 16
+    "start": 157.04,
+    "end": 162.96,
+    "raw": "machine intelligence and then we will talk about the traditional AI as well as the modern AI.",
+    "clean": "machine intelligence and then we will talk about the traditional ai as well as the modern ai",
+    "word_count": 17
   },
   {
     "id": 26,
-    "start": 161.84,
-    "end": 167.44,
-    "raw": "the modern AI. So, in the traditional AI I mean you may or may or may not be aware that AI already",
-    "clean": "the modern ai. in the traditional ai you may or may or may not be aware that ai already",
-    "word_count": 19
+    "start": 162.96,
+    "end": 168.64,
+    "raw": "So, in the traditional AI I mean you may or may or may not be aware that AI already has almost",
+    "clean": "in the traditional ai you may or may or may not be aware that ai already has almost",
+    "word_count": 18
   },
   {
     "id": 27,
-    "start": 167.44,
+    "start": 170.24,
     "end": 176.56,
-    "raw": "has almost 60 plus years of history. So, with such a long history we cannot obviously cover everything",
-    "clean": "has almost 60 plus years of history. with such a long history we cannot obviously cover everything",
-    "word_count": 17
+    "raw": "60 plus years of history right. So, with such a long history we cannot obviously cover everything",
+    "clean": "60 plus years of history with such a long history we cannot obviously cover everything",
+    "word_count": 15
   },
   {
     "id": 28,
     "start": 176.56,
     "end": 181.44,
-    "raw": "and not everything is relevant today, but we will give you a feel, a flavor for the lot of topics.",
-    "clean": "and not everything is relevant today, but we will give you a feel, a flavor for the lot of topics",
+    "raw": "and not everything is relevant today but we will give you a feel, a flavor for the lot of topic.",
+    "clean": "and not everything is relevant today but we will give you a feel, a flavor for the lot of topic",
     "word_count": 20
   },
   {
     "id": 29,
-    "start": 181.52,
-    "end": 185.92,
-    "raw": "So, we will talk about the traditional AI, the search or the interview, the knowledge representation",
-    "clean": "we will talk about the traditional ai, the search or the interview, the knowledge representation",
-    "word_count": 15
+    "start": 181.44,
+    "end": 185.2,
+    "raw": "So, we will talk about the traditional AI, the search or the interview, the knowledge",
+    "clean": "we will talk about the traditional ai, the search or the interview, the knowledge",
+    "word_count": 14
   },
   {
     "id": 30,
-    "start": 185.92,
-    "end": 190.64,
-    "raw": "or the interview, but then we will talk more about the modern AI also which is more machine learning",
-    "clean": "or the interview, but then we will talk more about the modern ai also which is more machine learning",
-    "word_count": 19
-  },
-  {
-    "id": 31,
-    "start": 190.64,
-    "end": 195.44,
-    "raw": "or the interview. And again this would not be a machine learning course. So, we will not cover",
-    "clean": "or the interview. and again this would not be a machine learning course. we will not cover",
+    "start": 185.2,
+    "end": 189.84,
+    "raw": "representation of the interview. But then we will talk more about the modern AI also which is",
+    "clean": "representation of the interview. but then we will talk more about the modern ai also which is",
     "word_count": 17
   },
   {
+    "id": 31,
+    "start": 189.84,
+    "end": 194.64,
+    "raw": "more machine learning oriented view. And again this would not be a machine learning course. So,",
+    "clean": "more machine learning oriented view. and again this would not be a machine learning course",
+    "word_count": 15
+  },
+  {
     "id": 32,
-    "start": 195.44,
-    "end": 200.0,
-    "raw": "the lot of topics that will be covered in a typical machine learning course, but we will introduce",
-    "clean": "the lot of topics that will be covered in a typical machine learning course, but we will introduce",
+    "start": 194.64,
+    "end": 199.04,
+    "raw": "we will not cover a lot of topics that will be covered in a typical machine learning course.",
+    "clean": "we will not cover a lot of topics that will be covered in a typical machine learning course",
     "word_count": 18
   },
   {
     "id": 33,
-    "start": 200.0,
-    "end": 204.32,
-    "raw": "the concepts and we will talk about reinforcement learning which is one part of machine learning,",
-    "clean": "the concepts and we will talk about reinforcement learning which is one part of machine learning",
+    "start": 199.04,
+    "end": 203.44,
+    "raw": "But we will introduce the concepts and we will talk about reinforcement learning which is one",
+    "clean": "but we will introduce the concepts and we will talk about reinforcement learning which is one",
     "word_count": 16
   },
   {
     "id": 34,
-    "start": 204.32,
-    "end": 210.8,
-    "raw": "which often machine learning courses do not cover. So, we will take that particular topic and we will",
-    "clean": "which often machine learning courses do not cover. we will take that particular topic and we will",
-    "word_count": 17
+    "start": 203.44,
+    "end": 208.32,
+    "raw": "part of machine learning which often machine learning courses do not cover. So, we will take that",
+    "clean": "part of machine learning which often machine learning courses do not cover. we will take that",
+    "word_count": 16
   },
   {
     "id": 35,
-    "start": 210.8,
-    "end": 219.12,
-    "raw": "study deeply inside the AI course. Even within modern there are now two branches. So, the typical",
-    "clean": "study deeply inside the ai course. even within modern there are now two branches. the typical",
+    "start": 208.56,
+    "end": 216.32,
+    "raw": "particular topic and we will study deeply inside the AI course. Even within modern there are",
+    "clean": "particular topic and we will study deeply inside the ai course. even within modern there are",
     "word_count": 16
   },
   {
     "id": 36,
-    "start": 219.12,
-    "end": 225.52,
-    "raw": "modern AI was very probabilistic statistical whereas, the very modern like the developments that",
-    "clean": "modern ai was very probabilistic statistical whereas, the very modern the developments that",
-    "word_count": 13
+    "start": 216.32,
+    "end": 222.56,
+    "raw": "now two branches. So, the typical modern AI was very probabilistic statistical whereas,",
+    "clean": "now two branches. the typical modern ai was very probabilistic statistical whereas",
+    "word_count": 12
   },
   {
     "id": 37,
-    "start": 225.52,
-    "end": 230.4,
-    "raw": "when that have been happening in the last 2 or 3 years have been of 5 years that have been",
-    "clean": "when that have been happening in the last 2 or 3 years have been of 5 years that have been",
-    "word_count": 20
+    "start": 222.56,
+    "end": 228.16,
+    "raw": "the very modern like the developments that have been happening in the last 2 or 3 years",
+    "clean": "the very modern the developments that have been happening in the last 2 or 3 years",
+    "word_count": 16
   },
   {
     "id": 38,
-    "start": 230.4,
-    "end": 236.24,
-    "raw": "using neural models. So, we will cover both the probabilistic AI, the statistical AI as well as",
-    "clean": "using neural models. we will cover both the probabilistic ai, the statistical ai as well as",
-    "word_count": 16
+    "start": 228.16,
+    "end": 234.16,
+    "raw": "have been of 5 years that have been using neural models. So, we will cover both the probabilistic AI,",
+    "clean": "have been of 5 years that have been using neural models. we will cover both the probabilistic ai",
+    "word_count": 18
   },
   {
     "id": 39,
-    "start": 236.24,
-    "end": 242.88,
-    "raw": "we will cover the more neural the deep learning AI. We will obviously keep them at a very basic",
-    "clean": "we will cover the more neural the deep learning ai. we will obviously keep them at a very basic",
-    "word_count": 19
+    "start": 234.4,
+    "end": 239.84,
+    "raw": "the statistically AI as well as we will cover the more neural the deep learning AI. We will",
+    "clean": "the statistically ai as well as we will cover the more neural the deep learning ai. we will",
+    "word_count": 18
   },
   {
     "id": 40,
-    "start": 242.88,
-    "end": 250.08,
-    "raw": "level, but you would get the right concepts so that you can study it further in subsequent courses.",
-    "clean": "level, but you would get the concepts that you can study it further in subsequent courses",
-    "word_count": 16
+    "start": 239.84,
+    "end": 246.16,
+    "raw": "obviously keep them at a very basic level, but you would get the right concepts so that you can",
+    "clean": "obviously keep them at a very basic level, but you would get the concepts that you can",
+    "word_count": 17
   },
   {
     "id": 41,
-    "start": 250.08,
-    "end": 254.88,
-    "raw": "We will follow one book the book is called Artificial Intelligence and Modern Approach by Stuart",
-    "clean": "we will follow one book the book is called artificial intelligence and modern approach by stuart",
+    "start": 247.68,
+    "end": 252.72,
+    "raw": "study it further in subsequent courses. We will follow one book. The book is called Artificial",
+    "clean": "study it further in subsequent courses. we will follow one book. the book is called artificial",
     "word_count": 16
   },
   {
     "id": 42,
-    "start": 254.88,
-    "end": 261.84,
-    "raw": "Russell and Peter Novich. Stuart Russell is a well known professor in Berkeley and Peter Novich",
-    "clean": "russell and peter novich. stuart russell is a well known professor in berkeley and peter novich",
-    "word_count": 16
+    "start": 252.72,
+    "end": 257.84,
+    "raw": "Intelligence Modern Approach by Stuart Russell and Peter Novich. Stuart Russell is a well-known",
+    "clean": "intelligence modern approach by stuart russell and peter novich. stuart russell is a well-known",
+    "word_count": 14
   },
   {
     "id": 43,
-    "start": 261.84,
-    "end": 267.76,
-    "raw": "is a very well known researcher in Google and they have both written this book which is almost",
-    "clean": "is a very well known researcher in google and they have both written this book which is almost",
-    "word_count": 18
+    "start": 257.84,
+    "end": 264.72,
+    "raw": "professor in Berkeley and Peter Novich is a very well-known researcher in Google and they have",
+    "clean": "professor in berkeley and peter novich is a very well-known researcher in google and they have",
+    "word_count": 16
   },
   {
     "id": 44,
-    "start": 267.76,
-    "end": 272.88,
-    "raw": "like a Bible of AI and we will not be able to cover the full Bible because it has many many",
-    "clean": "a bible of ai and we will not be able to cover the full bible because it has many many",
+    "start": 264.72,
+    "end": 271.12,
+    "raw": "both written this book which is almost like a Bible of AI and we will not be able to cover the",
+    "clean": "both written this book which is almost a bible of ai and we will not be able to cover the",
     "word_count": 20
   },
   {
     "id": 45,
-    "start": 272.88,
-    "end": 276.4,
-    "raw": "chapters. We will cover about 50 percent of the book in this particular course.",
-    "clean": "chapters. we will cover about 50 percent of the book in this particular course",
-    "word_count": 14
+    "start": 271.12,
+    "end": 275.68,
+    "raw": "full Bible because it has many many chapters. We will cover about 50 percent of the book in this",
+    "clean": "full bible because it has many many chapters. we will cover about 50 percent of the book in this",
+    "word_count": 19
   },
   {
     "id": 46,
-    "start": 277.84,
-    "end": 283.92,
-    "raw": "Yeah. So, I think you would enjoy the course. We will not only talk about the computational",
-    "clean": "yeah. i think you would enjoy the course. we will not only talk about the computational",
+    "start": 275.68,
+    "end": 283.44,
+    "raw": "particular course. So, I think you would enjoy the course. We will not only talk about the",
+    "clean": "particular course. i think you would enjoy the course. we will not only talk about the",
     "word_count": 16
   },
   {
     "id": 47,
-    "start": 283.92,
-    "end": 289.68,
-    "raw": "techniques, but we will also take detours here and they are talking about stories about how AI",
-    "clean": "techniques, but we will also take detours here and they are talking about stories about how ai",
-    "word_count": 17
+    "start": 283.44,
+    "end": 288.72,
+    "raw": "computational techniques, but we will also take detours here and there talking about stories",
+    "clean": "computational techniques, but we will also take detours here and there talking about stories",
+    "word_count": 14
   },
   {
     "id": 48,
-    "start": 289.68,
-    "end": 297.84,
-    "raw": "evolved what can we as humans learn from AI, how can AI model primate behavior, monkey's behavior",
-    "clean": "evolved what can we as humans learn from ai, how can ai model primate behavior, monkey's behavior",
-    "word_count": 17
+    "start": 288.72,
+    "end": 296.72,
+    "raw": "about how AI evolved. What can we as humans learn from AI? How can AI model primate behavior,",
+    "clean": "about how ai evolved. what can we as humans learn from ai? how can ai model primate behavior",
+    "word_count": 18
   },
   {
     "id": 49,
-    "start": 297.84,
-    "end": 301.92,
-    "raw": "and so on so forth. So, we will take several interesting detours and make the course fun and",
-    "clean": "and on forth. we will take several interesting detours and make the course fun and",
-    "word_count": 15
+    "start": 296.72,
+    "end": 301.28,
+    "raw": "monkeys behavior and so on so forth? So, we will take several interesting detours and make the",
+    "clean": "monkeys behavior and on forth? we will take several interesting detours and make the",
+    "word_count": 14
   },
   {
     "id": 50,
-    "start": 301.92,
-    "end": 315.28,
-    "raw": "interesting and engaging. I hope you take it. I hope you enjoyed. Thank you very much.",
-    "clean": "interesting and engaging. i hope you take it. i hope you enjoyed. thank you very much",
-    "word_count": 16
+    "start": 301.28,
+    "end": 306.4,
+    "raw": "course fun and interesting and engaging. I hope you take it. I hope you enjoyed. Thank you very much.",
+    "clean": "course fun and interesting and engaging. i hope you take it. i hope you enjoyed. thank you very much",
+    "word_count": 19
   }
 ]

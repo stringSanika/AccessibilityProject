@@ -8,9 +8,9 @@
            → FACT AS FACULTY MEMBER FOR SIX YEARS UNTIL 2013 AND I MOVED BACK IIT DELHI AT TIME
 [  24.96s]  in 2013 and from since then i have been in delhi teaching students at iit delhi
            → IN 2013 AND FROM SINCE THEN I HAVE BEEN IN DELHI TEACH STUDENTS AT IIT DELHI
-[  30.96s]  and i have been taking this ai course, i have taught it several times and after taking
+[  31.20s]  and i have been taking this ai course, i have taught it several times and after taking
            → AND I HAVE BEEN TAKING THIS AI COURSE I HAVE TEACH IT SEVERAL TIMES AND AFTER TAKING
-[  36.88s]  it five, six times i felt the course content had come to a certain roundedness and finesse that
+[  36.88s]  it five six times i felt the course content had come to a certain roundedness and finesse that
            → SIX TIMES I FELT COURSE CONTENT HAVE COME CERTAIN ROUNDEDNESS AND FINESSE THAT IT FIVE
 [  45.68s]  we could do an nptel course for it. i am really excited that we have recorded some fantastic lectures
            → NPTEL COURSE FOR IT I REALLY EXCITED THAT WE HAVE RECORDED SOME FANTASTIC LECTURES WE COULD
@@ -20,9 +20,9 @@
            → UNDERGRADUATE STUDENTS IT INTRODUCTORY COURSE AS YOU MAY IMAGINE THAT AI AS FIELD HAS
 [  64.72s]  become extremely popular, extremely well known. these days a lot of newspapers are writing about ai
            → BECOME EXTREMELY POPULAR EXTREMELY WELL KNOW THESE DAYS LOT OF NEWSPAPERS WRITE ABOUT AI
-[  71.04s]  the our prime minister modi has also done, has a policy for ai now, nithya yoga has brought out
+[  71.04s]  the our prime minister modi has also done has a policy for ai now, nithya yoga has brought out
            → MINISTER MODI HAS ALSO DO HAS POLICY FOR AI NOW NITHYA YOGA HAS BROUGHT OUT OUR PRIME
-[  78.88s]  an ai document. everywhere in the world people are talking about ai and it is sort of the amount
+[  78.88s]  an ai document everywhere in the world people are talking about ai and it is sort of the amount
            → AI DOCUMENT EVERYWHERE IN WORLD PEOPLE TALK ABOUT AI AND IT SORT OF AMOUNT
 [  84.64s]  of interest that the field is getting is phenomenal. i hope that many of you are interested in
            → OF INTEREST THAT FIELD GETTING PHENOMENAL I HOPE THAT MANY OF YOU INTERESTED IN
@@ -44,59 +44,59 @@
            → AND HOW WE MODEL IT HOW WE MODEL INTELLIGENCE COMPUTATIONALLY AND THEN FROM THERE ON YOU WOULD
 [ 137.44s]  able to go into advanced study from the basics that we have covered in this course. we will cover
            → ABLE GO INTO ADVANCED STUDY FROM BASICS THAT WE HAVE COVERED IN THIS COURSE WE WILL COVER
-[ 145.76s]  the philosophy of ai. what does it mean for the machine to be intelligent? what are the various
+[ 145.76s]  the philosophy of ai what does it mean for the machine to be intelligent, what are the various
            → PHILOSOPHY OF AI WHAT IT MEAN FOR MACHINE INTELLIGENT WHAT VARIOUS
-[ 150.80s]  ways in which machine can be considered intelligent? what are the various tasks that demonstrate
+[ 150.80s]  ways in which machine can be considered intelligent, what are the various tasks that demonstrate
            → WAYS IN WHICH MACHINE CAN CONSIDERED INTELLIGENT WHAT VARIOUS TASKS THAT DEMONSTRATE
-[ 156.32s]  the demonstrate machine intelligence and then we will talk about the traditional ai as well as
-           → DEMONSTRATE MACHINE INTELLIGENCE AND THEN WE WILL TALK ABOUT TRADITIONAL AI AS WELL AS
-[ 161.84s]  the modern ai. in the traditional ai you may or may or may not be aware that ai already
-           → MODERN AI IN TRADITIONAL AI YOU MAY OR MAY OR MAY AWARE THAT AI ALREADY NOT
-[ 167.44s]  has almost 60 plus years of history. with such a long history we cannot obviously cover everything
-           → HAS ALMOST 60 PLUS YEARS OF HISTORY WITH SUCH LONG HISTORY WE OBVIOUSLY COVER EVERYTHING NOT
-[ 176.56s]  and not everything is relevant today, but we will give you a feel, a flavor for the lot of topics
-           → AND EVERYTHING RELEVANT TODAY BUT WE WILL GIVE YOU FEEL FLAVOR FOR LOT OF TOPICS NOT
-[ 181.52s]  we will talk about the traditional ai, the search or the interview, the knowledge representation
-           → TALK ABOUT TRADITIONAL AI SEARCH OR INTERVIEW KNOWLEDGE REPRESENTATION WE WILL
-[ 185.92s]  or the interview, but then we will talk more about the modern ai also which is more machine learning
-           → OR INTERVIEW BUT THEN WE WILL TALK MORE ABOUT MODERN AI ALSO WHICH MORE MACHINE LEARN
-[ 190.64s]  or the interview. and again this would not be a machine learning course. we will not cover
-           → OR INTERVIEW AND AGAIN THIS WOULD MACHINE LEARN COURSE WE WILL COVER NOT
-[ 195.44s]  the lot of topics that will be covered in a typical machine learning course, but we will introduce
-           → LOT OF TOPICS THAT WILL COVERED IN TYPICAL MACHINE LEARN COURSE BUT WE WILL INTRODUCE
-[ 200.00s]  the concepts and we will talk about reinforcement learning which is one part of machine learning
-           → CONCEPTS AND WE WILL TALK ABOUT REINFORCEMENT LEARN WHICH ONE PART OF MACHINE LEARN
-[ 204.32s]  which often machine learning courses do not cover. we will take that particular topic and we will
-           → OFTEN MACHINE LEARN COURSES COVER WE WILL TAKE THAT PARTICULAR TOPIC AND WE WILL NOT WHICH
-[ 210.80s]  study deeply inside the ai course. even within modern there are now two branches. the typical
-           → STUDY DEEPLY INSIDE AI COURSE EVEN WITHIN MODERN THERE NOW TWO BRANCHES TYPICAL
-[ 219.12s]  modern ai was very probabilistic statistical whereas, the very modern the developments that
-           → MODERN AI PROBABILISTIC STATISTICAL WHEREAS MODERN DEVELOPMENTS THAT
-[ 225.52s]  when that have been happening in the last 2 or 3 years have been of 5 years that have been
-           → THAT HAVE BEEN HAPPENING IN LAST 2 OR 3 YEARS HAVE BEEN OF 5 YEARS THAT HAVE BEEN WHEN
-[ 230.40s]  using neural models. we will cover both the probabilistic ai, the statistical ai as well as
-           → USE NEURAL MODELS WE WILL COVER BOTH PROBABILISTIC AI STATISTICAL AI AS WELL AS
-[ 236.24s]  we will cover the more neural the deep learning ai. we will obviously keep them at a very basic
-           → COVER MORE NEURAL DEEP LEARN AI WE WILL OBVIOUSLY KEEP THEY AT BASIC WE WILL
-[ 242.88s]  level, but you would get the concepts that you can study it further in subsequent courses
-           → LEVEL BUT YOU WOULD GET CONCEPTS THAT YOU CAN STUDY IT FURTHER IN SUBSEQUENT COURSES
-[ 250.08s]  we will follow one book the book is called artificial intelligence and modern approach by stuart
-           → FOLLOW ONE BOOK BOOK CALL ARTIFICIAL INTELLIGENCE AND MODERN APPROACH BY STUART WE WILL
-[ 254.88s]  russell and peter novich. stuart russell is a well known professor in berkeley and peter novich
-           → RUSSELL AND PETER NOVICH STUART RUSSELL WELL KNOW PROFESSOR IN BERKELEY AND PETER NOVICH
-[ 261.84s]  is a very well known researcher in google and they have both written this book which is almost
-           → WELL KNOW RESEARCHER IN GOOGLE AND THEY HAVE BOTH WRITTEN THIS BOOK WHICH ALMOST
-[ 267.76s]  a bible of ai and we will not be able to cover the full bible because it has many many
-           → BIBLE OF AI AND WE WILL ABLE COVER FULL BIBLE BECAUSE IT HAS MANY MANY NOT
-[ 272.88s]  chapters. we will cover about 50 percent of the book in this particular course
-           → CHAPTERS WE WILL COVER ABOUT 50 PERCENT OF BOOK IN THIS PARTICULAR COURSE
-[ 277.84s]  yeah. i think you would enjoy the course. we will not only talk about the computational
-           → YEAH I THINK YOU WOULD ENJOY COURSE WE WILL ONLY TALK ABOUT COMPUTATIONAL NOT
-[ 283.92s]  techniques, but we will also take detours here and they are talking about stories about how ai
-           → TECHNIQUES BUT WE WILL ALSO TAKE DETOURS HERE AND THEY TALK ABOUT STORIES ABOUT HOW AI
-[ 289.68s]  evolved what can we as humans learn from ai, how can ai model primate behavior, monkey's behavior
-           → EVOLVED WHAT CAN WE AS HUMANS LEARN FROM AI HOW CAN AI MODEL PRIMATE BEHAVIOR MONKEY'S BEHAVIOR
-[ 297.84s]  and on forth. we will take several interesting detours and make the course fun and
-           → AND ON FORTH WE WILL TAKE SEVERAL INTERESTING DETOURS AND MAKE COURSE FUN AND
-[ 301.92s]  interesting and engaging. i hope you take it. i hope you enjoyed. thank you very much
-           → INTERESTING AND ENGAGING I HOPE YOU TAKE IT I HOPE YOU ENJOYED THANK YOU MUCH
+[ 157.04s]  machine intelligence and then we will talk about the traditional ai as well as the modern ai
+           → MACHINE INTELLIGENCE AND THEN WE WILL TALK ABOUT TRADITIONAL AI AS WELL AS MODERN AI
+[ 162.96s]  in the traditional ai you may or may or may not be aware that ai already has almost
+           → IN TRADITIONAL AI YOU MAY OR MAY OR MAY AWARE THAT AI ALREADY HAS ALMOST NOT
+[ 170.24s]  60 plus years of history with such a long history we cannot obviously cover everything
+           → 60 PLUS YEARS OF HISTORY WITH SUCH LONG HISTORY WE OBVIOUSLY COVER EVERYTHING NOT
+[ 176.56s]  and not everything is relevant today but we will give you a feel, a flavor for the lot of topic
+           → AND EVERYTHING RELEVANT TODAY BUT WE WILL GIVE YOU FEEL FLAVOR FOR LOT OF TOPIC NOT
+[ 181.44s]  we will talk about the traditional ai, the search or the interview, the knowledge
+           → TALK ABOUT TRADITIONAL AI SEARCH OR INTERVIEW KNOWLEDGE WE WILL
+[ 185.20s]  representation of the interview. but then we will talk more about the modern ai also which is
+           → REPRESENTATION OF INTERVIEW BUT THEN WE WILL TALK MORE ABOUT MODERN AI ALSO WHICH
+[ 189.84s]  more machine learning oriented view. and again this would not be a machine learning course
+           → MORE MACHINE LEARN ORIENTED VIEW AND AGAIN THIS WOULD MACHINE LEARN COURSE NOT
+[ 194.64s]  we will not cover a lot of topics that will be covered in a typical machine learning course
+           → COVER LOT OF TOPICS THAT WILL COVERED IN TYPICAL MACHINE LEARN COURSE WE WILL NOT
+[ 199.04s]  but we will introduce the concepts and we will talk about reinforcement learning which is one
+           → BUT WE WILL INTRODUCE CONCEPTS AND WE WILL TALK ABOUT REINFORCEMENT LEARN WHICH ONE
+[ 203.44s]  part of machine learning which often machine learning courses do not cover. we will take that
+           → PART OF MACHINE LEARN WHICH OFTEN MACHINE LEARN COURSES COVER WE WILL TAKE THAT NOT
+[ 208.56s]  particular topic and we will study deeply inside the ai course. even within modern there are
+           → PARTICULAR TOPIC AND WE WILL STUDY DEEPLY INSIDE AI COURSE EVEN WITHIN MODERN THERE
+[ 216.32s]  now two branches. the typical modern ai was very probabilistic statistical whereas
+           → NOW TWO BRANCHES TYPICAL MODERN AI PROBABILISTIC STATISTICAL WHEREAS
+[ 222.56s]  the very modern the developments that have been happening in the last 2 or 3 years
+           → MODERN DEVELOPMENTS THAT HAVE BEEN HAPPENING IN LAST 2 OR 3 YEARS
+[ 228.16s]  have been of 5 years that have been using neural models. we will cover both the probabilistic ai
+           → HAVE BEEN OF 5 YEARS THAT HAVE BEEN USE NEURAL MODELS WE WILL COVER BOTH PROBABILISTIC AI
+[ 234.40s]  the statistically ai as well as we will cover the more neural the deep learning ai. we will
+           → STATISTICALLY AI AS WELL AS WE WILL COVER MORE NEURAL DEEP LEARN AI WE WILL
+[ 239.84s]  obviously keep them at a very basic level, but you would get the concepts that you can
+           → OBVIOUSLY KEEP THEY AT BASIC LEVEL BUT YOU WOULD GET CONCEPTS THAT YOU CAN
+[ 247.68s]  study it further in subsequent courses. we will follow one book. the book is called artificial
+           → STUDY IT FURTHER IN SUBSEQUENT COURSES WE WILL FOLLOW ONE BOOK BOOK CALL ARTIFICIAL
+[ 252.72s]  intelligence modern approach by stuart russell and peter novich. stuart russell is a well-known
+           → INTELLIGENCE MODERN APPROACH BY STUART RUSSELL AND PETER NOVICH STUART RUSSELL WELLKNOWN
+[ 257.84s]  professor in berkeley and peter novich is a very well-known researcher in google and they have
+           → PROFESSOR IN BERKELEY AND PETER NOVICH WELLKNOWN RESEARCHER IN GOOGLE AND THEY HAVE
+[ 264.72s]  both written this book which is almost a bible of ai and we will not be able to cover the
+           → BOTH WRITTEN THIS BOOK WHICH ALMOST BIBLE OF AI AND WE WILL ABLE COVER NOT
+[ 271.12s]  full bible because it has many many chapters. we will cover about 50 percent of the book in this
+           → FULL BIBLE BECAUSE IT HAS MANY MANY CHAPTERS WE WILL COVER ABOUT 50 PERCENT OF BOOK IN THIS
+[ 275.68s]  particular course. i think you would enjoy the course. we will not only talk about the
+           → PARTICULAR COURSE I THINK YOU WOULD ENJOY COURSE WE WILL ONLY TALK ABOUT NOT
+[ 283.44s]  computational techniques, but we will also take detours here and there talking about stories
+           → COMPUTATIONAL TECHNIQUES BUT WE WILL ALSO TAKE DETOURS HERE AND THERE TALK ABOUT STORIES
+[ 288.72s]  about how ai evolved. what can we as humans learn from ai? how can ai model primate behavior
+           → ABOUT HOW AI EVOLVED WHAT CAN WE AS HUMANS LEARN FROM AI HOW CAN AI MODEL PRIMATE BEHAVIOR
+[ 296.72s]  monkeys behavior and on forth? we will take several interesting detours and make the
+           → MONKEYS BEHAVIOR AND ON FORTH WE WILL TAKE SEVERAL INTERESTING DETOURS AND MAKE
+[ 301.28s]  course fun and interesting and engaging. i hope you take it. i hope you enjoyed. thank you very much
+           → COURSE FUN AND INTERESTING AND ENGAGING I HOPE YOU TAKE IT I HOPE YOU ENJOYED THANK YOU MUCH

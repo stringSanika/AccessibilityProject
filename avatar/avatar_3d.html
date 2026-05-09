@@ -176,8 +176,8 @@ scene.background = new THREE.Color(0x1a1208);
 scene.fog        = new THREE.Fog(0x1a1208, 8, 20);
 
 const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-camera.position.set(0, 1.2, 3.8);
-camera.lookAt(0, 0.8, 0);
+camera.position.set(0, 0.85, 2.8);
+camera.lookAt(0, 0.45, 0);
 
 // Resize handler
 function resize(){
@@ -369,23 +369,23 @@ function buildArm(side){
   foreArm.add(hand);
 
   // Palm
-  const palm = box(0.1,0.11,0.04,skinMat);
-  palm.position.y = -0.055;
+  const palm = box(0.13,0.13,0.055,skinMat);
+  palm.position.y = -0.065;
   hand.add(palm);
 
   // Thumb
-  const thumb = buildFinger(0.022,0.018,0.055,0.048);
-  thumb.position.set(sign*0.055,-0.02,0);
+  const thumb = buildFinger(0.032,0.026,0.072,0.062);
+  thumb.position.set(sign*0.068,-0.02,0);
   thumb.rotation.z = sign * 1.1;
   thumb.rotation.x = -0.3;
   hand.add(thumb);
 
   // 4 Fingers
-  const fpos = [-0.035,-0.012,0.012,0.035];
-  const flen = [0.085,0.095,0.090,0.075];
+  const fpos = [-0.045,-0.015,0.015,0.044];
+  const flen = [0.115,0.130,0.122,0.100];
   const fingers = fpos.map((x,i)=>{
-    const f = buildFinger(0.018,0.015,flen[i],flen[i]*0.85);
-    f.position.set(x,-0.11,0);
+    const f = buildFinger(0.026,0.021,flen[i],flen[i]*0.85);
+    f.position.set(x,-0.13,0);
     hand.add(f);
     return f;
   });
@@ -447,21 +447,19 @@ avatar.add(leftArm.group);
 rightArm.group.position.set(0,0,0);
 leftArm.group.position.set(0,0,0);
 
-// Default arm pose — slightly bent at sides
+// KEY FIX: negative rotation.x sends arm toward +Z (toward camera)
+// neutral raised to -0.85/-0.95 so both hands sit at mid-chest level
 function setRestPose(){
-  // Right
-  rightArm.upperArm.rotation.z = -0.3;
-  rightArm.upperArm.rotation.x = 0.1;
-  rightArm.foreArm.rotation.x  = 0.4;
-  rightArm.hand.rotation.x     = 0.1;
-  // Left
-  leftArm.upperArm.rotation.z =  0.3;
-  leftArm.upperArm.rotation.x =  0.1;
-  leftArm.foreArm.rotation.x  =  0.4;
-  leftArm.hand.rotation.x     =  0.1;
-  // Rest finger pose
-  setFingers(rightArm, [0.15,0.15,0.15,0.15,0.15]);
-  setFingers(leftArm,  [0.15,0.15,0.15,0.15,0.15]);
+  rightArm.upperArm.rotation.z = -0.50;
+  rightArm.upperArm.rotation.x = -0.85;
+  rightArm.foreArm.rotation.x  = -0.95;
+  rightArm.hand.rotation.x     =  0.18;
+  leftArm.upperArm.rotation.z  =  0.50;
+  leftArm.upperArm.rotation.x  = -0.85;
+  leftArm.foreArm.rotation.x   = -0.95;
+  leftArm.hand.rotation.x      =  0.18;
+  setFingers(rightArm, [0.5,0.5,0.5,0.5,0.5]);
+  setFingers(leftArm,  [0.5,0.5,0.5,0.5,0.5]);
 }
 
 // ── Ground plane ───────────────────────────────────────────────
@@ -491,10 +489,10 @@ setRestPose();
 
 // setFingers: exts = [thumb, i, m, r, p] each 0=closed 1=extended
 function setFingers(armRig, exts){
-  const maxCurl = 1.4; // radians
+  const maxCurl = 2.0; // increased from 1.4 — makes closed vs open much clearer
   // Thumb
-  armRig.thumb._p1.rotation.x = (1-exts[0]) * 0.8;
-  armRig.thumb._p2.rotation.x = (1-exts[0]) * 0.6;
+  armRig.thumb._p1.rotation.x = (1-exts[0]) * 1.0;
+  armRig.thumb._p2.rotation.x = (1-exts[0]) * 0.8;
 
   armRig.fingers.forEach((f,i)=>{
     const curl = (1-exts[i+1]) * maxCurl;
@@ -504,108 +502,395 @@ function setFingers(armRig, exts){
   });
 }
 
-// Arm poses for different sign locations
+// FIXED: negative rotation.x = arm goes toward camera (+Z)
+// neutral raised so left hand matches right hand at mid-chest
 function setArmPose(armRig, pose, side){
   const s = side === 'R' ? 1 : -1;
   switch(pose){
     case 'neutral':
-      armRig.upperArm.rotation.z = s * -0.3;
-      armRig.upperArm.rotation.x = 0.1;
-      armRig.foreArm.rotation.x  = 0.4;
-      armRig.hand.rotation.x     = 0.1;
+      // Mid-chest level, in front — both arms symmetric at this height
+      armRig.upperArm.rotation.z = s * -0.50;
+      armRig.upperArm.rotation.x = -0.85;
+      armRig.foreArm.rotation.x  = -0.95;
+      armRig.hand.rotation.x     =  0.18;
       break;
     case 'chest':
-      armRig.upperArm.rotation.z = s * -0.15;
-      armRig.upperArm.rotation.x = 0.4;
-      armRig.foreArm.rotation.x  = 1.1;
-      armRig.hand.rotation.x     = -0.2;
-      break;
-    case 'forehead':
-      armRig.upperArm.rotation.z = s * -0.2;
-      armRig.upperArm.rotation.x = 0.8;
-      armRig.foreArm.rotation.x  = 1.4;
-      armRig.hand.rotation.x     = -0.3;
-      break;
-    case 'chin':
-      armRig.upperArm.rotation.z = s * -0.2;
-      armRig.upperArm.rotation.x = 0.6;
-      armRig.foreArm.rotation.x  = 1.2;
-      armRig.hand.rotation.x     = -0.1;
-      break;
-    case 'raised':
-      armRig.upperArm.rotation.z = s * -0.1;
-      armRig.upperArm.rotation.x = 1.0;
-      armRig.foreArm.rotation.x  = 0.9;
-      armRig.hand.rotation.x     = 0.0;
+      // Hand touching / near chest
+      armRig.upperArm.rotation.z = s * -0.18;
+      armRig.upperArm.rotation.x = -0.50;
+      armRig.foreArm.rotation.x  = -1.65;
+      armRig.hand.rotation.x     =  0.30;
       break;
     case 'forward':
-      armRig.upperArm.rotation.z = s * -0.25;
-      armRig.upperArm.rotation.x = 0.3;
-      armRig.foreArm.rotation.x  = 0.7;
-      armRig.hand.rotation.x     = 0.0;
+      // Hand extended forward, slightly higher than neutral
+      armRig.upperArm.rotation.z = s * -0.44;
+      armRig.upperArm.rotation.x = -0.92;
+      armRig.foreArm.rotation.x  = -1.02;
+      armRig.hand.rotation.x     =  0.14;
+      break;
+    case 'forehead':
+      // Hand raised to forehead
+      armRig.upperArm.rotation.z = s * -0.22;
+      armRig.upperArm.rotation.x = -1.18;
+      armRig.foreArm.rotation.x  = -1.28;
+      armRig.hand.rotation.x     =  0.40;
+      break;
+    case 'chin':
+      // Hand near chin/mouth-bottom
+      armRig.upperArm.rotation.z = s * -0.22;
+      armRig.upperArm.rotation.x = -1.00;
+      armRig.foreArm.rotation.x  = -1.45;
+      armRig.hand.rotation.x     =  0.22;
+      break;
+    case 'raised':
+      // Arm raised high, above head level
+      armRig.upperArm.rotation.z = s * -0.14;
+      armRig.upperArm.rotation.x = -1.32;
+      armRig.foreArm.rotation.x  = -1.08;
+      armRig.hand.rotation.x     =  0.06;
+      break;
+    case 'temple':
+      // Hand at side of head near temple
+      armRig.upperArm.rotation.z = s * -0.20;
+      armRig.upperArm.rotation.x = -1.14;
+      armRig.foreArm.rotation.x  = -1.40;
+      armRig.hand.rotation.x     =  0.44;
+      break;
+    case 'mouth':
+      // Hand near mouth/lips
+      armRig.upperArm.rotation.z = s * -0.22;
+      armRig.upperArm.rotation.x = -1.05;
+      armRig.foreArm.rotation.x  = -1.40;
+      armRig.hand.rotation.x     =  0.24;
+      break;
+    case 'ear':
+      // Hand near ear
+      armRig.upperArm.rotation.z = s * -0.08;
+      armRig.upperArm.rotation.x = -0.98;
+      armRig.foreArm.rotation.x  = -1.08;
+      armRig.hand.rotation.x     =  0.20;
+      break;
+    case 'wrist':
+      // Hand low, near waist/wrist
+      armRig.upperArm.rotation.z = s * -0.48;
+      armRig.upperArm.rotation.x = -0.65;
+      armRig.foreArm.rotation.x  = -0.72;
+      armRig.hand.rotation.x     = -0.08;
+      break;
+    case 'shoulder':
+      // Hand at shoulder level
+      armRig.upperArm.rotation.z = s * -0.18;
+      armRig.upperArm.rotation.x = -0.70;
+      armRig.foreArm.rotation.x  = -0.55;
+      armRig.hand.rotation.x     = -0.04;
+      break;
+    case 'sides':
+      // Arms out to the sides
+      armRig.upperArm.rotation.z = s * -0.82;
+      armRig.upperArm.rotation.x = -0.32;
+      armRig.foreArm.rotation.x  = -0.44;
+      armRig.hand.rotation.x     = -0.06;
       break;
   }
 }
 
 // Sign definitions: [R_fingers, R_pose, L_fingers, L_pose, headTilt]
 // fingers: [thumb,index,middle,ring,pinky] 0=closed 1=extended
+// ISL-corrected: two-handed signs use both hands, left stays at neutral height
 const SIGNS = {
-  // Greetings
-  HELLO:     [[.9,1,1,1,1],'forehead', [.3,.1,.1,.1,.1],'neutral',  0],
-  GOODBYE:   [[.9,1,1,1,1],'raised',   [.3,.1,.1,.1,.1],'neutral',  0],
-  THANK:     [[.9,1,1,1,1],'chin',     [.3,.1,.1,.1,.1],'neutral',  0.1],
+  // ── Greetings ──────────────────────────────────────────────────
+  // HELLO ISL: open-5 wave at forehead, left at neutral
+  HELLO:     [[1,1,1,1,1],'forehead',  [.5,.5,.5,.5,.5],'neutral',  0.1],
+  // GOODBYE ISL: open hand wave, left at neutral
+  GOODBYE:   [[1,1,1,1,1],'raised',    [.5,.5,.5,.5,.5],'neutral',  0],
+  // THANK ISL: flat-B from chin forward
+  THANK:     [[.9,1,1,1,1],'chin',     [.5,.5,.5,.5,.5],'neutral',  0.1],
 
-  // Pronouns
-  I:         [[.3,1,.1,.1,.1],'chest', [.3,.1,.1,.1,.1],'neutral',  0],
-  YOU:       [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', 0],
-  WE:        [[.3,1,.1,.1,.1],'chest', [.3,.1,.1,.1,.1],'neutral',  0],
-  HE:        [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', 0.1],
-  SHE:       [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', 0.1],
-  THEY:      [[.3,1,.1,.1,.1],'raised', [.3,.1,.1,.1,.1],'neutral', 0],
-  MY:        [[.9,1,1,1,1],'chest',    [.3,.1,.1,.1,.1],'neutral',  0],
-  YOUR:      [[.9,1,1,1,1],'forward',  [.3,.1,.1,.1,.1],'neutral',  0],
+  // ── Pronouns ───────────────────────────────────────────────────
+  // I ISL: index finger points to chest (one-handed), left rests
+  I:         [[.3,1,.1,.1,.1],'chest',   [.5,.5,.5,.5,.5],'neutral', 0],
+  // YOU ISL: index points forward at person
+  YOU:       [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral', 0],
+  // WE ISL: index sweeps from self outward (chest)
+  WE:        [[.3,1,.1,.1,.1],'chest',   [.5,.5,.5,.5,.5],'neutral', 0],
+  HE:        [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral', 0.1],
+  SHE:       [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral', 0.1],
+  THEY:      [[.3,1,.1,.1,.1],'raised',  [.5,.5,.5,.5,.5],'neutral', 0],
+  // MY ISL: flat-B presses chest (one-handed)
+  MY:        [[.9,1,1,1,1],'chest',     [.5,.5,.5,.5,.5],'neutral',  0],
+  YOUR:      [[.9,1,1,1,1],'forward',   [.5,.5,.5,.5,.5],'neutral',  0],
+  OUR:       [[.9,1,1,1,1],'chest',     [.9,1,1,1,1],'chest',        0],
+  HIS:       [[.9,1,1,1,1],'forward',   [.5,.5,.5,.5,.5],'neutral',  0.1],
+  HER:       [[.9,1,1,1,1],'forward',   [.5,.5,.5,.5,.5],'neutral',  0.1],
 
-  // Verbs
-  KNOW:      [[.9,1,1,1,1],'forehead', [.3,.1,.1,.1,.1],'neutral',  0],
-  THINK:     [[.3,1,.1,.1,.1],'forehead',[.3,.1,.1,.1,.1],'neutral',0.1],
-  UNDERSTAND:[[.3,1,.1,.1,.1],'forehead',[.3,.1,.1,.1,.1],'neutral',0],
-  LEARN:     [[.9,.5,.5,.5,.5],'forehead',[.3,.1,.1,.1,.1],'neutral',0],
+  // ── Common verbs ───────────────────────────────────────────────
+  // KNOW ISL: flat-B taps temple (one-handed)
+  KNOW:      [[.9,1,1,1,1],'temple',    [.5,.5,.5,.5,.5],'neutral',  0],
+  // THINK ISL: index circles at temple
+  THINK:     [[.3,1,.1,.1,.1],'temple', [.5,.5,.5,.5,.5],'neutral',  0.1],
+  // UNDERSTAND ISL: index flicks up at forehead
+  UNDERSTAND:[[.3,1,.1,.1,.1],'forehead',[.5,.5,.5,.5,.5],'neutral', 0],
+  // LEARN ISL: bent-5 moves from palm to forehead
+  LEARN:     [[.9,.5,.5,.5,.5],'forehead',[.9,1,1,1,1],'neutral',   0],
+  // TEACH ISL: flat-O both hands move forward from forehead (bilateral)
   TEACH:     [[.9,.5,.5,.5,.5],'forehead',[.9,.5,.5,.5,.5],'forehead',0],
-  EXPLAIN:   [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',   0],
-  GO:        [[.3,1,.1,.1,.1],'forward', [.3,.1,.1,.1,.1],'neutral', 0],
-  COME:      [[.3,1,.1,.1,.1],'chest',   [.3,.1,.1,.1,.1],'neutral', 0],
-  SHOW:      [[.3,1,.1,.1,.1],'forward', [.9,1,1,1,1],'forward',   0],
-  WORK:      [[.4,.1,.1,.1,.1],'neutral', [.4,.1,.1,.1,.1],'neutral',0],
-  HELP:      [[.9,1,1,1,1],'neutral',   [.4,.1,.1,.1,.1],'neutral', 0.1],
-  WANT:      [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',0],
-  NEED:      [[.3,.3,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', -0.1],
-  STOP:      [[.9,1,1,1,1],'neutral',   [.9,1,1,1,1],'neutral',    0],
-  START:     [[.3,1,.1,.1,.1],'neutral', [.9,1,1,1,1],'neutral',   0],
-  HAVE:      [[.9,.6,.6,.6,.6],'chest',  [.3,.1,.1,.1,.1],'neutral', 0],
+  // EXPLAIN ISL: both open-5 hands alternate forward (bilateral)
+  EXPLAIN:   [[1,1,1,1,1],'forward',    [1,1,1,1,1],'forward',        0],
+  GO:        [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',  0],
+  COME:      [[.3,1,.1,.1,.1],'chest',   [.5,.5,.5,.5,.5],'neutral',  0],
+  SHOW:      [[.3,1,.1,.1,.1],'forward', [.9,1,1,1,1],'neutral',      0],
+  // WORK ISL: two S-fists, right taps left wrist (bilateral)
+  WORK:      [[.1,.1,.1,.1,.1],'forward',[.1,.1,.1,.1,.1],'neutral',  0],
+  HELP:      [[.9,1,1,1,1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0.1],
+  // WANT ISL: bent-5 hands pull inward (bilateral)
+  WANT:      [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',  0],
+  NEED:      [[.3,.3,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',  -0.1],
+  USE:       [[.3,1,1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  STOP:      [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',       0],
+  START:     [[.3,1,.1,.1,.1],'forward', [.9,1,1,1,1],'forward',      0],
+  // HAVE ISL: bent-B both hands press chest (bilateral ISL)
+  HAVE:      [[.9,.6,.6,.6,.6],'chest',  [.9,.6,.6,.6,.6],'chest',    0],
+  // TAKE ISL: claw-5 grasps and pulls (one-handed)
+  TAKE:      [[.7,.7,.7,.7,.7],'forward',[.5,.5,.5,.5,.5],'neutral',  0],
+  TAKING:    [[.7,.7,.7,.7,.7],'forward',[.5,.5,.5,.5,.5],'neutral',  0],
+  // TALK ISL: both index fingers alternate at mouth (bilateral)
+  TALK:      [[.3,1,.1,.1,.1],'mouth',  [.3,1,.1,.1,.1],'mouth',      0.1],
+  COVER:     [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',       0],
+  COVERED:   [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',       0],
+  MAKE:      [[.1,.1,.1,.1,.1],'forward',[.1,.1,.1,.1,.1],'forward',  0],
+  BECOME:    [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',       0],
+  IMAGINE:   [[.3,1,.1,.1,.1],'temple', [.5,.5,.5,.5,.5],'neutral',   0.2],
+  DEMONSTRATE:[[.9,1,1,1,1],'forward', [.9,1,1,1,1],'forward',        0],
+  STUDY:     [[.3,1,1,.1,.1],'forward', [.9,1,1,1,1],'neutral',       0],
+  FEEL:      [[.9,.5,.5,.5,.5],'chest', [.5,.5,.5,.5,.5],'neutral',   0],
+  FELT:      [[.9,.5,.5,.5,.5],'chest', [.5,.5,.5,.5,.5],'neutral',   0],
+  MOVE:      [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',       0],
+  MOVED:     [[.9,1,1,1,1],'forward',   [.9,1,1,1,1],'forward',       0],
+  BRING:     [[1,1,1,1,1],'forward',    [1,1,1,1,1],'forward',         0],
+  BROUGHT:   [[1,1,1,1,1],'forward',    [1,1,1,1,1],'forward',         0],
+  RECORD:    [[.3,1,1,.1,.1],'forward', [.9,1,1,1,1],'forward',        0],
+  RECORDED:  [[.3,1,1,.1,.1],'forward', [.9,1,1,1,1],'forward',        0],
+  EVOLVE:    [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',  0.1],
+  EVOLVED:   [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',  0.1],
+  ENJOY:     [[1,1,1,1,1],'chest',      [1,1,1,1,1],'chest',           0.2],
+  ENJOYED:   [[1,1,1,1,1],'chest',      [1,1,1,1,1],'chest',           0.2],
+  // FINISH ISL: both open-5 flip outward (bilateral)
+  FINISH:    [[1,1,1,1,1],'forward',    [1,1,1,1,1],'forward',          0],
+  FINISHED:  [[1,1,1,1,1],'forward',    [1,1,1,1,1],'forward',          0],
+  DO:        [[.1,.1,.1,.1,.1],'forward',[.1,.1,.1,.1,.1],'neutral',  0],
+  WRITE:     [[.3,.5,.1,.1,.1],'forward',[.9,1,1,1,1],'neutral',       0],
+  WRITTEN:   [[.3,.5,.1,.1,.1],'forward',[.9,1,1,1,1],'neutral',       0],
+  READ:      [[.3,1,1,.1,.1],'forward', [.9,1,1,1,1],'neutral',        0],
+  CALL:      [[1,.1,.1,.1,1],'ear',     [.5,.5,.5,.5,.5],'neutral',    0],
 
-  // Questions
-  WHAT:      [[.9,1,1,1,1],'forward',  [.9,1,1,1,1],'forward',    -0.1],
-  WHERE:     [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', -0.1],
-  WHO:       [[.9,1,.1,.1,.1],'chin',   [.3,.1,.1,.1,.1],'neutral', -0.1],
-  HOW:       [[.9,.6,.6,.6,.6],'forward',[.9,.6,.6,.6,.6],'forward',-0.1],
-  WHEN:      [[.3,1,.1,.1,.1],'forward',[.3,.1,.1,.1,.1],'neutral', -0.1],
-  WHY:       [[.9,.1,.5,.1,.1],'forehead',[.3,.1,.1,.1,.1],'neutral',-0.15],
+  // ── Conjunctions / connectors ──────────────────────────────────
+  // AND ISL: open-5 closes to flat-O (one-handed)
+  AND:       [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  BUT:       [[.3,1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',   -0.1],
+  OR:        [[1,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   -0.1],
+  THEN:      [[.3,1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',    0],
+  BECAUSE:   [[.3,1,.1,.1,.1],'temple', [.5,.5,.5,.5,.5],'neutral',   0.15],
+  ALSO:      [[.8,.1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',   0],
+  FORTH:     [[.9,1,1,1,1],'forward',   [.5,.5,.5,.5,.5],'neutral',    0],
+  WELL:      [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',   0.1],
 
-  // Modifiers
-  NOT:       [[.9,.1,.1,.1,.1],'chin',  [.3,.1,.1,.1,.1],'neutral', -0.2],
-  GOOD:      [[.9,1,1,1,1],'chin',     [.3,.1,.1,.1,.1],'neutral',  0.15],
-  BAD:       [[.9,1,1,1,1],'chin',     [.3,.1,.1,.1,.1],'neutral', -0.15],
-  NEW:       [[.9,1,1,1,1],'forward',  [.3,.1,.1,.1,.1],'neutral',  0.1],
+  // ── Determiners / pointers ─────────────────────────────────────
+  // THIS ISL: index pointing down at a spot (one-handed), left at forward for symmetry
+  THIS:      [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',  -0.1],
+  THAT:      [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0.1],
+  // IT ISL: index pointing (one-handed)
+  IT:        [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  THESE:     [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  THERE:     [[.3,1,.1,.1,.1],'raised',  [.5,.5,.5,.5,.5],'neutral',  0.1],
+  HERE:      [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',  -0.1],
+  EVERYONE:  [[1,1,1,1,1],'raised',      [.5,.5,.5,.5,.5],'neutral',  0.1],
 
-  // Default / fingerspell
-  DEFAULT:   [[.9,1,1,1,1],'forward',  [.3,.1,.1,.1,.1],'neutral',  0],
+  // ── Auxiliary / modal verbs ────────────────────────────────────
+  WILL:      [[.3,1,.1,.1,.1],'chin',    [.5,.5,.5,.5,.5],'neutral',   0],
+  WOULD:     [[.9,.6,.6,.6,.6],'forward',[.5,.5,.5,.5,.5],'neutral',   0],
+  // CAN ISL: both A-fists downward (bilateral)
+  CAN:       [[.1,.1,.1,.1,.1],'forward',[.1,.1,.1,.1,.1],'forward',   0],
+  COULD:     [[.1,.1,.1,.1,.1],'forward',[.1,.1,.1,.1,.1],'neutral',   0],
+  HAS:       [[.9,.6,.6,.6,.6],'chest',  [.5,.5,.5,.5,.5],'neutral',   0],
+  BEEN:      [[.9,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',  -0.1],
+  MAY:       [[1,1,1,1,1],'forward',     [1,1,1,1,1],'neutral',        0.1],
+  YEAH:      [[.1,.1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',  -0.15],
+
+  // ── Prepositions ───────────────────────────────────────────────
+  // OF ISL: F-hand rotation
+  OF:        [[.3,.3,1,1,1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  // IN ISL: flat-O right inserts into C left (bilateral two-handed sign)
+  IN:        [[.3,.3,.3,.3,.3],'forward',[.7,.7,.7,.7,.7],'forward',   0],
+  // FOR ISL: index at temple twisting forward
+  FOR:       [[.3,1,.1,.1,.1],'temple',  [.5,.5,.5,.5,.5],'neutral',   0],
+  FROM:      [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  AT:        [[.9,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',   0],
+  // ON ISL: flat-B places on back of left hand (bilateral)
+  ON:        [[.9,1,1,1,1],'forward',    [.9,1,1,1,1],'forward',       0],
+  INTO:      [[.3,.3,.3,.3,.3],'forward',[.7,.7,.7,.7,.7],'forward',   0],
+  ABOUT:     [[.3,1,.1,.1,.1],'forward', [.9,1,1,1,1],'neutral',       0],
+  AS:        [[.8,.1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',   0],
+  UNTIL:     [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  SINCE:     [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',  -0.1],
+  AFTER:     [[.9,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',   0],
+  OUT:       [[.3,.3,.3,.3,.3],'forward',[.5,.5,.5,.5,.5],'neutral',   0],
+  BACK:      [[.9,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',  -0.1],
+
+  // ── Question words ─────────────────────────────────────────────
+  WHAT:      [[1,1,1,1,1],'forward',    [1,1,1,1,1],'forward',         -0.1],
+  WHERE:     [[.3,1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',   -0.1],
+  WHO:       [[.9,1,.1,.1,.1],'chin',   [.5,.5,.5,.5,.5],'neutral',   -0.1],
+  HOW:       [[.9,.6,.6,.6,.6],'forward',[.9,.6,.6,.6,.6],'forward',  -0.1],
+  WHEN:      [[.3,1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',   -0.1],
+  WHY:       [[.9,.1,.5,.1,.1],'temple', [.5,.5,.5,.5,.5],'neutral',  -0.15],
+  WHICH:     [[.8,.1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',  -0.15],
+
+  // ── Modifiers ──────────────────────────────────────────────────
+  NOT:       [[.9,.1,.1,.1,.1],'chin',   [.5,.5,.5,.5,.5],'neutral',  -0.2],
+  GOOD:      [[.9,1,1,1,1],'chin',       [.5,.5,.5,.5,.5],'neutral',   0.15],
+  BAD:       [[.9,1,1,1,1],'chin',       [.5,.5,.5,.5,.5],'neutral',  -0.15],
+  NEW:       [[.9,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',   0.1],
+  MODERN:    [[.2,.2,.2,.2,.2],'forward',[.5,.5,.5,.5,.5],'neutral',   0.1],
+  TRADITIONAL:[[.5,.3,.1,.1,.1],'forward',[.5,.3,.1,.1,.1],'forward', 0],
+  INTERESTING:[[.9,.5,.5,.5,.5],'chest', [.5,.5,.5,.5,.5],'neutral',  0.15],
+  EXTREMELY: [[.3,.3,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',   0.2],
+  OBVIOUSLY: [[1,1,1,1,1],'forward',     [1,1,1,1,1],'forward',       0.15],
+  EVERYTHING:[[1,1,1,1,1],'raised',      [1,1,1,1,1],'raised',         0.1],
+  POPULAR:   [[.3,1,1,.1,.1],'forward',  [.5,.5,.5,.5,.5],'neutral',   0.1],
+  FANTASTIC: [[.3,.3,1,1,1],'forward',   [.3,.3,1,1,1],'forward',      0.2],
+  TYPICAL:   [[.5,.3,.1,.1,.1],'forward',[.5,.3,.1,.1,.1],'forward',   0],
+  ALMOST:    [[.9,1,1,1,1],'forward',    [.9,1,1,1,1],'neutral',      -0.1],
+  REALLY:    [[.3,1,1,.1,.1],'forward',  [.5,.5,.5,.5,.5],'neutral',  0.15],
+  PARTICULAR:[[.3,1,1,.1,.1],'forward',  [.5,.5,.5,.5,.5],'neutral',   0],
+  VARIOUS:   [[.3,1,1,.1,.1],'raised',   [.5,.5,.5,.5,.5],'neutral',   0],
+  CERTAIN:   [[.7,.7,.7,.7,.7],'forward',[.5,.5,.5,.5,.5],'neutral',   0],
+  FULL:      [[.9,1,1,1,1],'forward',    [.9,1,1,1,1],'neutral',       0.1],
+  ONLY:      [[.3,1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  MUCH:      [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',  0.15],
+  SOME:      [[.9,1,1,1,1],'forward',    [.9,1,1,1,1],'neutral',       0],
+  BOTH:      [[.3,1,1,.1,.1],'forward',  [.3,1,1,.1,.1],'forward',     0],
+  ABLE:      [[.8,.1,.1,.1,.1],'forward',[.8,.1,.1,.1,.1],'forward',   0],
+  SPECIFIC:  [[.1,.1,.1,.1,.1],'forward',[.5,.5,.5,.5,.5],'neutral',  -0.1],
+  SEVERAL:   [[1,1,1,1,1],'forward',     [.5,.5,.5,.5,.5],'neutral',   0],
+  MANY:      [[.3,.3,.3,.3,.3],'raised', [.3,.3,.3,.3,.3],'raised',   0.1],
+  MORE:      [[.3,.3,.3,.3,.3],'forward',[.5,.5,.5,.5,.5],'neutral',   0],
+  LOT:       [[1,1,.1,.1,.1],'forward',  [.5,.5,.5,.5,.5],'neutral',  0.15],
+  ALL:       [[1,1,1,1,1],'raised',      [.5,.5,.5,.5,.5],'neutral',   0],
+  ONE:       [[.3,1,.1,.1,.1],'raised',  [.5,.5,.5,.5,.5],'neutral',   0],
+  FIVE:      [[1,1,1,1,1],'raised',      [.5,.5,.5,.5,.5],'neutral',   0],
+  SIX:       [[1,.1,.1,.1,1],'chin',     [.5,.5,.5,.5,.5],'neutral',   0],
+  PERCENT:   [[.3,1,1,.1,.1],'forward',  [.5,.5,.5,.5,.5],'neutral',   0],
+
+  // ── Academic / AI terms ────────────────────────────────────────
+  INTELLIGENCE: [[.3,1,.1,.1,.1],'temple',[.5,.5,.5,.5,.5],'neutral', 0.2],
+  INTELLIGENT:  [[.3,1,.1,.1,.1],'temple',[.5,.5,.5,.5,.5],'neutral', 0.1],
+  ARTIFICIAL:   [[.8,.1,.1,.1,.1],'forward',[.8,.1,.1,.1,.1],'forward',0],
+  MACHINE:      [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',0],
+  NEURAL:       [[.9,.5,.5,.5,.5],'forward',[.9,.5,.5,.5,.5],'forward',0],
+  COMPUTATIONAL:[[.7,.7,.7,.7,.7],'forward',[.7,.7,.7,.7,.7],'forward',0],
+  PROBABILISTIC:[[.3,1,1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral', 0],
+  STATISTICAL:  [[.1,.1,.1,.1,.1],'forward',[.1,.1,.1,.1,.1],'forward',0],
+  ALGORITHM:    [[.8,.1,.1,.1,.1],'forward',[.9,1,1,1,1],'neutral',    0],
+  DATA:         [[.7,1,.3,.3,.3],'forward', [.5,.5,.5,.5,.5],'neutral', 0],
+  TRAIN:        [[.8,.1,.1,.1,.1],'forward',[.8,.1,.1,.1,.1],'forward', 0],
+  UNDERGRADUATE:[[.3,1,1,.1,.1],'forward', [.9,1,1,1,1],'neutral',    -0.1],
+  INTRODUCTORY: [[.3,1,.1,.1,.1],'forward',[.9,1,1,1,1],'forward',     0],
+
+  // ── Common nouns ───────────────────────────────────────────────
+  COURSE:    [[.7,.7,.7,.7,.7],'forward', [.9,1,1,1,1],'neutral',      0],
+  COURSES:   [[.7,.7,.7,.7,.7],'forward', [.9,1,1,1,1],'neutral',      0],
+  BOOK:      [[.9,1,1,1,1],'forward',     [.9,1,1,1,1],'forward',       0],
+  FIELD:     [[.3,.3,1,1,1],'forward',    [.3,.3,1,1,1],'forward',      0],
+  TOPICS:    [[.3,1,.1,.1,.1],'forward',  [.5,.5,.5,.5,.5],'neutral',   0],
+  MODEL:     [[.2,.2,.2,.2,.2],'forward', [.2,.2,.2,.2,.2],'forward',   0],
+  LECTURE:   [[1,1,.1,.1,.1],'mouth',     [.5,.5,.5,.5,.5],'neutral',   0],
+  LECTURES:  [[1,1,.1,.1,.1],'mouth',     [.5,.5,.5,.5,.5],'neutral',   0],
+  PROGRAM:   [[.3,1,1,.1,.1],'forward',   [.9,1,1,1,1],'neutral',       0],
+  TIME:      [[.3,1,.1,.1,.1],'wrist',    [.5,.5,.5,.5,.5],'neutral',   0],
+  TIMES:     [[.3,1,.1,.1,.1],'wrist',    [.5,.5,.5,.5,.5],'neutral',   0],
+  WEEK:      [[.3,1,.1,.1,.1],'forward',  [.9,1,1,1,1],'neutral',       0],
+  YEAR:      [[.1,.1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  YEARS:     [[.1,.1,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  SEMESTER:  [[.1,.1,.1,.1,.1],'forward', [.9,1,1,1,1],'neutral',       0],
+  NAME:      [[.3,1,1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  NEWSPAPER: [[1,1,1,1,1],'forward',      [.9,1,1,1,1],'neutral',       0],
+  NEWSPAPERS:[[1,1,1,1,1],'forward',      [.9,1,1,1,1],'neutral',       0],
+  HISTORY:   [[.3,1,1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  SUBJECT:   [[.1,.1,.1,.1,.1],'chest',   [.5,.5,.5,.5,.5],'neutral',   0],
+  PART:      [[.9,1,1,1,1],'forward',     [.9,1,1,1,1],'neutral',       0],
+  DEPTH:     [[.9,1,1,1,1],'forward',     [.9,1,1,1,1],'neutral',      -0.2],
+  LEVEL:     [[.9,1,1,1,1],'forward',     [.9,1,1,1,1],'forward',       0],
+  CONTENT:   [[.7,.7,.7,.7,.7],'chest',   [.5,.5,.5,.5,.5],'neutral',   0],
+  PHILOSOPHY:[[.3,1,1,.1,.1],'forward',   [.3,1,1,.1,.1],'forward',    0.1],
+  INTERVIEW: [[.3,1,1,.1,.1],'forward',   [.3,1,1,.1,.1],'forward',     0],
+  CONCEPT:   [[.7,.7,.7,.7,.7],'temple',  [.5,.5,.5,.5,.5],'neutral',   0],
+  CONCEPTS:  [[.7,.7,.7,.7,.7],'temple',  [.5,.5,.5,.5,.5],'neutral',   0],
+  TECHNIQUE: [[.5,.3,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  TECHNIQUES:[[.5,.3,.1,.1,.1],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  STORY:     [[.3,.3,1,1,1],'forward',    [.3,.3,1,1,1],'forward',      0],
+  STORIES:   [[.3,.3,1,1,1],'forward',    [.3,.3,1,1,1],'forward',      0],
+  BEHAVIOR:  [[.9,1,1,1,1],'forward',     [.9,1,1,1,1],'forward',       0],
+  CHAPTER:   [[.7,.7,.7,.7,.7],'forward', [.9,1,1,1,1],'neutral',       0],
+  CHAPTERS:  [[.7,.7,.7,.7,.7],'forward', [.9,1,1,1,1],'neutral',       0],
+  POLICY:    [[.3,1,1,.1,.1],'forward',   [.9,1,1,1,1],'neutral',       0],
+  VIDEO:     [[.3,1,1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  FACT:      [[.3,.3,1,1,1],'forward',    [.9,1,1,1,1],'neutral',       0],
+  BIBLE:     [[.9,1,1,1,1],'forward',     [.9,1,1,1,1],'forward',       0],
+  INTRODUCTION:[[.3,1,.1,.1,.1],'forward',[.9,1,1,1,1],'forward',       0],
+  COMPUTER:  [[.7,.7,.7,.7,.7],'forward', [.9,1,1,1,1],'neutral',       0],
+  LANGUAGE:  [[1,1,.1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  NETWORK:   [[1,1,1,1,1],'forward',      [1,1,1,1,1],'forward',         0],
+  CLASS:     [[.7,.7,.7,.7,.7],'forward', [.5,.5,.5,.5,.5],'neutral',   0],
+  MEMBER:    [[.2,.2,.2,.2,.2],'shoulder',[.5,.5,.5,.5,.5],'neutral',   0],
+  MINISTER:  [[.2,.2,.2,.2,.2],'shoulder',[.2,.2,.2,.2,.2],'shoulder',  0],
+  PRIME:     [[.3,1,1,.1,.1],'raised',    [.5,.5,.5,.5,.5],'neutral',   0],
+  UNIVERSITY:[[.3,1,1,.1,.1],'raised',    [.5,.5,.5,.5,.5],'neutral',   0],
+  HUMAN:     [[.3,1,1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  HUMANS:    [[.3,1,1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  STUDENT:   [[.3,.3,.3,.3,.3],'forehead',[.5,.5,.5,.5,.5],'neutral',  0],
+  STUDENTS:  [[.3,.3,.3,.3,.3],'forehead',[.5,.5,.5,.5,.5],'neutral',  0],
+  TEACHER:   [[.3,.3,.3,.3,.3],'forehead',[.3,.3,.3,.3,.3],'forehead', 0],
+  PROFESSOR: [[.3,1,1,.1,.1],'forehead',  [.5,.5,.5,.5,.5],'neutral',  0],
+  RESEARCHER:[[.3,1,1,.1,.1],'forward',   [.9,1,1,1,1],'neutral',       0],
+  FACULTY:   [[.3,.3,1,1,1],'forward',    [.3,.3,1,1,1],'forward',      0],
+  PRIMATE:   [[.3,1,1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  MONKEY:    [[.7,.7,.7,.7,.7],'sides',   [.7,.7,.7,.7,.7],'sides',      0],
+  "MONKEY'S":[[.7,.7,.7,.7,.7],'sides',   [.7,.7,.7,.7,.7],'sides',      0],
+  TODAY:     [[1,.1,.1,.1,1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0],
+  HOME:      [[.3,.3,.3,.3,.3],'chin',    [.5,.5,.5,.5,.5],'neutral',   0],
+  HOPE:      [[.3,1,.1,.1,.1],'forehead', [.5,.5,.5,.5,.5],'neutral',  0.15],
+  EXCITED:   [[.9,.5,.5,.5,.5],'chest',   [.9,.5,.5,.5,.5],'chest',     0.2],
+  FUN:       [[.3,1,1,.1,.1],'forward',   [.5,.5,.5,.5,.5],'neutral',   0.2],
+  ENGAGING:  [[.9,.5,.5,.5,.5],'chest',   [.5,.5,.5,.5,.5],'neutral',  0.15],
+  YOGA:      [[1,.1,.1,.1,1],'forward',   [1,.1,.1,.1,1],'forward',     0.1],
+
+  // ── Proper nouns — fingerspell (open hand at forward) ──────────
+  AI:        [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  IIT:       [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  NPTEL:     [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  DELHI:     [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  PHD:       [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  GOOGLE:    [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  BERKELEY:  [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  WASHINGTON:[[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  SEATTLE:   [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  STUART:    [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  RUSSELL:   [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  PETER:     [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  NOVICH:    [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  MOSSAM:    [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  MODI:      [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+  NITHYA:    [[1,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
+
+  // ── Default / fallback ─────────────────────────────────────────
+  DEFAULT:   [[.9,1,1,1,1],'forward',    [.5,.5,.5,.5,.5],'neutral',    0],
 };
 
 // ── Smooth animation system ────────────────────────────────────
 let currentPose = null;
 let targetPose  = null;
 let poseT       = 1; // 0→1 blend
-const BLEND_SPD = 4; // blend speed
+const BLEND_SPD = 7; // blend speed
 
 function setPoseTarget(signName){
   currentPose = targetPose || SIGNS.DEFAULT;

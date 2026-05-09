@@ -89,6 +89,16 @@ HAND_SHAPES: dict[str, dict[str, tuple]] = {
         "r_ring_1":  (-5, 0, 0),  "r_pinky_1":  (-5, 0, 0),
         "r_thumb_1": (30, 0, 0),
     },
+    "open_b": {
+        "r_index_1": (-10, 0, 0), "r_middle_1": (-10, 0, 0),
+        "r_ring_1":  (-10, 0, 0), "r_pinky_1":  (-10, 0, 0),
+        "r_thumb_1": (20, 0, 0),
+    },
+    "flat_5": {
+        "r_index_1": (-10, 0, 10), "r_middle_1": (-10, 0, 0),
+        "r_ring_1":  (-10, 0,-10), "r_pinky_1":  (-10, 0,-15),
+        "r_thumb_1": (-15, 0,30),
+    },
     "index_1": {
         "r_index_1": (0, 0, 0),   "r_middle_1": (80, 0, 0),
         "r_ring_1":  (80, 0, 0),  "r_pinky_1":  (80, 0, 0),
@@ -104,9 +114,24 @@ HAND_SHAPES: dict[str, dict[str, tuple]] = {
         "r_ring_1":  (90, 0, 0),  "r_pinky_1":  (90, 0, 0),
         "r_thumb_1": (40, 0, 20),
     },
+    "a_hand": {
+        "r_index_1": (85, 0, 0),  "r_middle_1": (85, 0, 0),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (-5, 0, 25),
+    },
+    "bent_b": {
+        "r_index_1": (50, 0, 0),  "r_middle_1": (50, 0, 0),
+        "r_ring_1":  (50, 0, 0),  "r_pinky_1":  (50, 0, 0),
+        "r_thumb_1": (30, 0, 0),
+    },
     "bent_5": {
         "r_index_1": (45, 0, 0),  "r_middle_1": (45, 0, 0),
         "r_ring_1":  (45, 0, 0),  "r_pinky_1":  (45, 0, 0),
+        "r_thumb_1": (20, 0, 0),
+    },
+    "bent_middle": {
+        "r_index_1": (-5, 0, 0),  "r_middle_1": (70, 0, 0),
+        "r_ring_1":  (-5, 0, 0),  "r_pinky_1":  (-5, 0, 0),
         "r_thumb_1": (20, 0, 0),
     },
     "v_hand": {
@@ -114,7 +139,92 @@ HAND_SHAPES: dict[str, dict[str, tuple]] = {
         "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
         "r_thumb_1": (40, 0, 0),
     },
-    "fingerspell": {   # placeholder — fingerspell handled per-letter in real impl
+    "u_hand": {
+        "r_index_1": (0, 0, 5),   "r_middle_1": (0, 0,-5),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (40, 0, 0),
+    },
+    "l_hand": {
+        "r_index_1": (0, 0, 0),   "r_middle_1": (85, 0, 0),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (-10, 0,-30),
+    },
+    "y_hand": {
+        "r_index_1": (85, 0, 0),  "r_middle_1": (85, 0, 0),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (-5, 0, 0),
+        "r_thumb_1": (-10, 0,-25),
+    },
+    "c_hand": {
+        "r_index_1": (40, 0, 0),  "r_middle_1": (40, 0, 0),
+        "r_ring_1":  (40, 0, 0),  "r_pinky_1":  (40, 0, 0),
+        "r_thumb_1": (30, 0,-20),
+    },
+    "claw_5": {
+        "r_index_1": (60, 0, 0),  "r_middle_1": (60, 0, 0),
+        "r_ring_1":  (60, 0, 0),  "r_pinky_1":  (60, 0, 0),
+        "r_thumb_1": (40, 0,-15),
+    },
+    "flat_o": {
+        "r_index_1": (70, 0, 0),  "r_middle_1": (70, 0, 0),
+        "r_ring_1":  (70, 0, 0),  "r_pinky_1":  (70, 0, 0),
+        "r_thumb_1": (50, 0,-20),
+    },
+    "x_hook": {
+        "r_index_1": (50, 20, 0), "r_middle_1": (85, 0, 0),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (35, 0, 0),
+    },
+    "modified_x": {
+        "r_index_1": (45, 15, 0), "r_middle_1": (85, 0, 0),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (30, 0, 0),
+    },
+    "f_hand": {
+        "r_index_1": (55, 0, 0),  "r_middle_1": (-5, 0, 0),
+        "r_ring_1":  (-5, 0, 0),  "r_pinky_1":  (-5, 0, 0),
+        "r_thumb_1": (40, 0,-15),
+    },
+    "d_hand": {
+        "r_index_1": (0, 0, 0),   "r_middle_1": (65, 0, 0),
+        "r_ring_1":  (65, 0, 0),  "r_pinky_1":  (65, 0, 0),
+        "r_thumb_1": (45, 0,-15),
+    },
+    "h_hand": {
+        "r_index_1": (0, 0, 5),   "r_middle_1": (0, 0,-5),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (50, 0, 10),
+    },
+    "m_hand": {
+        "r_index_1": (90, 0, 0),  "r_middle_1": (90, 0, 0),
+        "r_ring_1":  (90, 0, 0),  "r_pinky_1":  (90, 0, 0),
+        "r_thumb_1": (30, 0, 10),
+    },
+    "p_hand": {
+        "r_index_1": (0, 0, 0),   "r_middle_1": (0, 90, 0),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (35, 0,-10),
+    },
+    "r_hand": {
+        "r_index_1": (0, 0,-10),  "r_middle_1": (0, 0, 10),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (40, 0, 0),
+    },
+    "t_hand": {
+        "r_index_1": (85, 0, 0),  "r_middle_1": (85, 0, 0),
+        "r_ring_1":  (85, 0, 0),  "r_pinky_1":  (85, 0, 0),
+        "r_thumb_1": (30, 0, 5),
+    },
+    "b_hand": {
+        "r_index_1": (-5, 0, 0),  "r_middle_1": (-5, 0, 0),
+        "r_ring_1":  (-5, 0, 0),  "r_pinky_1":  (-5, 0, 0),
+        "r_thumb_1": (60, 0, 15),
+    },
+    "flat_5": {
+        "r_index_1": (-10, 0, 12), "r_middle_1": (-10, 0, 0),
+        "r_ring_1":  (-10, 0,-12), "r_pinky_1":  (-10, 0,-18),
+        "r_thumb_1": (-15, 0, 35),
+    },
+    "fingerspell": {
         "r_index_1": (0, 0, 0),   "r_middle_1": (0, 0, 0),
         "r_ring_1":  (0, 0, 0),   "r_pinky_1":  (0, 0, 0),
         "r_thumb_1": (0, 0, 0),
