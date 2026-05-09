@@ -191,3 +191,7 @@ Built under **Prof. PVM Rao**, Department of Electrical Engineering, IIT Delhi.
 **Vaishnavi Rai**
 B.Tech CSE, IIT Delhi (3rd year)
 [cs1230657@iitd.ac.in](mailto:cs1230657@iitd.ac.in)
+
+**Avani Komalkar**
+B.Tech CSE, IIT Delhi (3rd year)
+[cs5230325@iitd.ac.in](mailto:cs5230325@iitd.ac.in)
