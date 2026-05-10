@@ -252,7 +252,7 @@ update_avatar.py
 
 ## Supervisor
 
-Built under **Prof. PVM Rao**, Department of Electrical Engineering, IIT Delhi.
+Built under **Prof. PVM Rao**, Department of Design & Department of Mechanical Engineering, IIT Delhi.
 
 ---
 
