@@ -1,0 +1,4718 @@
+[
+  {
+    "sign": "12",
+    "r_fingers": [
+      0.4,
+      0.74,
+      0.57,
+      0.3,
+      0.23
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.063,
+      "upperArm_z": -0.301,
+      "foreArm_x": -1.12,
+      "hand_z": -0.231,
+      "hand_y": 2.785
+    },
+    "l_angles": {
+      "upperArm_x": -0.098,
+      "upperArm_z": 0.084,
+      "foreArm_x": -0.725,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 85,
+    "hand_frames": 34
+  },
+  {
+    "sign": "2",
+    "r_fingers": [
+      0.47,
+      0.48,
+      0.58,
+      0.41,
+      0.18
+    ],
+    "l_fingers": [
+      0.8,
+      0.75,
+      0.73,
+      0.66,
+      0.5
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.003,
+      "upperArm_z": -0.34,
+      "foreArm_x": -1.131,
+      "hand_z": -0.346,
+      "hand_y": 2.896
+    },
+    "l_angles": {
+      "upperArm_x": -0.185,
+      "upperArm_z": 0.151,
+      "foreArm_x": -0.78,
+      "hand_z": 0.28,
+      "hand_y": -0.172
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 111,
+    "hand_frames": 43
+  },
+  {
+    "sign": "3",
+    "r_fingers": [
+      0.5,
+      0.69,
+      0.81,
+      0.7,
+      0.32
+    ],
+    "l_fingers": [
+      0.62,
+      0.82,
+      0.96,
+      0.62,
+      0.6
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.033,
+      "upperArm_z": -0.293,
+      "foreArm_x": -1.144,
+      "hand_z": -0.334,
+      "hand_y": 2.869
+    },
+    "l_angles": {
+      "upperArm_x": -0.084,
+      "upperArm_z": 0.084,
+      "foreArm_x": -0.755,
+      "hand_z": 0.081,
+      "hand_y": -0.651
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 91,
+    "hand_frames": 33
+  },
+  {
+    "sign": "60",
+    "r_fingers": [
+      0.66,
+      0.32,
+      0.32,
+      0.33,
+      0.39
+    ],
+    "l_fingers": [
+      0.68,
+      1.0,
+      1.0,
+      1.0,
+      0.77
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.237,
+      "upperArm_z": -0.399,
+      "foreArm_x": -1.101,
+      "hand_z": -0.51,
+      "hand_y": 2.665
+    },
+    "l_angles": {
+      "upperArm_x": -0.158,
+      "upperArm_z": 0.162,
+      "foreArm_x": -0.72,
+      "hand_z": -0.108,
+      "hand_y": -2.96
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 119,
+    "hand_frames": 53
+  },
+  {
+    "sign": "ABLE",
+    "r_fingers": [
+      0.77,
+      0.32,
+      0.29,
+      0.25,
+      0.17
+    ],
+    "l_fingers": [
+      0.79,
+      0.32,
+      0.31,
+      0.25,
+      0.2
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.154,
+      "upperArm_z": -0.454,
+      "foreArm_x": -0.959,
+      "hand_z": -0.425,
+      "hand_y": 0.342
+    },
+    "l_angles": {
+      "upperArm_x": -1.118,
+      "upperArm_z": 0.46,
+      "foreArm_x": -0.968,
+      "hand_z": -0.266,
+      "hand_y": -2.587
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 71,
+    "hand_frames": 46
+  },
+  {
+    "sign": "ADVANCED",
+    "r_fingers": [
+      0.54,
+      0.49,
+      0.39,
+      0.35,
+      0.38
+    ],
+    "l_fingers": [
+      0.49,
+      0.41,
+      0.29,
+      0.3,
+      0.37
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.549,
+      "upperArm_z": -0.378,
+      "foreArm_x": -0.984,
+      "hand_z": -0.34,
+      "hand_y": 2.277
+    },
+    "l_angles": {
+      "upperArm_x": -1.238,
+      "upperArm_z": 0.427,
+      "foreArm_x": -1.016,
+      "hand_z": -0.479,
+      "hand_y": -1.716
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 826,
+    "hand_frames": 1102
+  },
+  {
+    "sign": "AFTER",
+    "r_fingers": [
+      0.59,
+      0.74,
+      0.8,
+      0.78,
+      0.63
+    ],
+    "l_fingers": [
+      0.68,
+      0.21,
+      0.28,
+      0.46,
+      0.76
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.052,
+      "upperArm_z": -0.373,
+      "foreArm_x": -0.994,
+      "hand_z": -0.176,
+      "hand_y": 1.279
+    },
+    "l_angles": {
+      "upperArm_x": -0.118,
+      "upperArm_z": 0.064,
+      "foreArm_x": -0.784,
+      "hand_z": 0.525,
+      "hand_y": -1.494
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 84,
+    "hand_frames": 38
+  },
+  {
+    "sign": "AGAIN",
+    "r_fingers": [
+      0.43,
+      0.62,
+      0.37,
+      0.23,
+      0.19
+    ],
+    "l_fingers": [
+      0.46,
+      0.5,
+      1.0,
+      0.88,
+      0.54
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.062,
+      "upperArm_z": -0.393,
+      "foreArm_x": -0.966,
+      "hand_z": -0.177,
+      "hand_y": 2.855
+    },
+    "l_angles": {
+      "upperArm_x": -0.18,
+      "upperArm_z": 0.082,
+      "foreArm_x": -0.801,
+      "hand_z": 0.143,
+      "hand_y": -0.761
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 101,
+    "hand_frames": 74
+  },
+  {
+    "sign": "ALMOST",
+    "r_fingers": [
+      0.59,
+      0.48,
+      0.44,
+      0.9,
+      1.0
+    ],
+    "l_fingers": [
+      0.5,
+      0.33,
+      0.3,
+      0.29,
+      0.49
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.167,
+      "upperArm_z": -0.042,
+      "foreArm_x": -1.158,
+      "hand_z": -0.493,
+      "hand_y": 1.016
+    },
+    "l_angles": {
+      "upperArm_x": -1.155,
+      "upperArm_z": 0.176,
+      "foreArm_x": -1.084,
+      "hand_z": -0.267,
+      "hand_y": -1.213
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 114,
+    "hand_frames": 107
+  },
+  {
+    "sign": "ALREADY",
+    "r_fingers": [
+      0.55,
+      0.68,
+      0.76,
+      0.78,
+      0.61
+    ],
+    "l_fingers": [
+      0.52,
+      0.7,
+      0.75,
+      0.73,
+      0.62
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.904,
+      "upperArm_z": -0.132,
+      "foreArm_x": -1.0,
+      "hand_z": 0.231,
+      "hand_y": 2.786
+    },
+    "l_angles": {
+      "upperArm_x": -0.92,
+      "upperArm_z": 0.13,
+      "foreArm_x": -0.987,
+      "hand_z": 0.058,
+      "hand_y": -0.735
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 77,
+    "hand_frames": 43
+  },
+  {
+    "sign": "AND",
+    "r_fingers": [
+      0.31,
+      0.33,
+      0.36,
+      0.37,
+      0.33
+    ],
+    "l_fingers": [
+      0.41,
+      0.7,
+      0.76,
+      0.64,
+      0.6
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.158,
+      "upperArm_z": -0.207,
+      "foreArm_x": -1.068,
+      "hand_z": -0.399,
+      "hand_y": 0.836
+    },
+    "l_angles": {
+      "upperArm_x": -1.131,
+      "upperArm_z": 0.273,
+      "foreArm_x": -1.038,
+      "hand_z": -0.407,
+      "hand_y": -2.317
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 553,
+    "hand_frames": 647
+  },
+  {
+    "sign": "APPROACH",
+    "r_fingers": [
+      0.54,
+      0.55,
+      0.56,
+      0.64,
+      0.65
+    ],
+    "l_fingers": [
+      0.52,
+      0.79,
+      0.92,
+      0.85,
+      0.69
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.401,
+      "upperArm_z": -0.346,
+      "foreArm_x": -1.018,
+      "hand_z": -0.446,
+      "hand_y": 0.883
+    },
+    "l_angles": {
+      "upperArm_x": -1.016,
+      "upperArm_z": 0.263,
+      "foreArm_x": -1.019,
+      "hand_z": -0.48,
+      "hand_y": -2.486
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 458,
+    "hand_frames": 768
+  },
+  {
+    "sign": "AT",
+    "r_fingers": [
+      0.55,
+      0.64,
+      0.67,
+      0.68,
+      0.61
+    ],
+    "l_fingers": [
+      0.5,
+      0.48,
+      0.33,
+      0.31,
+      0.32
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.211,
+      "upperArm_z": -0.199,
+      "foreArm_x": -1.186,
+      "hand_z": -0.392,
+      "hand_y": 0.931
+    },
+    "l_angles": {
+      "upperArm_x": -1.122,
+      "upperArm_z": 0.29,
+      "foreArm_x": -1.162,
+      "hand_z": -0.293,
+      "hand_y": -1.687
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 544,
+    "hand_frames": 822
+  },
+  {
+    "sign": "AWARE",
+    "r_fingers": [
+      0.32,
+      0.67,
+      0.44,
+      0.39,
+      0.3
+    ],
+    "l_fingers": [
+      0.35,
+      0.8,
+      0.37,
+      0.28,
+      0.26
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.218,
+      "upperArm_z": -0.426,
+      "foreArm_x": -0.95,
+      "hand_z": -0.405,
+      "hand_y": 0.525
+    },
+    "l_angles": {
+      "upperArm_x": -0.758,
+      "upperArm_z": 0.196,
+      "foreArm_x": -0.974,
+      "hand_z": -0.212,
+      "hand_y": -1.989
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 664,
+    "hand_frames": 657
+  },
+  {
+    "sign": "BACK",
+    "r_fingers": [
+      0.57,
+      0.5,
+      0.44,
+      0.49,
+      0.39
+    ],
+    "l_fingers": [
+      0.49,
+      0.61,
+      0.5,
+      0.31,
+      0.22
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.122,
+      "upperArm_z": -0.285,
+      "foreArm_x": -0.967,
+      "hand_z": -0.192,
+      "hand_y": 0.952
+    },
+    "l_angles": {
+      "upperArm_x": -0.851,
+      "upperArm_z": 0.481,
+      "foreArm_x": -1.079,
+      "hand_z": -0.504,
+      "hand_y": -2.759
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 118,
+    "hand_frames": 177
+  },
+  {
+    "sign": "BAD",
+    "r_fingers": [
+      0.75,
+      0.59,
+      0.78,
+      0.81,
+      0.78
+    ],
+    "l_fingers": [
+      0.8,
+      0.74,
+      0.75,
+      0.72,
+      0.7
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.982,
+      "upperArm_z": -0.262,
+      "foreArm_x": -0.967,
+      "hand_z": -0.154,
+      "hand_y": 1.427
+    },
+    "l_angles": {
+      "upperArm_x": -0.076,
+      "upperArm_z": 0.031,
+      "foreArm_x": -0.773,
+      "hand_z": -0.094,
+      "hand_y": -1.649
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 64,
+    "hand_frames": 36
+  },
+  {
+    "sign": "BASIC",
+    "r_fingers": [
+      0.6,
+      0.58,
+      0.6,
+      0.58,
+      0.51
+    ],
+    "l_fingers": [
+      0.56,
+      0.67,
+      0.8,
+      0.92,
+      0.79
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.566,
+      "upperArm_z": -0.52,
+      "foreArm_x": -0.729,
+      "hand_z": -0.212,
+      "hand_y": 0.613
+    },
+    "l_angles": {
+      "upperArm_x": -1.04,
+      "upperArm_z": 0.126,
+      "foreArm_x": -0.923,
+      "hand_z": -0.165,
+      "hand_y": -2.128
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 105,
+    "hand_frames": 89
+  },
+  {
+    "sign": "BASICS",
+    "r_fingers": [
+      0.57,
+      0.62,
+      0.64,
+      0.63,
+      0.58
+    ],
+    "l_fingers": [
+      0.54,
+      0.44,
+      0.54,
+      0.57,
+      0.63
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.253,
+      "upperArm_z": -0.47,
+      "foreArm_x": -0.921,
+      "hand_z": -0.575,
+      "hand_y": 1.874
+    },
+    "l_angles": {
+      "upperArm_x": -0.953,
+      "upperArm_z": 0.23,
+      "foreArm_x": -1.093,
+      "hand_z": -0.351,
+      "hand_y": -1.805
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 168,
+    "hand_frames": 118
+  },
+  {
+    "sign": "BIBLE",
+    "r_fingers": [
+      0.48,
+      0.47,
+      0.54,
+      0.6,
+      0.63
+    ],
+    "l_fingers": [
+      0.54,
+      0.73,
+      0.82,
+      0.82,
+      0.75
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.519,
+      "upperArm_z": -0.415,
+      "foreArm_x": -0.964,
+      "hand_z": -0.727,
+      "hand_y": 1.25
+    },
+    "l_angles": {
+      "upperArm_x": -0.808,
+      "upperArm_z": 0.217,
+      "foreArm_x": -0.945,
+      "hand_z": -0.15,
+      "hand_y": -2.142
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 241,
+    "hand_frames": 336
+  },
+  {
+    "sign": "BOTH",
+    "r_fingers": [
+      0.38,
+      0.96,
+      1.0,
+      0.4,
+      0.41
+    ],
+    "l_fingers": [
+      0.58,
+      0.7,
+      0.4,
+      0.32,
+      0.56
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.766,
+      "upperArm_z": -0.107,
+      "foreArm_x": -1.198,
+      "hand_z": 0.266,
+      "hand_y": 0.815
+    },
+    "l_angles": {
+      "upperArm_x": -0.202,
+      "upperArm_z": 0.129,
+      "foreArm_x": -0.882,
+      "hand_z": 0.086,
+      "hand_y": -0.637
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 95,
+    "hand_frames": 58
+  },
+  {
+    "sign": "CALL",
+    "r_fingers": [
+      0.7,
+      0.4,
+      0.37,
+      0.32,
+      0.28
+    ],
+    "l_fingers": [
+      0.38,
+      0.42,
+      0.4,
+      0.28,
+      0.39
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.328,
+      "upperArm_z": -0.326,
+      "foreArm_x": -0.866,
+      "hand_z": -0.32,
+      "hand_y": 2.848
+    },
+    "l_angles": {
+      "upperArm_x": -0.257,
+      "upperArm_z": 0.211,
+      "foreArm_x": -0.614,
+      "hand_z": 0.092,
+      "hand_y": -0.431
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 108,
+    "hand_frames": 47
+  },
+  {
+    "sign": "CAN",
+    "r_fingers": [
+      0.42,
+      0.41,
+      0.52,
+      0.68,
+      0.67
+    ],
+    "l_fingers": [
+      0.45,
+      0.41,
+      0.59,
+      0.9,
+      0.97
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.179,
+      "upperArm_z": -0.288,
+      "foreArm_x": -1.035,
+      "hand_z": -0.632,
+      "hand_y": 0.88
+    },
+    "l_angles": {
+      "upperArm_x": -1.05,
+      "upperArm_z": 0.199,
+      "foreArm_x": -1.075,
+      "hand_z": -0.577,
+      "hand_y": -2.343
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 263,
+    "hand_frames": 313
+  },
+  {
+    "sign": "COME",
+    "r_fingers": [
+      0.57,
+      0.4,
+      0.36,
+      0.47,
+      0.7
+    ],
+    "l_fingers": [
+      0.83,
+      0.85,
+      0.84,
+      0.75,
+      0.48
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.802,
+      "upperArm_z": -0.306,
+      "foreArm_x": -0.91,
+      "hand_z": -0.417,
+      "hand_y": 2.03
+    },
+    "l_angles": {
+      "upperArm_x": -0.148,
+      "upperArm_z": 0.06,
+      "foreArm_x": -0.758,
+      "hand_z": 0.381,
+      "hand_y": -3.061
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 111,
+    "hand_frames": 26
+  },
+  {
+    "sign": "COURSE",
+    "r_fingers": [
+      0.42,
+      0.59,
+      0.7,
+      0.84,
+      0.93
+    ],
+    "l_fingers": [
+      0.51,
+      0.93,
+      1.0,
+      1.0,
+      0.86
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.113,
+      "upperArm_z": -0.079,
+      "foreArm_x": -1.143,
+      "hand_z": -0.438,
+      "hand_y": 0.709
+    },
+    "l_angles": {
+      "upperArm_x": -0.949,
+      "upperArm_z": 0.099,
+      "foreArm_x": -1.124,
+      "hand_z": 0.462,
+      "hand_y": -2.655
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 113,
+    "hand_frames": 69
+  },
+  {
+    "sign": "DEPTH",
+    "r_fingers": [
+      0.44,
+      0.64,
+      0.2,
+      0.13,
+      0.13
+    ],
+    "l_fingers": [
+      0.54,
+      0.7,
+      0.77,
+      0.77,
+      0.67
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.279,
+      "upperArm_z": -0.315,
+      "foreArm_x": -0.803,
+      "hand_z": -0.126,
+      "hand_y": 0.546
+    },
+    "l_angles": {
+      "upperArm_x": -1.118,
+      "upperArm_z": 0.137,
+      "foreArm_x": -1.045,
+      "hand_z": 0.043,
+      "hand_y": -0.928
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 116,
+    "hand_frames": 82
+  },
+  {
+    "sign": "DO",
+    "r_fingers": [
+      0.62,
+      0.27,
+      0.2,
+      0.14,
+      0.12
+    ],
+    "l_fingers": [
+      0.36,
+      0.78,
+      0.35,
+      0.26,
+      0.29
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.0,
+      "upperArm_z": -0.3,
+      "foreArm_x": -0.958,
+      "hand_z": -0.211,
+      "hand_y": 2.843
+    },
+    "l_angles": {
+      "upperArm_x": -0.951,
+      "upperArm_z": 0.241,
+      "foreArm_x": -0.924,
+      "hand_z": -0.278,
+      "hand_y": -1.404
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 74,
+    "hand_frames": 40
+  },
+  {
+    "sign": "ENJOY",
+    "r_fingers": [
+      0.5,
+      0.58,
+      0.75,
+      0.8,
+      0.65
+    ],
+    "l_fingers": [
+      0.53,
+      0.68,
+      0.87,
+      0.8,
+      0.62
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.137,
+      "upperArm_z": -0.369,
+      "foreArm_x": -0.998,
+      "hand_z": -0.873,
+      "hand_y": 0.227
+    },
+    "l_angles": {
+      "upperArm_x": -0.877,
+      "upperArm_z": 0.333,
+      "foreArm_x": -0.956,
+      "hand_z": -0.956,
+      "hand_y": -2.878
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 90,
+    "hand_frames": 118
+  },
+  {
+    "sign": "EVERYTHING",
+    "r_fingers": [
+      0.42,
+      0.56,
+      0.73,
+      0.82,
+      0.86
+    ],
+    "l_fingers": [
+      0.49,
+      0.73,
+      0.9,
+      0.93,
+      0.93
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.778,
+      "upperArm_z": -0.154,
+      "foreArm_x": -1.028,
+      "hand_z": 0.941,
+      "hand_y": 1.979
+    },
+    "l_angles": {
+      "upperArm_x": -0.746,
+      "upperArm_z": 0.179,
+      "foreArm_x": -0.966,
+      "hand_z": 0.926,
+      "hand_y": -1.149
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 101,
+    "hand_frames": 116
+  },
+  {
+    "sign": "EXCITED",
+    "r_fingers": [
+      0.51,
+      0.74,
+      0.85,
+      0.8,
+      0.71
+    ],
+    "l_fingers": [
+      0.68,
+      0.51,
+      0.48,
+      0.42,
+      0.36
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.971,
+      "upperArm_z": -0.21,
+      "foreArm_x": -1.04,
+      "hand_z": -0.222,
+      "hand_y": 0.644
+    },
+    "l_angles": {
+      "upperArm_x": -0.237,
+      "upperArm_z": 0.145,
+      "foreArm_x": -0.853,
+      "hand_z": 0.38,
+      "hand_y": -0.557
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 97,
+    "hand_frames": 43
+  },
+  {
+    "sign": "EXTREMELY",
+    "r_fingers": [
+      0.5,
+      0.58,
+      0.55,
+      0.56,
+      0.51
+    ],
+    "l_fingers": [
+      0.51,
+      0.72,
+      0.74,
+      0.7,
+      0.56
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.162,
+      "upperArm_z": -0.337,
+      "foreArm_x": -0.996,
+      "hand_z": -0.28,
+      "hand_y": 1.012
+    },
+    "l_angles": {
+      "upperArm_x": -0.862,
+      "upperArm_z": 0.234,
+      "foreArm_x": -0.957,
+      "hand_z": -0.327,
+      "hand_y": -1.958
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 941,
+    "hand_frames": 1115
+  },
+  {
+    "sign": "FACT",
+    "r_fingers": [
+      0.49,
+      0.66,
+      0.87,
+      0.88,
+      0.84
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.836,
+      "upperArm_z": -0.107,
+      "foreArm_x": -1.08,
+      "hand_z": -0.167,
+      "hand_y": 2.16
+    },
+    "l_angles": {
+      "upperArm_x": -0.164,
+      "upperArm_z": 0.097,
+      "foreArm_x": -0.844,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 72,
+    "hand_frames": 23
+  },
+  {
+    "sign": "FINISHED",
+    "r_fingers": [
+      0.58,
+      0.58,
+      0.69,
+      0.71,
+      0.72
+    ],
+    "l_fingers": [
+      0.52,
+      0.63,
+      0.71,
+      0.73,
+      0.66
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.317,
+      "upperArm_z": -0.451,
+      "foreArm_x": -0.951,
+      "hand_z": -0.23,
+      "hand_y": 1.481
+    },
+    "l_angles": {
+      "upperArm_x": -1.317,
+      "upperArm_z": 0.536,
+      "foreArm_x": -0.951,
+      "hand_z": -0.511,
+      "hand_y": -1.975
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 536,
+    "hand_frames": 851
+  },
+  {
+    "sign": "FOLLOW",
+    "r_fingers": [
+      0.59,
+      0.39,
+      0.24,
+      0.14,
+      0.09
+    ],
+    "l_fingers": [
+      0.5,
+      0.32,
+      0.25,
+      0.16,
+      0.15
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.961,
+      "upperArm_z": -0.263,
+      "foreArm_x": -1.063,
+      "hand_z": 0.1,
+      "hand_y": 3.053
+    },
+    "l_angles": {
+      "upperArm_x": -0.921,
+      "upperArm_z": 0.091,
+      "foreArm_x": -1.069,
+      "hand_z": -0.43,
+      "hand_y": -2.729
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 91,
+    "hand_frames": 98
+  },
+  {
+    "sign": "FROM",
+    "r_fingers": [
+      0.56,
+      0.41,
+      0.52,
+      0.71,
+      0.87
+    ],
+    "l_fingers": [
+      0.68,
+      0.94,
+      0.9,
+      0.84,
+      0.73
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.053,
+      "upperArm_z": -0.364,
+      "foreArm_x": -1.011,
+      "hand_z": -0.865,
+      "hand_y": 1.312
+    },
+    "l_angles": {
+      "upperArm_x": -0.117,
+      "upperArm_z": 0.081,
+      "foreArm_x": -0.793,
+      "hand_z": -0.613,
+      "hand_y": -1.399
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 113,
+    "hand_frames": 36
+  },
+  {
+    "sign": "FULL",
+    "r_fingers": [
+      0.43,
+      0.71,
+      0.86,
+      0.31,
+      0.24
+    ],
+    "l_fingers": [
+      0.42,
+      0.72,
+      0.78,
+      0.31,
+      0.28
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.997,
+      "upperArm_z": -0.328,
+      "foreArm_x": -1.012,
+      "hand_z": 0.328,
+      "hand_y": 2.942
+    },
+    "l_angles": {
+      "upperArm_x": -0.946,
+      "upperArm_z": 0.307,
+      "foreArm_x": -1.075,
+      "hand_z": 0.042,
+      "hand_y": -0.375
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 91,
+    "hand_frames": 76
+  },
+  {
+    "sign": "FUN",
+    "r_fingers": [
+      0.27,
+      0.49,
+      0.41,
+      0.41,
+      0.32
+    ],
+    "l_fingers": [
+      0.53,
+      0.36,
+      0.26,
+      0.24,
+      0.32
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.954,
+      "upperArm_z": -0.201,
+      "foreArm_x": -1.026,
+      "hand_z": -0.455,
+      "hand_y": 0.249
+    },
+    "l_angles": {
+      "upperArm_x": -0.89,
+      "upperArm_z": 0.117,
+      "foreArm_x": -1.074,
+      "hand_z": -0.883,
+      "hand_y": -2.708
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 102,
+    "hand_frames": 91
+  },
+  {
+    "sign": "GET",
+    "r_fingers": [
+      0.36,
+      0.94,
+      1.0,
+      0.67,
+      0.29
+    ],
+    "l_fingers": [
+      0.71,
+      0.77,
+      0.61,
+      0.53,
+      0.55
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.843,
+      "upperArm_z": -0.22,
+      "foreArm_x": -1.164,
+      "hand_z": 0.008,
+      "hand_y": 0.696
+    },
+    "l_angles": {
+      "upperArm_x": -0.176,
+      "upperArm_z": 0.049,
+      "foreArm_x": -0.841,
+      "hand_z": 0.159,
+      "hand_y": -0.814
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 100,
+    "hand_frames": 40
+  },
+  {
+    "sign": "GIVE",
+    "r_fingers": [
+      0.43,
+      0.9,
+      0.96,
+      0.97,
+      0.92
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.171,
+      "upperArm_z": -0.368,
+      "foreArm_x": -0.977,
+      "hand_z": -0.587,
+      "hand_y": 0.771
+    },
+    "l_angles": {
+      "upperArm_x": -0.137,
+      "upperArm_z": 0.137,
+      "foreArm_x": -0.793,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 98,
+    "hand_frames": 41
+  },
+  {
+    "sign": "GO",
+    "r_fingers": [
+      0.77,
+      0.76,
+      0.71,
+      0.65,
+      0.57
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.805,
+      "upperArm_z": -0.58,
+      "foreArm_x": -0.628,
+      "hand_z": -0.139,
+      "hand_y": 2.243
+    },
+    "l_angles": {
+      "upperArm_x": -0.085,
+      "upperArm_z": 0.071,
+      "foreArm_x": -0.613,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 73,
+    "hand_frames": 34
+  },
+  {
+    "sign": "GOOD",
+    "r_fingers": [
+      0.64,
+      0.29,
+      0.75,
+      0.8,
+      0.69
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.155,
+      "upperArm_z": -0.29,
+      "foreArm_x": -1.1,
+      "hand_z": -0.343,
+      "hand_y": 2.487
+    },
+    "l_angles": {
+      "upperArm_x": -0.106,
+      "upperArm_z": 0.121,
+      "foreArm_x": -0.649,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 87,
+    "hand_frames": 50
+  },
+  {
+    "sign": "GOODBYE",
+    "r_fingers": [
+      0.64,
+      0.61,
+      0.67,
+      0.65,
+      0.55
+    ],
+    "l_fingers": [
+      0.73,
+      0.56,
+      0.54,
+      0.58,
+      0.64
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.629,
+      "upperArm_z": -0.473,
+      "foreArm_x": -0.914,
+      "hand_z": -0.314,
+      "hand_y": 2.961
+    },
+    "l_angles": {
+      "upperArm_x": -0.214,
+      "upperArm_z": 0.211,
+      "foreArm_x": -0.589,
+      "hand_z": 0.106,
+      "hand_y": -2.926
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 108,
+    "hand_frames": 49
+  },
+  {
+    "sign": "HAVE",
+    "r_fingers": [
+      0.75,
+      0.82,
+      0.93,
+      1.0,
+      1.0
+    ],
+    "l_fingers": [
+      0.7,
+      0.96,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.93,
+      "upperArm_z": -0.215,
+      "foreArm_x": -0.929,
+      "hand_z": -0.137,
+      "hand_y": 2.694
+    },
+    "l_angles": {
+      "upperArm_x": -0.944,
+      "upperArm_z": 0.282,
+      "foreArm_x": -0.864,
+      "hand_z": -0.274,
+      "hand_y": -0.608
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 77,
+    "hand_frames": 92
+  },
+  {
+    "sign": "HELLO",
+    "r_fingers": [
+      0.62,
+      0.72,
+      0.83,
+      0.83,
+      0.73
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.539,
+      "upperArm_z": -0.381,
+      "foreArm_x": -0.932,
+      "hand_z": -0.305,
+      "hand_y": 2.673
+    },
+    "l_angles": {
+      "upperArm_x": -0.195,
+      "upperArm_z": 0.183,
+      "foreArm_x": -0.598,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 75,
+    "hand_frames": 38
+  },
+  {
+    "sign": "HERE",
+    "r_fingers": [
+      0.83,
+      1.0,
+      0.99,
+      0.96,
+      0.74
+    ],
+    "l_fingers": [
+      1.0,
+      0.94,
+      0.97,
+      0.91,
+      0.7
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.925,
+      "upperArm_z": -0.374,
+      "foreArm_x": -0.819,
+      "hand_z": -0.202,
+      "hand_y": 2.523
+    },
+    "l_angles": {
+      "upperArm_x": -0.591,
+      "upperArm_z": 0.298,
+      "foreArm_x": -0.888,
+      "hand_z": -0.219,
+      "hand_y": -0.311
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 74,
+    "hand_frames": 67
+  },
+  {
+    "sign": "HISTORY",
+    "r_fingers": [
+      0.53,
+      0.53,
+      0.55,
+      0.52,
+      0.48
+    ],
+    "l_fingers": [
+      0.48,
+      0.52,
+      0.42,
+      0.39,
+      0.37
+    ],
+    "r_location": "temple",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.978,
+      "upperArm_z": -0.574,
+      "foreArm_x": -0.584,
+      "hand_z": -0.294,
+      "hand_y": 1.676
+    },
+    "l_angles": {
+      "upperArm_x": -1.285,
+      "upperArm_z": 0.181,
+      "foreArm_x": -0.845,
+      "hand_z": -0.516,
+      "hand_y": -2.414
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 517,
+    "hand_frames": 725
+  },
+  {
+    "sign": "HOPE",
+    "r_fingers": [
+      0.4,
+      0.66,
+      0.73,
+      0.21,
+      0.2
+    ],
+    "l_fingers": [
+      0.71,
+      0.7,
+      0.76,
+      0.3,
+      0.33
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.433,
+      "upperArm_z": -0.426,
+      "foreArm_x": -1.009,
+      "hand_z": -0.115,
+      "hand_y": 2.849
+    },
+    "l_angles": {
+      "upperArm_x": -1.191,
+      "upperArm_z": 0.401,
+      "foreArm_x": -1.141,
+      "hand_z": -0.042,
+      "hand_y": -0.294
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 90,
+    "hand_frames": 95
+  },
+  {
+    "sign": "HOW",
+    "r_fingers": [
+      0.52,
+      0.55,
+      0.64,
+      0.63,
+      0.57
+    ],
+    "l_fingers": [
+      0.68,
+      0.85,
+      0.73,
+      0.6,
+      0.4
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.367,
+      "upperArm_z": -0.39,
+      "foreArm_x": -0.938,
+      "hand_z": -0.28,
+      "hand_y": 0.888
+    },
+    "l_angles": {
+      "upperArm_x": -1.037,
+      "upperArm_z": 0.346,
+      "foreArm_x": -0.911,
+      "hand_z": -0.381,
+      "hand_y": -2.334
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 475,
+    "hand_frames": 802
+  },
+  {
+    "sign": "HUGE",
+    "r_fingers": [
+      0.48,
+      0.73,
+      0.83,
+      0.86,
+      0.58
+    ],
+    "l_fingers": [
+      0.46,
+      0.77,
+      0.86,
+      0.85,
+      0.67
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.987,
+      "upperArm_z": -0.284,
+      "foreArm_x": -1.092,
+      "hand_z": -0.153,
+      "hand_y": 1.691
+    },
+    "l_angles": {
+      "upperArm_x": -0.971,
+      "upperArm_z": 0.347,
+      "foreArm_x": -1.074,
+      "hand_z": -0.229,
+      "hand_y": -1.207
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 84,
+    "hand_frames": 51
+  },
+  {
+    "sign": "HUMAN",
+    "r_fingers": [
+      0.53,
+      0.62,
+      0.7,
+      0.73,
+      0.65
+    ],
+    "l_fingers": [
+      0.52,
+      0.6,
+      0.66,
+      0.71,
+      0.66
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.311,
+      "upperArm_z": -0.31,
+      "foreArm_x": -1.004,
+      "hand_z": -0.565,
+      "hand_y": 0.834
+    },
+    "l_angles": {
+      "upperArm_x": -0.875,
+      "upperArm_z": 0.277,
+      "foreArm_x": -0.881,
+      "hand_z": -0.636,
+      "hand_y": -2.749
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 377,
+    "hand_frames": 555
+  },
+  {
+    "sign": "I",
+    "r_fingers": [
+      0.08,
+      0.06,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "l_fingers": [
+      0.68,
+      0.62,
+      0.62,
+      0.57,
+      0.26
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.885,
+      "upperArm_z": -0.352,
+      "foreArm_x": -0.955,
+      "hand_z": -0.326,
+      "hand_y": 0.177
+    },
+    "l_angles": {
+      "upperArm_x": -0.126,
+      "upperArm_z": 0.069,
+      "foreArm_x": -0.883,
+      "hand_z": -0.002,
+      "hand_y": -2.318
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 120,
+    "hand_frames": 30
+  },
+  {
+    "sign": "IN",
+    "r_fingers": [
+      0.64,
+      0.94,
+      1.0,
+      1.0,
+      0.95
+    ],
+    "l_fingers": [
+      0.33,
+      0.38,
+      0.71,
+      1.0,
+      1.0
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.467,
+      "upperArm_z": -0.399,
+      "foreArm_x": -0.951,
+      "hand_z": -0.652,
+      "hand_y": 0.427
+    },
+    "l_angles": {
+      "upperArm_x": -1.148,
+      "upperArm_z": 0.323,
+      "foreArm_x": -1.017,
+      "hand_z": -0.812,
+      "hand_y": -2.531
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 93,
+    "hand_frames": 94
+  },
+  {
+    "sign": "INSIDE",
+    "r_fingers": [
+      0.38,
+      0.49,
+      0.53,
+      0.41,
+      0.37
+    ],
+    "l_fingers": [
+      0.49,
+      0.52,
+      0.55,
+      0.59,
+      0.6
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.846,
+      "upperArm_z": -0.537,
+      "foreArm_x": -0.731,
+      "hand_z": -0.631,
+      "hand_y": 1.115
+    },
+    "l_angles": {
+      "upperArm_x": -1.202,
+      "upperArm_z": 0.193,
+      "foreArm_x": -1.013,
+      "hand_z": -0.386,
+      "hand_y": -1.791
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 600,
+    "hand_frames": 908
+  },
+  {
+    "sign": "INTELLIGENT",
+    "r_fingers": [
+      0.52,
+      0.64,
+      0.71,
+      0.67,
+      0.57
+    ],
+    "l_fingers": [
+      0.44,
+      0.67,
+      0.57,
+      0.53,
+      0.45
+    ],
+    "r_location": "forehead",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.958,
+      "upperArm_z": -0.585,
+      "foreArm_x": -0.708,
+      "hand_z": -0.522,
+      "hand_y": 2.264
+    },
+    "l_angles": {
+      "upperArm_x": -0.345,
+      "upperArm_z": 0.11,
+      "foreArm_x": -0.499,
+      "hand_z": 0.454,
+      "hand_y": -0.99
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 105,
+    "hand_frames": 58
+  },
+  {
+    "sign": "INTEREST",
+    "r_fingers": [
+      0.46,
+      0.65,
+      0.62,
+      0.51,
+      0.48
+    ],
+    "l_fingers": [
+      0.45,
+      0.63,
+      0.71,
+      0.76,
+      0.75
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.328,
+      "upperArm_z": -0.427,
+      "foreArm_x": -0.922,
+      "hand_z": -0.375,
+      "hand_y": 1.262
+    },
+    "l_angles": {
+      "upperArm_x": -0.892,
+      "upperArm_z": 0.257,
+      "foreArm_x": -0.954,
+      "hand_z": -0.421,
+      "hand_y": -2.128
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 507,
+    "hand_frames": 975
+  },
+  {
+    "sign": "INTERVIEW",
+    "r_fingers": [
+      0.54,
+      0.09,
+      0.14,
+      0.12,
+      0.75
+    ],
+    "l_fingers": [
+      0.52,
+      0.06,
+      0.12,
+      0.12,
+      0.8
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.019,
+      "upperArm_z": -0.166,
+      "foreArm_x": -1.112,
+      "hand_z": -0.175,
+      "hand_y": 1.728
+    },
+    "l_angles": {
+      "upperArm_x": -0.991,
+      "upperArm_z": 0.192,
+      "foreArm_x": -1.113,
+      "hand_z": -0.256,
+      "hand_y": -2.245
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 132,
+    "hand_frames": 157
+  },
+  {
+    "sign": "INTRODUCE",
+    "r_fingers": [
+      0.51,
+      0.55,
+      1.0,
+      1.0,
+      0.91
+    ],
+    "l_fingers": [
+      0.53,
+      0.59,
+      1.0,
+      1.0,
+      0.71
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.012,
+      "upperArm_z": -0.262,
+      "foreArm_x": -1.058,
+      "hand_z": -0.866,
+      "hand_y": 0.548
+    },
+    "l_angles": {
+      "upperArm_x": -1.006,
+      "upperArm_z": 0.248,
+      "foreArm_x": -0.999,
+      "hand_z": -0.994,
+      "hand_y": -2.769
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 94,
+    "hand_frames": 95
+  },
+  {
+    "sign": "IT",
+    "r_fingers": [
+      0.49,
+      0.61,
+      0.67,
+      0.7,
+      0.64
+    ],
+    "l_fingers": [
+      0.51,
+      0.58,
+      0.63,
+      0.59,
+      0.54
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.981,
+      "upperArm_z": -0.631,
+      "foreArm_x": -0.737,
+      "hand_z": -0.436,
+      "hand_y": 1.087
+    },
+    "l_angles": {
+      "upperArm_x": -1.695,
+      "upperArm_z": 0.604,
+      "foreArm_x": -0.772,
+      "hand_z": -0.433,
+      "hand_y": -1.96
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 161,
+    "hand_frames": 121
+  },
+  {
+    "sign": "ITSELF",
+    "r_fingers": [
+      0.61,
+      0.65,
+      0.33,
+      0.27,
+      0.24
+    ],
+    "l_fingers": [
+      0.75,
+      0.62,
+      0.6,
+      0.68,
+      0.65
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.966,
+      "upperArm_z": -0.205,
+      "foreArm_x": -1.033,
+      "hand_z": -0.593,
+      "hand_y": 1.524
+    },
+    "l_angles": {
+      "upperArm_x": -0.184,
+      "upperArm_z": 0.113,
+      "foreArm_x": -0.751,
+      "hand_z": 0.226,
+      "hand_y": -1.617
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 56,
+    "hand_frames": 46
+  },
+  {
+    "sign": "KNOW",
+    "r_fingers": [
+      0.49,
+      0.37,
+      0.37,
+      0.44,
+      0.46
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "temple",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.56,
+      "upperArm_z": -0.329,
+      "foreArm_x": -0.856,
+      "hand_z": -0.287,
+      "hand_y": 0.811
+    },
+    "l_angles": {
+      "upperArm_x": -0.157,
+      "upperArm_z": 0.073,
+      "foreArm_x": -0.541,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 73,
+    "hand_frames": 40
+  },
+  {
+    "sign": "KNOWLEDGE",
+    "r_fingers": [
+      0.52,
+      0.63,
+      0.63,
+      0.57,
+      0.48
+    ],
+    "l_fingers": [
+      0.56,
+      0.69,
+      0.73,
+      0.72,
+      0.64
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.367,
+      "upperArm_z": -0.206,
+      "foreArm_x": -1.014,
+      "hand_z": -0.186,
+      "hand_y": 0.969
+    },
+    "l_angles": {
+      "upperArm_x": -0.932,
+      "upperArm_z": 0.263,
+      "foreArm_x": -0.797,
+      "hand_z": -0.169,
+      "hand_y": -2.154
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 476,
+    "hand_frames": 870
+  },
+  {
+    "sign": "LAST",
+    "r_fingers": [
+      0.11,
+      0.6,
+      0.17,
+      0.07,
+      0.06
+    ],
+    "l_fingers": [
+      0.55,
+      0.08,
+      0.08,
+      0.06,
+      0.05
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.973,
+      "upperArm_z": -0.246,
+      "foreArm_x": -1.013,
+      "hand_z": -0.904,
+      "hand_y": 0.255
+    },
+    "l_angles": {
+      "upperArm_x": -1.151,
+      "upperArm_z": 0.273,
+      "foreArm_x": -0.938,
+      "hand_z": -0.077,
+      "hand_y": -1.946
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 150,
+    "hand_frames": 70
+  },
+  {
+    "sign": "LEARN",
+    "r_fingers": [
+      0.66,
+      0.37,
+      0.41,
+      0.39,
+      0.29
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.67,
+      "upperArm_z": -0.488,
+      "foreArm_x": -0.804,
+      "hand_z": -0.319,
+      "hand_y": 2.909
+    },
+    "l_angles": {
+      "upperArm_x": -0.106,
+      "upperArm_z": 0.101,
+      "foreArm_x": -0.619,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 138,
+    "hand_frames": 53
+  },
+  {
+    "sign": "LESS",
+    "r_fingers": [
+      0.49,
+      0.37,
+      0.35,
+      0.34,
+      0.33
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.067,
+      "upperArm_z": -0.445,
+      "foreArm_x": -1.113,
+      "hand_z": -0.568,
+      "hand_y": 2.497
+    },
+    "l_angles": {
+      "upperArm_x": -0.208,
+      "upperArm_z": 0.167,
+      "foreArm_x": -0.805,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 78,
+    "hand_frames": 48
+  },
+  {
+    "sign": "LEVEL",
+    "r_fingers": [
+      0.54,
+      0.41,
+      0.41,
+      0.41,
+      0.36
+    ],
+    "l_fingers": [
+      0.57,
+      0.42,
+      0.37,
+      0.36,
+      0.36
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.332,
+      "upperArm_z": -0.302,
+      "foreArm_x": -1.006,
+      "hand_z": -0.319,
+      "hand_y": 1.975
+    },
+    "l_angles": {
+      "upperArm_x": -1.24,
+      "upperArm_z": 0.306,
+      "foreArm_x": -1.077,
+      "hand_z": -0.153,
+      "hand_y": -1.157
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 91,
+    "hand_frames": 77
+  },
+  {
+    "sign": "LONG",
+    "r_fingers": [
+      0.56,
+      0.49,
+      0.75,
+      0.85,
+      0.74
+    ],
+    "l_fingers": [
+      0.42,
+      0.48,
+      0.75,
+      0.92,
+      0.8
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.387,
+      "upperArm_z": -0.537,
+      "foreArm_x": -0.758,
+      "hand_z": 0.909,
+      "hand_y": 2.547
+    },
+    "l_angles": {
+      "upperArm_x": -1.167,
+      "upperArm_z": 0.344,
+      "foreArm_x": -1.055,
+      "hand_z": -0.844,
+      "hand_y": -2.797
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 107,
+    "hand_frames": 102
+  },
+  {
+    "sign": "LOT",
+    "r_fingers": [
+      0.51,
+      0.64,
+      0.67,
+      0.72,
+      0.73
+    ],
+    "l_fingers": [
+      0.43,
+      0.65,
+      0.55,
+      0.55,
+      0.49
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.217,
+      "upperArm_z": -0.405,
+      "foreArm_x": -1.041,
+      "hand_z": -0.417,
+      "hand_y": 0.987
+    },
+    "l_angles": {
+      "upperArm_x": -1.121,
+      "upperArm_z": 0.12,
+      "foreArm_x": -1.166,
+      "hand_z": -0.253,
+      "hand_y": -2.392
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 928,
+    "hand_frames": 1461
+  },
+  {
+    "sign": "MACHINE",
+    "r_fingers": [
+      0.5,
+      0.44,
+      0.5,
+      0.55,
+      0.51
+    ],
+    "l_fingers": [
+      0.39,
+      0.53,
+      0.53,
+      0.47,
+      0.42
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.504,
+      "upperArm_z": -0.469,
+      "foreArm_x": -0.927,
+      "hand_z": -0.454,
+      "hand_y": 0.869
+    },
+    "l_angles": {
+      "upperArm_x": -1.134,
+      "upperArm_z": 0.415,
+      "foreArm_x": -0.94,
+      "hand_z": -0.442,
+      "hand_y": -2.398
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 852,
+    "hand_frames": 1274
+  },
+  {
+    "sign": "MAKE",
+    "r_fingers": [
+      0.3,
+      0.45,
+      0.38,
+      0.33,
+      0.47
+    ],
+    "l_fingers": [
+      0.3,
+      0.35,
+      0.33,
+      0.93,
+      0.85
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.174,
+      "upperArm_z": -0.149,
+      "foreArm_x": -0.851,
+      "hand_z": -0.422,
+      "hand_y": 0.969
+    },
+    "l_angles": {
+      "upperArm_x": -1.069,
+      "upperArm_z": 0.191,
+      "foreArm_x": -0.816,
+      "hand_z": -0.439,
+      "hand_y": -2.139
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 97,
+    "hand_frames": 85
+  },
+  {
+    "sign": "MANY",
+    "r_fingers": [
+      0.65,
+      0.94,
+      0.95,
+      0.94,
+      0.74
+    ],
+    "l_fingers": [
+      0.69,
+      0.99,
+      0.99,
+      0.99,
+      0.98
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.979,
+      "upperArm_z": -0.205,
+      "foreArm_x": -1.077,
+      "hand_z": 0.338,
+      "hand_y": 0.698
+    },
+    "l_angles": {
+      "upperArm_x": -0.971,
+      "upperArm_z": 0.235,
+      "foreArm_x": -1.08,
+      "hand_z": 0.318,
+      "hand_y": -2.621
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 84,
+    "hand_frames": 99
+  },
+  {
+    "sign": "MATERIAL",
+    "r_fingers": [
+      0.5,
+      0.65,
+      0.67,
+      0.8,
+      0.92
+    ],
+    "l_fingers": [
+      0.54,
+      0.77,
+      0.77,
+      0.79,
+      0.8
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.834,
+      "upperArm_z": -0.156,
+      "foreArm_x": -1.017,
+      "hand_z": 0.678,
+      "hand_y": 1.328
+    },
+    "l_angles": {
+      "upperArm_x": -0.822,
+      "upperArm_z": 0.184,
+      "foreArm_x": -1.045,
+      "hand_z": 0.462,
+      "hand_y": -2.156
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 121,
+    "hand_frames": 102
+  },
+  {
+    "sign": "MAY",
+    "r_fingers": [
+      0.47,
+      0.42,
+      0.26,
+      0.19,
+      0.18
+    ],
+    "l_fingers": [
+      0.6,
+      0.56,
+      0.41,
+      0.38,
+      0.39
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.216,
+      "upperArm_z": -0.342,
+      "foreArm_x": -1.042,
+      "hand_z": -0.541,
+      "hand_y": 1.702
+    },
+    "l_angles": {
+      "upperArm_x": -1.097,
+      "upperArm_z": 0.306,
+      "foreArm_x": -1.105,
+      "hand_z": -0.183,
+      "hand_y": -0.948
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 109,
+    "hand_frames": 117
+  },
+  {
+    "sign": "MEAN",
+    "r_fingers": [
+      0.45,
+      0.57,
+      0.47,
+      0.39,
+      0.33
+    ],
+    "l_fingers": [
+      0.45,
+      0.59,
+      0.45,
+      0.42,
+      0.38
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.448,
+      "upperArm_z": -0.289,
+      "foreArm_x": -0.88,
+      "hand_z": -0.038,
+      "hand_y": 1.966
+    },
+    "l_angles": {
+      "upperArm_x": -1.062,
+      "upperArm_z": 0.149,
+      "foreArm_x": -0.868,
+      "hand_z": -0.315,
+      "hand_y": -1.827
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 1035,
+    "hand_frames": 1649
+  },
+  {
+    "sign": "MEANS",
+    "r_fingers": [
+      0.45,
+      0.5,
+      0.51,
+      0.52,
+      0.51
+    ],
+    "l_fingers": [
+      0.49,
+      0.56,
+      0.63,
+      0.69,
+      0.71
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.597,
+      "upperArm_z": -0.501,
+      "foreArm_x": -0.778,
+      "hand_z": -0.574,
+      "hand_y": 1.186
+    },
+    "l_angles": {
+      "upperArm_x": -1.241,
+      "upperArm_z": 0.355,
+      "foreArm_x": -0.907,
+      "hand_z": -0.35,
+      "hand_y": -1.731
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 1248,
+    "hand_frames": 1796
+  },
+  {
+    "sign": "MINISTER",
+    "r_fingers": [
+      0.53,
+      0.26,
+      0.2,
+      0.14,
+      0.13
+    ],
+    "l_fingers": [
+      0.46,
+      0.49,
+      0.65,
+      0.35,
+      0.34
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.138,
+      "upperArm_z": -0.523,
+      "foreArm_x": -1.092,
+      "hand_z": -0.26,
+      "hand_y": 0.405
+    },
+    "l_angles": {
+      "upperArm_x": -0.799,
+      "upperArm_z": 0.244,
+      "foreArm_x": -1.024,
+      "hand_z": -0.115,
+      "hand_y": -0.787
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 98,
+    "hand_frames": 108
+  },
+  {
+    "sign": "MODEL",
+    "r_fingers": [
+      0.6,
+      0.63,
+      0.54,
+      0.51,
+      0.48
+    ],
+    "l_fingers": [
+      0.36,
+      0.67,
+      0.26,
+      0.23,
+      0.17
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.42,
+      "upperArm_z": -0.457,
+      "foreArm_x": -0.988,
+      "hand_z": -0.135,
+      "hand_y": 2.921
+    },
+    "l_angles": {
+      "upperArm_x": -0.956,
+      "upperArm_z": 0.21,
+      "foreArm_x": -0.962,
+      "hand_z": -0.365,
+      "hand_y": -2.549
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 114,
+    "hand_frames": 107
+  },
+  {
+    "sign": "MODERN",
+    "r_fingers": [
+      0.55,
+      0.62,
+      0.56,
+      0.65,
+      0.66
+    ],
+    "l_fingers": [
+      0.5,
+      0.68,
+      0.84,
+      0.87,
+      0.84
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.278,
+      "upperArm_z": -0.331,
+      "foreArm_x": -0.951,
+      "hand_z": -0.238,
+      "hand_y": 0.844
+    },
+    "l_angles": {
+      "upperArm_x": -0.795,
+      "upperArm_z": 0.174,
+      "foreArm_x": -0.911,
+      "hand_z": -0.183,
+      "hand_y": -2.138
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 173,
+    "hand_frames": 179
+  },
+  {
+    "sign": "MY",
+    "r_fingers": [
+      0.3,
+      0.15,
+      0.1,
+      0.05,
+      0.04
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.985,
+      "upperArm_z": -0.328,
+      "foreArm_x": -1.045,
+      "hand_z": -0.3,
+      "hand_y": 0.267
+    },
+    "l_angles": {
+      "upperArm_x": -0.364,
+      "upperArm_z": 0.044,
+      "foreArm_x": -1.165,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 61,
+    "hand_frames": 31
+  },
+  {
+    "sign": "NAME",
+    "r_fingers": [
+      0.04,
+      0.13,
+      0.07,
+      0.06,
+      0.04
+    ],
+    "l_fingers": [
+      0.52,
+      0.85,
+      0.81,
+      0.73,
+      0.54
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.878,
+      "upperArm_z": -0.238,
+      "foreArm_x": -1.142,
+      "hand_z": -0.293,
+      "hand_y": 0.135
+    },
+    "l_angles": {
+      "upperArm_x": -0.631,
+      "upperArm_z": 0.369,
+      "foreArm_x": -0.828,
+      "hand_z": 0.733,
+      "hand_y": -0.194
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 85,
+    "hand_frames": 101
+  },
+  {
+    "sign": "NOT",
+    "r_fingers": [
+      0.58,
+      0.62,
+      0.56,
+      0.6,
+      1.0
+    ],
+    "l_fingers": [
+      0.57,
+      0.66,
+      0.64,
+      0.66,
+      0.88
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.007,
+      "upperArm_z": -0.144,
+      "foreArm_x": -1.095,
+      "hand_z": -0.249,
+      "hand_y": 0.776
+    },
+    "l_angles": {
+      "upperArm_x": -0.24,
+      "upperArm_z": 0.051,
+      "foreArm_x": -0.979,
+      "hand_z": 0.19,
+      "hand_y": -0.944
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 96,
+    "hand_frames": 54
+  },
+  {
+    "sign": "NOW",
+    "r_fingers": [
+      0.51,
+      0.5,
+      0.31,
+      0.32,
+      0.51
+    ],
+    "l_fingers": [
+      0.42,
+      0.19,
+      0.18,
+      0.23,
+      0.2
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.07,
+      "upperArm_z": -0.381,
+      "foreArm_x": -1.003,
+      "hand_z": -0.516,
+      "hand_y": 1.619
+    },
+    "l_angles": {
+      "upperArm_x": -0.204,
+      "upperArm_z": 0.129,
+      "foreArm_x": -0.796,
+      "hand_z": 0.389,
+      "hand_y": -2.922
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 100,
+    "hand_frames": 35
+  },
+  {
+    "sign": "OFTEN",
+    "r_fingers": [
+      0.33,
+      0.71,
+      0.68,
+      0.46,
+      0.25
+    ],
+    "l_fingers": [
+      0.38,
+      0.26,
+      0.22,
+      0.15,
+      0.13
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.713,
+      "upperArm_z": -0.481,
+      "foreArm_x": -0.769,
+      "hand_z": -0.651,
+      "hand_y": 0.67
+    },
+    "l_angles": {
+      "upperArm_x": -0.21,
+      "upperArm_z": 0.128,
+      "foreArm_x": -0.572,
+      "hand_z": 0.269,
+      "hand_y": -0.491
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 78,
+    "hand_frames": 55
+  },
+  {
+    "sign": "ONE",
+    "r_fingers": [
+      0.2,
+      0.68,
+      0.27,
+      0.16,
+      0.12
+    ],
+    "l_fingers": [
+      0.52,
+      0.72,
+      0.43,
+      0.32,
+      0.38
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.25,
+      "upperArm_z": -0.331,
+      "foreArm_x": -1.007,
+      "hand_z": -0.766,
+      "hand_y": 0.797
+    },
+    "l_angles": {
+      "upperArm_x": -0.998,
+      "upperArm_z": 0.287,
+      "foreArm_x": -1.043,
+      "hand_z": -0.569,
+      "hand_y": -0.696
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 76,
+    "hand_frames": 114
+  },
+  {
+    "sign": "OUR",
+    "r_fingers": [
+      0.38,
+      0.21,
+      0.18,
+      0.16,
+      0.17
+    ],
+    "l_fingers": [
+      0.44,
+      0.48,
+      0.52,
+      0.56,
+      0.63
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.005,
+      "upperArm_z": -0.241,
+      "foreArm_x": -1.085,
+      "hand_z": -0.322,
+      "hand_y": 0.406
+    },
+    "l_angles": {
+      "upperArm_x": -0.758,
+      "upperArm_z": 0.207,
+      "foreArm_x": -1.011,
+      "hand_z": -0.385,
+      "hand_y": -1.944
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 79,
+    "hand_frames": 57
+  },
+  {
+    "sign": "OUT",
+    "r_fingers": [
+      0.51,
+      0.73,
+      0.92,
+      0.96,
+      0.97
+    ],
+    "l_fingers": [
+      0.62,
+      0.54,
+      0.64,
+      0.63,
+      0.64
+    ],
+    "r_location": "temple",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.643,
+      "upperArm_z": -0.47,
+      "foreArm_x": -0.781,
+      "hand_z": -0.055,
+      "hand_y": 0.681
+    },
+    "l_angles": {
+      "upperArm_x": -0.188,
+      "upperArm_z": 0.069,
+      "foreArm_x": -0.598,
+      "hand_z": 0.153,
+      "hand_y": -1.19
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 69,
+    "hand_frames": 34
+  },
+  {
+    "sign": "PART",
+    "r_fingers": [
+      0.61,
+      0.53,
+      0.64,
+      0.71,
+      0.68
+    ],
+    "l_fingers": [
+      0.43,
+      0.43,
+      0.4,
+      0.38,
+      0.42
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.19,
+      "upperArm_z": -0.299,
+      "foreArm_x": -0.971,
+      "hand_z": -0.131,
+      "hand_y": 1.141
+    },
+    "l_angles": {
+      "upperArm_x": -0.987,
+      "upperArm_z": 0.064,
+      "foreArm_x": -1.047,
+      "hand_z": -0.038,
+      "hand_y": -2.391
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 64,
+    "hand_frames": 46
+  },
+  {
+    "sign": "PEOPLE",
+    "r_fingers": [
+      0.66,
+      0.43,
+      0.32,
+      0.25,
+      0.26
+    ],
+    "l_fingers": [
+      0.55,
+      0.54,
+      0.41,
+      0.3,
+      0.28
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.949,
+      "upperArm_z": -0.261,
+      "foreArm_x": -0.962,
+      "hand_z": -0.014,
+      "hand_y": 2.748
+    },
+    "l_angles": {
+      "upperArm_x": -0.873,
+      "upperArm_z": 0.189,
+      "foreArm_x": -0.984,
+      "hand_z": 0.157,
+      "hand_y": -0.93
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 156,
+    "hand_frames": 83
+  },
+  {
+    "sign": "POLICY",
+    "r_fingers": [
+      0.44,
+      0.62,
+      0.21,
+      0.15,
+      0.16
+    ],
+    "l_fingers": [
+      0.54,
+      0.7,
+      0.79,
+      0.83,
+      0.76
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.996,
+      "upperArm_z": -0.197,
+      "foreArm_x": -1.052,
+      "hand_z": -0.514,
+      "hand_y": 1.049
+    },
+    "l_angles": {
+      "upperArm_x": -0.996,
+      "upperArm_z": 0.266,
+      "foreArm_x": -1.057,
+      "hand_z": 0.226,
+      "hand_y": -1.225
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 104,
+    "hand_frames": 61
+  },
+  {
+    "sign": "PRIME",
+    "r_fingers": [
+      0.42,
+      0.72,
+      0.82,
+      0.85,
+      0.83
+    ],
+    "l_fingers": [
+      0.59,
+      0.75,
+      0.63,
+      0.58,
+      0.7
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.054,
+      "upperArm_z": -0.288,
+      "foreArm_x": -1.082,
+      "hand_z": -0.699,
+      "hand_y": 1.272
+    },
+    "l_angles": {
+      "upperArm_x": -0.915,
+      "upperArm_z": 0.194,
+      "foreArm_x": -1.087,
+      "hand_z": 0.372,
+      "hand_y": -1.279
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 97,
+    "hand_frames": 129
+  },
+  {
+    "sign": "PROFESSOR",
+    "r_fingers": [
+      0.56,
+      0.83,
+      0.85,
+      0.8,
+      0.69
+    ],
+    "l_fingers": [
+      0.72,
+      0.72,
+      0.82,
+      0.91,
+      0.74
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.163,
+      "upperArm_z": -0.295,
+      "foreArm_x": -1.067,
+      "hand_z": 0.187,
+      "hand_y": 2.213
+    },
+    "l_angles": {
+      "upperArm_x": -0.852,
+      "upperArm_z": 0.121,
+      "foreArm_x": -0.969,
+      "hand_z": -0.841,
+      "hand_y": -2.752
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 108,
+    "hand_frames": 85
+  },
+  {
+    "sign": "PROGRAM",
+    "r_fingers": [
+      0.6,
+      0.27,
+      0.2,
+      0.18,
+      0.2
+    ],
+    "l_fingers": [
+      0.61,
+      0.94,
+      1.0,
+      1.0,
+      0.98
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.135,
+      "upperArm_z": -0.112,
+      "foreArm_x": -1.123,
+      "hand_z": -0.218,
+      "hand_y": 0.198
+    },
+    "l_angles": {
+      "upperArm_x": -1.056,
+      "upperArm_z": 0.192,
+      "foreArm_x": -1.12,
+      "hand_z": -0.031,
+      "hand_y": -2.657
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 72,
+    "hand_frames": 80
+  },
+  {
+    "sign": "RESEARCHER",
+    "r_fingers": [
+      0.55,
+      0.48,
+      0.39,
+      0.28,
+      0.25
+    ],
+    "l_fingers": [
+      0.52,
+      0.51,
+      0.47,
+      0.49,
+      0.53
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.351,
+      "upperArm_z": -0.467,
+      "foreArm_x": -0.889,
+      "hand_z": -0.121,
+      "hand_y": 2.492
+    },
+    "l_angles": {
+      "upperArm_x": -1.042,
+      "upperArm_z": 0.438,
+      "foreArm_x": -0.827,
+      "hand_z": -0.307,
+      "hand_y": -1.451
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 132,
+    "hand_frames": 76
+  },
+  {
+    "sign": "SEARCH",
+    "r_fingers": [
+      0.46,
+      0.29,
+      0.27,
+      0.3,
+      0.71
+    ],
+    "l_fingers": [
+      0.77,
+      0.72,
+      0.5,
+      0.48,
+      0.34
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.048,
+      "upperArm_z": -0.18,
+      "foreArm_x": -1.18,
+      "hand_z": -0.023,
+      "hand_y": 0.177
+    },
+    "l_angles": {
+      "upperArm_x": -0.166,
+      "upperArm_z": 0.081,
+      "foreArm_x": -0.759,
+      "hand_z": 0.302,
+      "hand_y": -2.956
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 76,
+    "hand_frames": 32
+  },
+  {
+    "sign": "SEVERAL",
+    "r_fingers": [
+      0.47,
+      0.7,
+      0.73,
+      0.67,
+      0.57
+    ],
+    "l_fingers": [
+      0.48,
+      0.68,
+      0.79,
+      0.74,
+      0.64
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.165,
+      "upperArm_z": -0.213,
+      "foreArm_x": -1.021,
+      "hand_z": -0.082,
+      "hand_y": 0.988
+    },
+    "l_angles": {
+      "upperArm_x": -0.938,
+      "upperArm_z": 0.326,
+      "foreArm_x": -0.887,
+      "hand_z": -0.398,
+      "hand_y": -2.246
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 555,
+    "hand_frames": 1027
+  },
+  {
+    "sign": "SINCE",
+    "r_fingers": [
+      0.6,
+      0.71,
+      0.78,
+      0.79,
+      0.73
+    ],
+    "l_fingers": [
+      0.68,
+      0.85,
+      0.92,
+      0.9,
+      0.75
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.173,
+      "upperArm_z": -0.32,
+      "foreArm_x": -0.985,
+      "hand_z": -0.101,
+      "hand_y": 0.779
+    },
+    "l_angles": {
+      "upperArm_x": -0.107,
+      "upperArm_z": 0.084,
+      "foreArm_x": -0.776,
+      "hand_z": -0.007,
+      "hand_y": -2.887
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 90,
+    "hand_frames": 54
+  },
+  {
+    "sign": "SIX",
+    "r_fingers": [
+      0.62,
+      0.72,
+      0.18,
+      0.13,
+      0.12
+    ],
+    "l_fingers": [
+      0.66,
+      0.65,
+      0.14,
+      0.11,
+      0.14
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.624,
+      "upperArm_z": -0.383,
+      "foreArm_x": -0.831,
+      "hand_z": 0.065,
+      "hand_y": 2.629
+    },
+    "l_angles": {
+      "upperArm_x": -1.56,
+      "upperArm_z": 0.395,
+      "foreArm_x": -0.846,
+      "hand_z": -0.007,
+      "hand_y": -0.673
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 81,
+    "hand_frames": 51
+  },
+  {
+    "sign": "SOME",
+    "r_fingers": [
+      0.68,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "l_fingers": [
+      0.67,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.991,
+      "upperArm_z": -0.105,
+      "foreArm_x": -1.225,
+      "hand_z": 0.04,
+      "hand_y": 0.425
+    },
+    "l_angles": {
+      "upperArm_x": -0.125,
+      "upperArm_z": 0.148,
+      "foreArm_x": -0.724,
+      "hand_z": 0.102,
+      "hand_y": -2.737
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 85,
+    "hand_frames": 46
+  },
+  {
+    "sign": "STUDENT",
+    "r_fingers": [
+      0.52,
+      0.55,
+      0.68,
+      0.82,
+      0.81
+    ],
+    "l_fingers": [
+      0.55,
+      0.39,
+      0.45,
+      0.5,
+      0.47
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.191,
+      "upperArm_z": -0.461,
+      "foreArm_x": -1.015,
+      "hand_z": -0.532,
+      "hand_y": 1.358
+    },
+    "l_angles": {
+      "upperArm_x": -0.202,
+      "upperArm_z": 0.119,
+      "foreArm_x": -0.737,
+      "hand_z": 0.639,
+      "hand_y": -2.016
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 59,
+    "hand_frames": 41
+  },
+  {
+    "sign": "STUDY",
+    "r_fingers": [
+      0.61,
+      0.84,
+      0.99,
+      1.0,
+      0.92
+    ],
+    "l_fingers": [
+      0.64,
+      0.84,
+      0.99,
+      1.0,
+      0.98
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.04,
+      "upperArm_z": -0.096,
+      "foreArm_x": -1.125,
+      "hand_z": -0.172,
+      "hand_y": 0.277
+    },
+    "l_angles": {
+      "upperArm_x": -1.026,
+      "upperArm_z": 0.154,
+      "foreArm_x": -1.123,
+      "hand_z": -0.133,
+      "hand_y": -2.844
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 93,
+    "hand_frames": 85
+  },
+  {
+    "sign": "TAKE",
+    "r_fingers": [
+      0.49,
+      0.65,
+      0.86,
+      0.75,
+      0.45
+    ],
+    "l_fingers": [
+      0.76,
+      0.89,
+      0.89,
+      0.8,
+      0.91
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.007,
+      "upperArm_z": -0.094,
+      "foreArm_x": -1.149,
+      "hand_z": -0.03,
+      "hand_y": 0.808
+    },
+    "l_angles": {
+      "upperArm_x": -0.134,
+      "upperArm_z": 0.06,
+      "foreArm_x": -0.73,
+      "hand_z": 0.467,
+      "hand_y": -2.697
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 81,
+    "hand_frames": 46
+  },
+  {
+    "sign": "TALK",
+    "r_fingers": [
+      0.6,
+      0.66,
+      0.8,
+      0.27,
+      0.23
+    ],
+    "l_fingers": [
+      0.45,
+      0.74,
+      0.73,
+      0.25,
+      0.23
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.114,
+      "upperArm_z": -0.313,
+      "foreArm_x": -1.159,
+      "hand_z": -0.359,
+      "hand_y": 2.494
+    },
+    "l_angles": {
+      "upperArm_x": -1.058,
+      "upperArm_z": 0.352,
+      "foreArm_x": -1.195,
+      "hand_z": -0.324,
+      "hand_y": -0.715
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 97,
+    "hand_frames": 68
+  },
+  {
+    "sign": "TEACH",
+    "r_fingers": [
+      0.51,
+      0.71,
+      0.87,
+      0.81,
+      0.67
+    ],
+    "l_fingers": [
+      0.57,
+      0.76,
+      0.94,
+      0.93,
+      0.77
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.377,
+      "upperArm_z": -0.495,
+      "foreArm_x": -0.919,
+      "hand_z": -0.85,
+      "hand_y": 0.443
+    },
+    "l_angles": {
+      "upperArm_x": -1.154,
+      "upperArm_z": 0.54,
+      "foreArm_x": -0.924,
+      "hand_z": -0.738,
+      "hand_y": -2.68
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 73,
+    "hand_frames": 67
+  },
+  {
+    "sign": "THANK",
+    "r_fingers": [
+      0.6,
+      0.88,
+      0.99,
+      1.0,
+      0.96
+    ],
+    "l_fingers": [
+      0.0,
+      0.0,
+      0.0,
+      0.03,
+      0.0
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.836,
+      "upperArm_z": -0.182,
+      "foreArm_x": -1.192,
+      "hand_z": -0.29,
+      "hand_y": 0.367
+    },
+    "l_angles": {
+      "upperArm_x": -0.231,
+      "upperArm_z": 0.147,
+      "foreArm_x": -0.874,
+      "hand_z": 0.444,
+      "hand_y": -3.016
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 68,
+    "hand_frames": 34
+  },
+  {
+    "sign": "THAT",
+    "r_fingers": [
+      0.48,
+      0.23,
+      0.23,
+      0.26,
+      0.32
+    ],
+    "l_fingers": [
+      0.53,
+      0.62,
+      0.54,
+      0.69,
+      0.74
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.997,
+      "upperArm_z": -0.385,
+      "foreArm_x": -0.915,
+      "hand_z": -0.27,
+      "hand_y": 1.26
+    },
+    "l_angles": {
+      "upperArm_x": -0.055,
+      "upperArm_z": 0.014,
+      "foreArm_x": -0.693,
+      "hand_z": -0.21,
+      "hand_y": -1.352
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 119,
+    "hand_frames": 51
+  },
+  {
+    "sign": "THERE",
+    "r_fingers": [
+      0.31,
+      0.5,
+      0.33,
+      0.2,
+      0.16
+    ],
+    "l_fingers": [
+      0.84,
+      0.67,
+      0.23,
+      0.18,
+      0.15
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.434,
+      "upperArm_z": -0.547,
+      "foreArm_x": -0.785,
+      "hand_z": 0.446,
+      "hand_y": 2.911
+    },
+    "l_angles": {
+      "upperArm_x": -0.045,
+      "upperArm_z": 0.02,
+      "foreArm_x": -0.665,
+      "hand_z": 0.338,
+      "hand_y": -0.146
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 69,
+    "hand_frames": 32
+  },
+  {
+    "sign": "THEY",
+    "r_fingers": [
+      0.19,
+      0.5,
+      0.23,
+      0.14,
+      0.12
+    ],
+    "l_fingers": [
+      0.28,
+      0.3,
+      0.33,
+      0.25,
+      0.09
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.086,
+      "upperArm_z": -0.175,
+      "foreArm_x": -1.209,
+      "hand_z": -0.601,
+      "hand_y": 0.48
+    },
+    "l_angles": {
+      "upperArm_x": -0.342,
+      "upperArm_z": 0.176,
+      "foreArm_x": -1.051,
+      "hand_z": 0.359,
+      "hand_y": -2.915
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 82,
+    "hand_frames": 31
+  },
+  {
+    "sign": "THINK",
+    "r_fingers": [
+      0.4,
+      0.56,
+      0.15,
+      0.11,
+      0.1
+    ],
+    "l_fingers": [
+      0.58,
+      0.56,
+      0.52,
+      0.44,
+      0.36
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.3,
+      "upperArm_z": -0.228,
+      "foreArm_x": -1.011,
+      "hand_z": -0.059,
+      "hand_y": 0.799
+    },
+    "l_angles": {
+      "upperArm_x": -0.121,
+      "upperArm_z": 0.078,
+      "foreArm_x": -0.614,
+      "hand_z": 0.046,
+      "hand_y": -2.95
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 85,
+    "hand_frames": 41
+  },
+  {
+    "sign": "THIS",
+    "r_fingers": [
+      0.38,
+      0.37,
+      0.32,
+      0.39,
+      0.67
+    ],
+    "l_fingers": [
+      0.34,
+      0.46,
+      0.34,
+      0.19,
+      0.2
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.872,
+      "upperArm_z": -0.313,
+      "foreArm_x": -1.089,
+      "hand_z": -0.294,
+      "hand_y": 1.469
+    },
+    "l_angles": {
+      "upperArm_x": -0.097,
+      "upperArm_z": 0.025,
+      "foreArm_x": -0.804,
+      "hand_z": 0.358,
+      "hand_y": -0.504
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 76,
+    "hand_frames": 32
+  },
+  {
+    "sign": "TIME",
+    "r_fingers": [
+      0.41,
+      0.32,
+      0.26,
+      0.21,
+      0.21
+    ],
+    "l_fingers": [
+      0.78,
+      0.4,
+      0.46,
+      0.46,
+      0.51
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.412,
+      "upperArm_z": -0.4,
+      "foreArm_x": -0.907,
+      "hand_z": -0.813,
+      "hand_y": 1.253
+    },
+    "l_angles": {
+      "upperArm_x": -1.362,
+      "upperArm_z": 0.432,
+      "foreArm_x": -0.831,
+      "hand_z": -0.33,
+      "hand_y": -2.799
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 75,
+    "hand_frames": 83
+  },
+  {
+    "sign": "TODAY",
+    "r_fingers": [
+      0.49,
+      0.43,
+      0.29,
+      0.27,
+      0.4
+    ],
+    "l_fingers": [
+      0.3,
+      0.5,
+      0.25,
+      0.19,
+      0.18
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.068,
+      "upperArm_z": -0.414,
+      "foreArm_x": -1.085,
+      "hand_z": -0.568,
+      "hand_y": 1.727
+    },
+    "l_angles": {
+      "upperArm_x": -0.237,
+      "upperArm_z": 0.143,
+      "foreArm_x": -0.805,
+      "hand_z": 0.437,
+      "hand_y": -1.413
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 63,
+    "hand_frames": 35
+  },
+  {
+    "sign": "TOPIC",
+    "r_fingers": [
+      0.74,
+      0.58,
+      0.66,
+      0.19,
+      0.21
+    ],
+    "l_fingers": [
+      0.57,
+      0.62,
+      0.7,
+      0.23,
+      0.23
+    ],
+    "r_location": "temple",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.553,
+      "upperArm_z": -0.445,
+      "foreArm_x": -0.99,
+      "hand_z": -0.321,
+      "hand_y": 2.962
+    },
+    "l_angles": {
+      "upperArm_x": -1.325,
+      "upperArm_z": 0.398,
+      "foreArm_x": -1.097,
+      "hand_z": -0.208,
+      "hand_y": -0.562
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 82,
+    "hand_frames": 83
+  },
+  {
+    "sign": "TRADITIONAL",
+    "r_fingers": [
+      0.36,
+      0.78,
+      0.82,
+      0.68,
+      0.39
+    ],
+    "l_fingers": [
+      0.56,
+      0.7,
+      0.73,
+      0.64,
+      0.45
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.433,
+      "upperArm_z": -0.545,
+      "foreArm_x": -0.806,
+      "hand_z": -0.493,
+      "hand_y": 0.245
+    },
+    "l_angles": {
+      "upperArm_x": -1.229,
+      "upperArm_z": 0.159,
+      "foreArm_x": -0.776,
+      "hand_z": -0.406,
+      "hand_y": -2.266
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 117,
+    "hand_frames": 60
+  },
+  {
+    "sign": "TWO",
+    "r_fingers": [
+      0.27,
+      0.63,
+      0.84,
+      0.66,
+      0.55
+    ],
+    "l_fingers": [
+      0.56,
+      0.8,
+      0.48,
+      0.29,
+      0.45
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.371,
+      "upperArm_z": -0.518,
+      "foreArm_x": -0.803,
+      "hand_z": -0.786,
+      "hand_y": 0.411
+    },
+    "l_angles": {
+      "upperArm_x": -0.293,
+      "upperArm_z": 0.132,
+      "foreArm_x": -0.794,
+      "hand_z": 0.845,
+      "hand_y": -2.577
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 69,
+    "hand_frames": 34
+  },
+  {
+    "sign": "UNDERGRADUATE",
+    "r_fingers": [
+      0.44,
+      0.53,
+      0.53,
+      0.52,
+      0.5
+    ],
+    "l_fingers": [
+      0.52,
+      0.55,
+      0.56,
+      0.55,
+      0.63
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.389,
+      "upperArm_z": -0.438,
+      "foreArm_x": -1.0,
+      "hand_z": -0.604,
+      "hand_y": 0.969
+    },
+    "l_angles": {
+      "upperArm_x": -1.029,
+      "upperArm_z": 0.194,
+      "foreArm_x": -1.062,
+      "hand_z": -0.325,
+      "hand_y": -1.741
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 256,
+    "hand_frames": 403
+  },
+  {
+    "sign": "UNDERSTAND",
+    "r_fingers": [
+      0.37,
+      0.49,
+      0.17,
+      0.14,
+      0.15
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.309,
+      "upperArm_z": -0.359,
+      "foreArm_x": -1.066,
+      "hand_z": -0.174,
+      "hand_y": 0.714
+    },
+    "l_angles": {
+      "upperArm_x": -0.159,
+      "upperArm_z": 0.145,
+      "foreArm_x": -0.667,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 76,
+    "hand_frames": 46
+  },
+  {
+    "sign": "UNIVERSITY",
+    "r_fingers": [
+      0.64,
+      0.72,
+      0.52,
+      0.46,
+      0.4
+    ],
+    "l_fingers": [
+      0.68,
+      0.98,
+      1.0,
+      0.97,
+      0.81
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.174,
+      "upperArm_z": -0.207,
+      "foreArm_x": -1.148,
+      "hand_z": -0.136,
+      "hand_y": 2.092
+    },
+    "l_angles": {
+      "upperArm_x": -1.087,
+      "upperArm_z": 0.364,
+      "foreArm_x": -1.123,
+      "hand_z": 0.282,
+      "hand_y": -2.652
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 81,
+    "hand_frames": 80
+  },
+  {
+    "sign": "VIDEO",
+    "r_fingers": [
+      0.35,
+      0.11,
+      0.07,
+      0.07,
+      0.08
+    ],
+    "l_fingers": [
+      0.6,
+      0.4,
+      0.34,
+      0.29,
+      0.29
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.752,
+      "upperArm_z": -0.53,
+      "foreArm_x": -0.79,
+      "hand_z": -0.54,
+      "hand_y": 0.702
+    },
+    "l_angles": {
+      "upperArm_x": -0.159,
+      "upperArm_z": 0.144,
+      "foreArm_x": -0.533,
+      "hand_z": 0.197,
+      "hand_y": -1.644
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 93,
+    "hand_frames": 50
+  },
+  {
+    "sign": "VIEW",
+    "r_fingers": [
+      0.21,
+      0.27,
+      0.52,
+      0.18,
+      0.19
+    ],
+    "l_fingers": [
+      0.52,
+      0.7,
+      0.31,
+      0.23,
+      0.25
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.133,
+      "upperArm_z": -0.283,
+      "foreArm_x": -1.07,
+      "hand_z": -0.639,
+      "hand_y": 0.605
+    },
+    "l_angles": {
+      "upperArm_x": -0.968,
+      "upperArm_z": 0.195,
+      "foreArm_x": -0.996,
+      "hand_z": -0.338,
+      "hand_y": -0.919
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 89,
+    "hand_frames": 91
+  },
+  {
+    "sign": "WANT",
+    "r_fingers": [
+      0.66,
+      0.96,
+      0.95,
+      0.94,
+      0.87
+    ],
+    "l_fingers": [
+      0.5,
+      0.91,
+      0.92,
+      0.91,
+      0.88
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.974,
+      "upperArm_z": -0.215,
+      "foreArm_x": -0.919,
+      "hand_z": 0.137,
+      "hand_y": 1.544
+    },
+    "l_angles": {
+      "upperArm_x": -0.938,
+      "upperArm_z": 0.221,
+      "foreArm_x": -0.937,
+      "hand_z": 0.202,
+      "hand_y": -2.026
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 81,
+    "hand_frames": 40
+  },
+  {
+    "sign": "WAYS",
+    "r_fingers": [
+      0.6,
+      0.67,
+      0.86,
+      0.93,
+      0.97
+    ],
+    "l_fingers": [
+      0.6,
+      0.62,
+      0.75,
+      0.79,
+      0.69
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.978,
+      "upperArm_z": -0.244,
+      "foreArm_x": -1.042,
+      "hand_z": -0.247,
+      "hand_y": 0.748
+    },
+    "l_angles": {
+      "upperArm_x": -0.833,
+      "upperArm_z": 0.108,
+      "foreArm_x": -1.085,
+      "hand_z": -0.044,
+      "hand_y": -2.81
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 73,
+    "hand_frames": 70
+  },
+  {
+    "sign": "WE",
+    "r_fingers": [
+      0.41,
+      0.43,
+      0.45,
+      0.45,
+      0.45
+    ],
+    "l_fingers": [
+      0.4,
+      0.34,
+      0.31,
+      0.29,
+      0.56
+    ],
+    "r_location": "wrist",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.961,
+      "upperArm_z": -0.18,
+      "foreArm_x": -1.073,
+      "hand_z": -0.254,
+      "hand_y": 1.06
+    },
+    "l_angles": {
+      "upperArm_x": -0.95,
+      "upperArm_z": 0.241,
+      "foreArm_x": -1.088,
+      "hand_z": -0.447,
+      "hand_y": -2.417
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 75,
+    "hand_frames": 48
+  },
+  {
+    "sign": "WEEK",
+    "r_fingers": [
+      0.51,
+      0.4,
+      0.55,
+      0.52,
+      0.48
+    ],
+    "l_fingers": [
+      0.54,
+      0.54,
+      0.55,
+      0.53,
+      0.44
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.007,
+      "upperArm_z": -0.295,
+      "foreArm_x": -1.129,
+      "hand_z": -0.267,
+      "hand_y": 2.814
+    },
+    "l_angles": {
+      "upperArm_x": -0.169,
+      "upperArm_z": 0.135,
+      "foreArm_x": -0.769,
+      "hand_z": 0.215,
+      "hand_y": -0.677
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 75,
+    "hand_frames": 29
+  },
+  {
+    "sign": "WELL",
+    "r_fingers": [
+      0.4,
+      0.77,
+      0.74,
+      0.54,
+      0.39
+    ],
+    "l_fingers": [
+      0.31,
+      0.65,
+      0.77,
+      0.67,
+      0.39
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.286,
+      "upperArm_z": -0.356,
+      "foreArm_x": -0.851,
+      "hand_z": -0.533,
+      "hand_y": 0.746
+    },
+    "l_angles": {
+      "upperArm_x": -0.751,
+      "upperArm_z": 0.309,
+      "foreArm_x": -0.819,
+      "hand_z": -0.484,
+      "hand_y": -2.613
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 107,
+    "hand_frames": 102
+  },
+  {
+    "sign": "WHEN",
+    "r_fingers": [
+      0.49,
+      0.68,
+      0.79,
+      0.81,
+      0.73
+    ],
+    "l_fingers": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "r_location": "chin",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.077,
+      "upperArm_z": -0.315,
+      "foreArm_x": -1.178,
+      "hand_z": -0.345,
+      "hand_y": 1.116
+    },
+    "l_angles": {
+      "upperArm_x": -0.162,
+      "upperArm_z": 0.146,
+      "foreArm_x": -0.778,
+      "hand_z": 0.0,
+      "hand_y": 0.0
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 69,
+    "hand_frames": 43
+  },
+  {
+    "sign": "WHERE",
+    "r_fingers": [
+      0.53,
+      0.51,
+      0.59,
+      0.58,
+      0.54
+    ],
+    "l_fingers": [
+      0.94,
+      0.79,
+      0.73,
+      0.68,
+      0.63
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.286,
+      "upperArm_z": -0.446,
+      "foreArm_x": -1.001,
+      "hand_z": -0.349,
+      "hand_y": 1.011
+    },
+    "l_angles": {
+      "upperArm_x": -0.835,
+      "upperArm_z": 0.143,
+      "foreArm_x": -1.05,
+      "hand_z": -0.279,
+      "hand_y": -0.829
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 62,
+    "hand_frames": 62
+  },
+  {
+    "sign": "WHICH",
+    "r_fingers": [
+      0.57,
+      0.61,
+      0.71,
+      0.69,
+      0.66
+    ],
+    "l_fingers": [
+      0.49,
+      0.56,
+      0.49,
+      0.43,
+      0.42
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -0.944,
+      "upperArm_z": -0.202,
+      "foreArm_x": -1.14,
+      "hand_z": 0.121,
+      "hand_y": 1.375
+    },
+    "l_angles": {
+      "upperArm_x": -0.156,
+      "upperArm_z": 0.156,
+      "foreArm_x": -0.783,
+      "hand_z": 0.266,
+      "hand_y": -1.993
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 76,
+    "hand_frames": 45
+  },
+  {
+    "sign": "WORK",
+    "r_fingers": [
+      0.57,
+      0.72,
+      0.86,
+      0.92,
+      0.85
+    ],
+    "l_fingers": [
+      0.47,
+      0.71,
+      0.97,
+      1.0,
+      0.63
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.192,
+      "upperArm_z": -0.302,
+      "foreArm_x": -1.051,
+      "hand_z": -0.396,
+      "hand_y": 0.315
+    },
+    "l_angles": {
+      "upperArm_x": -1.055,
+      "upperArm_z": 0.368,
+      "foreArm_x": -1.052,
+      "hand_z": -0.779,
+      "hand_y": -2.522
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 62,
+    "hand_frames": 58
+  },
+  {
+    "sign": "WORLD",
+    "r_fingers": [
+      0.5,
+      0.57,
+      0.69,
+      0.71,
+      0.67
+    ],
+    "l_fingers": [
+      0.51,
+      0.62,
+      0.56,
+      0.56,
+      0.54
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.435,
+      "upperArm_z": -0.477,
+      "foreArm_x": -0.88,
+      "hand_z": -0.446,
+      "hand_y": 1.159
+    },
+    "l_angles": {
+      "upperArm_x": -1.169,
+      "upperArm_z": 0.317,
+      "foreArm_x": -0.985,
+      "hand_z": -0.305,
+      "hand_y": -1.545
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 407,
+    "hand_frames": 696
+  },
+  {
+    "sign": "WRITE",
+    "r_fingers": [
+      0.5,
+      0.27,
+      0.21,
+      0.15,
+      0.13
+    ],
+    "l_fingers": [
+      0.54,
+      0.63,
+      1.0,
+      1.0,
+      0.99
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.238,
+      "upperArm_z": -0.445,
+      "foreArm_x": -0.969,
+      "hand_z": -0.537,
+      "hand_y": 2.529
+    },
+    "l_angles": {
+      "upperArm_x": -0.983,
+      "upperArm_z": 0.333,
+      "foreArm_x": -1.036,
+      "hand_z": -0.469,
+      "hand_y": -2.677
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 88,
+    "hand_frames": 115
+  },
+  {
+    "sign": "YEAR",
+    "r_fingers": [
+      0.17,
+      0.52,
+      0.19,
+      0.12,
+      0.07
+    ],
+    "l_fingers": [
+      0.49,
+      0.62,
+      0.39,
+      0.3,
+      0.25
+    ],
+    "r_location": "neutral",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.086,
+      "upperArm_z": -0.245,
+      "foreArm_x": -1.158,
+      "hand_z": -0.649,
+      "hand_y": 0.357
+    },
+    "l_angles": {
+      "upperArm_x": -0.998,
+      "upperArm_z": 0.201,
+      "foreArm_x": -1.062,
+      "hand_z": 0.417,
+      "hand_y": -0.445
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 93,
+    "hand_frames": 75
+  },
+  {
+    "sign": "YOGA",
+    "r_fingers": [
+      0.58,
+      0.59,
+      0.7,
+      0.72,
+      0.61
+    ],
+    "l_fingers": [
+      0.84,
+      0.54,
+      0.47,
+      0.46,
+      0.4
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.371,
+      "upperArm_z": -0.088,
+      "foreArm_x": -0.884,
+      "hand_z": -0.144,
+      "hand_y": 0.459
+    },
+    "l_angles": {
+      "upperArm_x": -0.278,
+      "upperArm_z": 0.119,
+      "foreArm_x": -0.566,
+      "hand_z": -0.083,
+      "hand_y": -1.021
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 93,
+    "hand_frames": 71
+  },
+  {
+    "sign": "YOU",
+    "r_fingers": [
+      0.25,
+      0.41,
+      0.4,
+      0.34,
+      0.72
+    ],
+    "l_fingers": [
+      0.45,
+      0.33,
+      0.42,
+      0.43,
+      0.44
+    ],
+    "r_location": "chest",
+    "l_location": "neutral",
+    "r_angles": {
+      "upperArm_x": -1.233,
+      "upperArm_z": -0.089,
+      "foreArm_x": -0.959,
+      "hand_z": -0.327,
+      "hand_y": 1.146
+    },
+    "l_angles": {
+      "upperArm_x": -0.062,
+      "upperArm_z": 0.042,
+      "foreArm_x": -0.646,
+      "hand_z": 0.066,
+      "hand_y": -0.931
+    },
+    "source": "ISLRTC_pose_verified",
+    "pose_frames": 69,
+    "hand_frames": 35
+  }
+]
